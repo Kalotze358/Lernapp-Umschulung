@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+    margin: 0;
+}
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar nav {
+    display: grid;
+    gap: 10px;
+}
+
+.nav-button {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+.nav-button:hover {
+    background-color: #eeeeee;
+}
+
+.nav-button.aktiv {
+    background-color: #dddddd;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.bereich {
+    display: none;
+}
+
+.bereich.aktiv {
+    display: block;
+}
+
+#antworten {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#naechste-frage {
+    margin-top: 20px;
+}
+
+.untermenue {
+    display: none;
+    gap: 5px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.untermenue.aktiv {
+    display: grid;
+}
+
+.kategorie-button {
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+.kategorie-button:hover {
+    background-color: #eeeeee;
+}
+
+.kategorie-button.aktiv {
+    background-color: #dddddd;
+    font-weight: bold;
+}
+
+#kategorie-titel {
+    font-weight: bold;
+    color: #555;
+}

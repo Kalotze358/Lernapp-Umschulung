@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IT-Lernapp</title>
+
+    <link rel="stylesheet" href="style.css">
+
+<script src="fragen/netzwerke.js" defer></script>
+<script src="fragen/programmierung.js" defer></script>
+<script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="app-layout">
+
+        <aside class="sidebar">
+
+            <h2>IT-Lernapp</h2>
+
+            <nav>
+
+                <button class="nav-button aktiv" data-bereich="quiz-bereich">
+                    Quiz
+                </button>
+
+                <div class="untermenue aktiv" id="quiz-untermenue">
+                    <button class="kategorie-button aktiv" data-kategorie="netzwerk">
+                        Netzwerktechnik
+                    </button>
+
+                    <button class="kategorie-button" data-kategorie="programmierung">
+                        Programmierung
+                    </button>
+                </div>
+
+                <button class="nav-button" data-bereich="wissen-bereich">
+                  Wissenswertes
+             </button>
+
+             <button class="nav-button" data-bereich="links-bereich">
+                 Links
+             </button>
+
+            </nav>
+
+        </aside>
+
+
+        <main>
+
+            <section id="quiz-bereich" class="bereich aktiv">
+
+                <h1>Quiz</h1>
+
+                <p id="kategorie-titel">Netzwerktechnik</p>
+
+                <h2 id="frage">
+                    Frage wird geladen...
+                </h2>
+
+                <div id="antworten">
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
+
+                <p id="ergebnis"></p>
+
+                <p>
+                    Punkte: <span id="punkte">0</span>
+                </p>
+
+                <button id="naechste-frage">
+                    Nächste Frage
+                </button>
+
+            </section>
+
+
+            <section id="wissen-bereich" class="bereich">
+
+                <h1>Wissenswertes</h1>
+
+                <p>
+                    Hier können später Erklärungen, Merksätze
+                    und Zusammenfassungen eingefügt werden.
+                </p>
+
+            </section>
+
+
+            <section id="links-bereich" class="bereich">
+
+                <h1>Nützliche Links</h1>
+
+                <p>
+                    Hier können später hilfreiche Webseiten,
+                    Dokumentationen und Lernmaterialien gesammelt werden.
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
