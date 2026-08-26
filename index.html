@@ -8,7 +8,7 @@
     <title>IT-Lernapp</title>
 
     <link rel="stylesheet" href="style.css">
-
+<script src="daten/lernfelder.js" defer></script>
 <script src="fragen/netzwerke.js" defer></script>
 <script src="fragen/programmierung.js" defer></script>
 <script src="script.js" defer></script>
@@ -37,7 +37,10 @@
                         Programmierung
                     </button>
                 </div>
-
+                <button class="nav-button" data-bereich="lernfelder-bereich">
+                        Lernfelder
+                </button>
+                
                 <button class="nav-button" data-bereich="wissen-bereich">
                   Wissenswertes
              </button>
@@ -58,6 +61,8 @@
                 <h1>Quiz</h1>
 
                 <p id="kategorie-titel">Netzwerktechnik</p>
+                
+                <p id="fortschritt">Frage 1 von 1</p>
 
                 <h2 id="frage">
                     Frage wird geladen...
@@ -71,6 +76,8 @@
                 </div>
 
                 <p id="ergebnis"></p>
+                
+                <div id="quiz-auswertung"></div>
 
                 <p>
                     Punkte: <span id="punkte">0</span>
@@ -82,7 +89,17 @@
 
             </section>
 
+            <section id="lernfelder-bereich" class="bereich">
 
+                <h1>Lernfelder</h1>
+
+                <p>
+                    Lernfelder der Fachrichtung Fachinformatiker Systemintegration
+                </p>
+
+                <div id="lernfelder-liste"></div>
+
+</section>
             <section id="wissen-bereich" class="bereich">
 
                 <h1>Wissenswertes</h1>

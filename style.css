@@ -111,3 +111,150 @@ button {
     font-weight: bold;
     color: #555;
 }
+#lernfelder-liste {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.lernfeld-karte {
+    display: grid;
+    gap: 8px;
+
+    padding: 18px;
+
+    text-align: left;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.lernfeld-karte:hover {
+    background-color: #f2f4f7;
+}
+
+.lernfeld-nummer {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555555;
+}
+
+.lernfeld-titel {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.4;
+}
+.zurueck-button {
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.zurueck-button:hover {
+    background-color: #f2f4f7;
+}
+
+.lernfeld-detail-nummer {
+    font-weight: bold;
+    color: #555555;
+    margin-bottom: 5px;
+}
+
+.themen-liste {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.thema-karte {
+    padding: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.themen-quiz-button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.themen-quiz-button:not(:disabled) {
+    cursor: pointer;
+}
+
+.themen-quiz-button:disabled {
+    cursor: not-allowed;
+    opacity: 1;
+}
+.lernfeld-quiz-button {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin: 15px 0 20px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lernfeld-quiz-button:disabled {
+    cursor: not-allowed;
+    opacity: 1;
+    background-color: #eeeeee;
+    color: #555555;
+}
+
+#fortschritt {
+    font-size: 14px;
+    color: #666666;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+#quiz-auswertung {
+    margin-top: 20px;
+}
+
+#quiz-auswertung h3 {
+    margin-bottom: 10px;
+}
+
+.prozent-ergebnis {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.bewertung {
+    font-size: 18px;
+    font-weight: bold;
+}
+.ergebnis-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.ergebnis-button {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    background-color: #f2f4f7;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ergebnis-button:hover {
+    background-color: #e5e7eb;
+}
