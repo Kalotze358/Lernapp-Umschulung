@@ -3,6 +3,8 @@ const mobileMenuButton =
 
 const hauptnavigation =
     document.getElementById("hauptnavigation");
+const darkmodeButton =
+    document.getElementById("darkmode-button");
 const frageAnzeige = document.getElementById("frage");
 const antwortButtons = document.querySelectorAll("#antworten button");
 const ergebnis = document.getElementById("ergebnis");
@@ -775,5 +777,46 @@ navButtons.forEach((button) => {
     });
 
 });
+function darkModeAktualisieren() {
+
+    const darkModeAktiv =
+        document.body.classList.contains("dark-mode");
+
+    if (darkModeAktiv) {
+
+        darkmodeButton.textContent =
+            "☀️ Light Mode";
+
+    } else {
+
+        darkmodeButton.textContent =
+            "🌙 Dark Mode";
+    }
+}
+
+
+darkmodeButton.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+    const darkModeAktiv =
+        document.body.classList.contains("dark-mode");
+
+    localStorage.setItem(
+        "darkMode",
+        darkModeAktiv
+    );
+
+    darkModeAktualisieren();
+});
+
+
+if (localStorage.getItem("darkMode") === "true") {
+
+    document.body.classList.add("dark-mode");
+}
+
+darkModeAktualisieren();
+
 lernfelderAnzeigen();
 frageAnzeigen();

@@ -267,6 +267,79 @@ button {
     background-color: #e5e7eb;
 }
 
+#darkmode-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+
+    background-color: #f2f4f7;
+
+    cursor: pointer;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #eeeeee;
+}
+
+body.dark-mode .sidebar {
+    background-color: #1e1e1e;
+    border-color: #333333;
+}
+
+body.dark-mode main {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .nav-button,
+body.dark-mode .kategorie-button {
+    color: #eeeeee;
+}
+
+body.dark-mode .nav-button:hover,
+body.dark-mode .kategorie-button:hover {
+    background-color: #333333;
+}
+
+body.dark-mode .nav-button.aktiv,
+body.dark-mode .kategorie-button.aktiv {
+    background-color: #444444;
+}
+
+body.dark-mode #kategorie-titel,
+body.dark-mode #fortschritt,
+body.dark-mode .lernfeld-nummer,
+body.dark-mode .lernfeld-titel,
+body.dark-mode .lernfeld-detail-nummer {
+    color: #bbbbbb;
+}
+
+body.dark-mode .lernfeld-karte,
+body.dark-mode .thema-karte,
+body.dark-mode .zurueck-button {
+    background-color: #2a2a2a;
+    color: #eeeeee;
+    border-color: #444444;
+}
+
+body.dark-mode .lernfeld-karte:hover,
+body.dark-mode .zurueck-button:hover {
+    background-color: #353535;
+}
+
+body.dark-mode #antworten button,
+body.dark-mode #naechste-frage,
+body.dark-mode .ergebnis-button,
+body.dark-mode #darkmode-button,
+body.dark-mode #mobile-menu-button {
+    background-color: #2a2a2a;
+    color: #eeeeee;
+    border-color: #444444;
+}
+
 @media (max-width: 900px) {
 
     .app-layout {
