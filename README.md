@@ -6,7 +6,7 @@ Das Projekt soll uns dabei helfen, Unterrichtsinhalte zu wiederholen und gleichz
 
 ## Aktueller Stand
 
-Die Lernapp befindet sich noch in einer frühen Entwicklungsphase.
+Die Lernapp befindet sich noch in einer frühen Entwicklungsphase. Stand 20.08.2026
 
 Aktuell vorhanden:
 
