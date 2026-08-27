@@ -705,6 +705,7 @@ document
         punkteAnzeige.textContent = punkte;
 
         frageAnzeigen();
+        mobilesMenueSchliessen();
 
     });
 
@@ -728,6 +729,14 @@ mobileMenuButton.addEventListener("click", () => {
     }
 
 });
+
+function mobilesMenueSchliessen() {
+
+    hauptnavigation.classList.remove("mobil-offen");
+
+    mobileMenuButton.textContent =
+        "☰ Menü";
+}
 
 const navButtons = document.querySelectorAll(".nav-button");
 const bereiche = document.querySelectorAll(".bereich");
@@ -760,7 +769,9 @@ navButtons.forEach((button) => {
 
             quizUntermenue.classList.remove("aktiv");
         }
-
+        
+        mobilesMenueSchliessen();
+    
     });
 
 });
