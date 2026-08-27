@@ -258,3 +258,66 @@ button {
 .ergebnis-button:hover {
     background-color: #e5e7eb;
 }
+
+@media (max-width: 900px) {
+
+    .app-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: unset;
+        border-right: none;
+        border-bottom: 1px solid #dddddd;
+        padding: 20px;
+    }
+
+    .sidebar h2 {
+        margin-bottom: 20px;
+    }
+
+    main {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .nav-button,
+    .kategorie-button {
+        width: 100%;
+        text-align: left;
+    }
+
+    #antworten button {
+        width: 100%;
+    }
+
+    #lernfelder-liste {
+        grid-template-columns: 1fr;
+    }
+
+    .themen-liste {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    #frage {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .ergebnis-buttons {
+        flex-direction: column;
+    }
+
+    .ergebnis-button {
+        width: 100%;
+    }
+}
