@@ -429,3 +429,16 @@ body.dark-mode #mobile-menu-button {
         width: 100%;
     }
 }
+.start-buttons {
+    display: grid;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.start-buttons button {
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+}

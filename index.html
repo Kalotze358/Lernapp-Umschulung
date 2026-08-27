@@ -26,7 +26,7 @@
             </button>
 
             <nav id="hauptnavigation">
-             <button class="nav-button aktiv" data-bereich="quiz-bereich">
+             <button class="nav-button" data-bereich="quiz-bereich">
                   Quiz
                 </button>
 
@@ -61,8 +61,99 @@
 
 
         <main>
+            <section id="start-bereich" class="bereich aktiv">
 
-            <section id="quiz-bereich" class="bereich aktiv">
+                <h1>Willkommen zur IT-Lernapp</h1>
+
+                <p>
+                    Wähle aus, womit du lernen möchtest.
+                </p>
+
+                <div class="start-buttons">
+
+                    <button id="start-quiz-button">
+                        Quiz starten
+                    </button>
+
+                    <button id="start-lernfelder-button">
+                        Lernfelder
+                    </button>
+
+                </div>
+
+            </section>
+            <main>
+
+    <section id="start-bereich" class="bereich aktiv">
+
+        ...
+        Inhalt deiner Startseite
+        ...
+
+    </section>
+
+
+    <section id="quiz-auswahl-bereich" class="bereich">
+
+        <h1>Quiz auswählen</h1>
+
+        <p>
+            Wähle eine Kategorie aus.
+        </p>
+
+        <div class="quiz-auswahl-buttons">
+
+            <button data-start-kategorie="netzwerk">
+                Netzwerktechnik
+            </button>
+
+            <button data-start-kategorie="programmierung">
+                Programmierung
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section id="quiz-bereich" class="bereich">
+
+    <h1>Quiz</h1>
+
+    <p id="kategorie-titel">
+        Netzwerktechnik
+    </p>
+
+    <p id="fortschritt">
+        Frage 1 von 1
+    </p>
+
+    <h2 id="frage">
+        Frage wird geladen...
+    </h2>
+
+    <div id="antworten">
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+    </div>
+
+    <p id="ergebnis"></p>
+
+    <div id="quiz-auswertung"></div>
+
+    <p>
+        Punkte:
+        <span id="punkte">0</span>
+    </p>
+
+    <button id="naechste-frage">
+        Nächste Frage
+    </button>
+
+</section>
+            <section id="quiz-bereich" class="bereich">
 
                 <h1>Quiz</h1>
 

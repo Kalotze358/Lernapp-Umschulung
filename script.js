@@ -1,3 +1,10 @@
+const quizAuswahlButtons =
+    document.querySelectorAll("[data-start-kategorie]");
+const startQuizButton =
+    document.getElementById("start-quiz-button");
+
+const startLernfelderButton =
+    document.getElementById("start-lernfelder-button");
 const mobileMenuButton =
     document.getElementById("mobile-menu-button");
 
@@ -43,9 +50,54 @@ function fragenMischen(fragen) {
 
     return gemischteFragen;
 }
+function antwortenMischen(frage) {
+
+    let antworten;
+
+    if (typeof frage.antworten[0] === "string") {
+
+        antworten = frage.antworten.map((text, index) => {
+
+            return {
+                text: text,
+                richtig: index === frage.richtig
+            };
+
+        });
+
+    } else {
+
+        antworten = frage.antworten.map((antwort) => {
+
+            return {
+                ...antwort
+            };
+
+        });
+
+    }
+
+    for (let i = antworten.length - 1; i > 0; i--) {
+
+        const zufallsIndex =
+            Math.floor(Math.random() * (i + 1));
+
+        [
+            antworten[i],
+            antworten[zufallsIndex]
+        ] = [
+            antworten[zufallsIndex],
+            antworten[i]
+        ];
+    }
+
+    return antworten;
+} 
+
 let aktuelleFrage = 0;
 let punkte = 0;
 let aktuellesLernfeld = null;
+let aktuelleAntworten = [];
 
 function lernfelderAnzeigen() {
 
@@ -258,23 +310,83 @@ function lernfeldQuizStarten(lernfeld) {
     document
         .getElementById("quiz-bereich")
         .classList.add("aktiv");
+navButtons.forEach((button) => {
+    button.classList.remove("aktiv");
+});
 
-    navButtons.forEach((button) => {
-        button.classList.remove("aktiv");
-    });
+const quizButton =
+    document.querySelector(
+        '.nav-button[data-bereich="quiz-bereich"]'
+    );
 
-    const quizButton =
-        document.querySelector(
-            '.nav-button[data-bereich="quiz-bereich"]'
-        );
+quizButton.classList.add("aktiv");
 
-    quizButton.classList.add("aktiv");
+quizUntermenue.classList.add("aktiv");
 
-    quizUntermenue.classList.add("aktiv");
-
-    frageAnzeigen();
+frageAnzeigen();
 
 }
+
+
+
+startLernfelderButton.addEventListener("click", () => {
+
+    bereiche.forEach((bereich) => {
+        bereich.classList.remove("aktiv");
+    });
+
+    document
+        .getElementById("lernfelder-bereich")
+        .classList.add("aktiv");
+});
+
+
+quizAuswahlButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        console.log("Quiz-Auswahl geklickt");
+
+        const kategorie =
+            button.dataset.startKategorie;
+
+        aktuellesLernfeld = null;
+
+        if (kategorie === "netzwerk") {
+
+            aktiveFragen =
+                fragenMischen(netzwerkFragen);
+
+            kategorieTitel.textContent =
+                "Netzwerktechnik";
+
+        } else if (kategorie === "programmierung") {
+
+            aktiveFragen =
+                fragenMischen(programmierungFragen);
+
+            kategorieTitel.textContent =
+                "Programmierung";
+        }
+
+        aktuelleFrage = 0;
+        punkte = 0;
+
+        punkteAnzeige.textContent = punkte;
+
+        bereiche.forEach((bereich) => {
+            bereich.classList.remove("aktiv");
+        });
+
+        document
+            .getElementById("quiz-bereich")
+            .classList.add("aktiv");
+
+        frageAnzeigen();
+    });
+
+});
+    
 function findeFragenFuerThema(lernfeldId, themaId) {
 
     return alleFragen.filter((frage) => {
@@ -563,24 +675,27 @@ wiederholenButton.addEventListener(
 );
 
 
-const zurueckButton =
-    document.createElement("button");
-
-zurueckButton.textContent =
-    "← Zurück zum Lernfeld";
-
-zurueckButton.classList.add(
-    "ergebnis-button"
-);
-
-zurueckButton.addEventListener(
-    "click",
-    zurueckZumLernfeld
-);
-
-
 buttonBereich.appendChild(wiederholenButton);
-buttonBereich.appendChild(zurueckButton);
+
+if (aktuellesLernfeld) {
+
+    const zurueckButton =
+        document.createElement("button");
+
+    zurueckButton.textContent =
+        "← Zurück zum Lernfeld";
+
+    zurueckButton.classList.add(
+        "ergebnis-button"
+    );
+
+    zurueckButton.addEventListener(
+        "click",
+        zurueckZumLernfeld
+    );
+
+    buttonBereich.appendChild(zurueckButton);
+}
 
 quizAuswertung.appendChild(buttonBereich);
 }
@@ -588,23 +703,41 @@ quizAuswertung.appendChild(buttonBereich);
 function frageAnzeigen() {
 
     const frage = aktiveFragen[aktuelleFrage];
+
+    aktuelleAntworten = antwortenMischen(frage);
+
     fortschrittAnzeige.textContent =
-    "Frage " +
-    (aktuelleFrage + 1) +
-    " von " +
-    aktiveFragen.length;
+        "Frage " +
+        (aktuelleFrage + 1) +
+        " von " +
+        aktiveFragen.length;
 
     frageAnzeige.textContent = frage.frage;
 
     antwortButtons.forEach((button, index) => {
-        button.textContent = frage.antworten[index];
-        button.disabled = false;
+
+        const antwort = aktuelleAntworten[index];
+
+        if (antwort) {
+
+            button.style.display = "block";
+            button.textContent = antwort.text;
+            button.disabled = false;
+
+        } else {
+
+            button.style.display = "none";
+            button.textContent = "";
+            button.disabled = true;
+        }
+
     });
 
     ergebnis.textContent = "";
 
     quizAuswertung.innerHTML = "";
-
+    
+    naechsteFrageButton.style.display = "block";
     naechsteFrageButton.disabled = true;
 }
 
@@ -612,9 +745,14 @@ antwortButtons.forEach((button, index) => {
 
     button.addEventListener("click", () => {
 
-        const frage = aktiveFragen[aktuelleFrage];
+        const ausgewaehlteAntwort =
+            aktuelleAntworten[index];
 
-        if (index === frage.richtig) {
+        if (!ausgewaehlteAntwort) {
+            return;
+        }
+
+        if (ausgewaehlteAntwort.richtig) {
 
             ergebnis.textContent = "✓ Richtig!";
 
@@ -623,10 +761,14 @@ antwortButtons.forEach((button, index) => {
 
         } else {
 
-            const richtigeAntwort = frage.antworten[frage.richtig];
+            const richtigeAntwort =
+                aktuelleAntworten.find((antwort) => {
+                    return antwort.richtig;
+                });
 
             ergebnis.textContent =
-                "✗ Falsch! Richtig wäre: " + richtigeAntwort;
+                "✗ Falsch! Richtig wäre: " +
+                richtigeAntwort.text;
         }
 
         antwortButtons.forEach((button) => {
@@ -648,7 +790,6 @@ naechsteFrageButton.addEventListener("click", () => {
 
     } else {
 
-
     frageAnzeige.textContent = "Quiz beendet!";
 
     fortschrittAnzeige.textContent =
@@ -660,10 +801,12 @@ naechsteFrageButton.addEventListener("click", () => {
 
         button.disabled = true;
         button.textContent = "";
+        button.style.display = "none";
 
     });
 
     naechsteFrageButton.disabled = true;
+    naechsteFrageButton.style.display = "none";
 
     quizErgebnisAnzeigen();
 
@@ -671,7 +814,7 @@ naechsteFrageButton.addEventListener("click", () => {
 
 });
 
-kategorieButtons.forEach((button) => {
+    kategorieButtons.forEach((button) => {
 
     button.addEventListener("click", () => {
 
@@ -679,9 +822,9 @@ kategorieButtons.forEach((button) => {
             button.classList.remove("aktiv");
             bereiche.forEach((bereich) => {
     bereich.classList.remove("aktiv");
-});
+    });
 
-document
+    document
     .getElementById("quiz-bereich")
     .classList.add("aktiv");
         });
@@ -740,9 +883,35 @@ function mobilesMenueSchliessen() {
         "☰ Menü";
 }
 
+
 const navButtons = document.querySelectorAll(".nav-button");
 const bereiche = document.querySelectorAll(".bereich");
 const quizUntermenue = document.getElementById("quiz-untermenue");
+
+
+startQuizButton.addEventListener("click", () => {
+
+    bereiche.forEach((bereich) => {
+        bereich.classList.remove("aktiv");
+    });
+
+    document
+        .getElementById("quiz-auswahl-bereich")
+        .classList.add("aktiv");
+});
+
+
+startLernfelderButton.addEventListener("click", () => {
+
+    bereiche.forEach((bereich) => {
+        bereich.classList.remove("aktiv");
+    });
+
+    document
+        .getElementById("lernfelder-bereich")
+        .classList.add("aktiv");
+});
+
 
 navButtons.forEach((button) => {
 
