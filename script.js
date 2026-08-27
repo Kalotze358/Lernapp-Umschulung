@@ -1,3 +1,8 @@
+const mobileMenuButton =
+    document.getElementById("mobile-menu-button");
+
+const hauptnavigation =
+    document.getElementById("hauptnavigation");
 const frageAnzeige = document.getElementById("frage");
 const antwortButtons = document.querySelectorAll("#antworten button");
 const ergebnis = document.getElementById("ergebnis");
@@ -704,6 +709,26 @@ document
     });
 
 });
+
+mobileMenuButton.addEventListener("click", () => {
+
+    const istOffen =
+        hauptnavigation.classList.toggle("mobil-offen");
+
+    if (istOffen) {
+
+        mobileMenuButton.textContent =
+            "✕ Menü schließen";
+
+    } else {
+
+        mobileMenuButton.textContent =
+            "☰ Menü";
+
+    }
+
+});
+
 const navButtons = document.querySelectorAll(".nav-button");
 const bereiche = document.querySelectorAll(".bereich");
 const quizUntermenue = document.getElementById("quiz-untermenue");
