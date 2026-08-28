@@ -74,7 +74,15 @@ main {
     gap: 10px;
     margin-top: 20px;
 }
+#antworten button.ausgewaehlt {
+    border: 2px solid #555555;
+    background-color: #dfe6ee;
+    font-weight: bold;
+}
 
+#antworten button.ausgewaehlt::before {
+    content: "✓ ";
+}
 button {
     padding: 12px;
     font-size: 16px;
@@ -340,6 +348,12 @@ body.dark-mode #mobile-menu-button {
     border-color: #444444;
 }
 
+body.dark-mode #antworten button.ausgewaehlt {
+    background-color: #454545;
+    border-color: #aaaaaa;
+    color: #ffffff;
+}
+
 @media (max-width: 900px) {
 
     .app-layout {
@@ -441,4 +455,8 @@ body.dark-mode #mobile-menu-button {
     font-weight: bold;
     border: 1px solid #dddddd;
     border-radius: 10px;
+}
+#antwort-pruefen {
+    display: none;
+    margin-top: 15px;
 }

@@ -7,7 +7,8 @@ const startLernfelderButton =
     document.getElementById("start-lernfelder-button");
 const mobileMenuButton =
     document.getElementById("mobile-menu-button");
-
+const antwortPruefenButton =
+    document.getElementById("antwort-pruefen");
 const hauptnavigation =
     document.getElementById("hauptnavigation");
 const darkmodeButton =
@@ -27,7 +28,17 @@ const quizAuswertung =
 let aktiveFragen = netzwerkFragen;
 const alleFragen = [
     ...netzwerkFragen,
-    ...programmierungFragen
+    ...programmierungFragen,
+    ...lf01Fragen,
+    ...lf02Fragen,
+    ...lf04Fragen,
+    ...lf06Fragen,
+    ...lf07Fragen,
+    ...lf08Fragen,
+    ...lf09Fragen,
+    ...lf10bFragen,
+    ...lf11bFragen,
+    ...lf12bFragen
 ];
 function fragenMischen(fragen) {
 
@@ -52,30 +63,14 @@ function fragenMischen(fragen) {
 }
 function antwortenMischen(frage) {
 
-    let antworten;
-
-    if (typeof frage.antworten[0] === "string") {
-
-        antworten = frage.antworten.map((text, index) => {
-
-            return {
-                text: text,
-                richtig: index === frage.richtig
-            };
-
-        });
-
-    } else {
-
-        antworten = frage.antworten.map((antwort) => {
+    const antworten =
+        frage.antworten.map((antwort) => {
 
             return {
                 ...antwort
             };
 
         });
-
-    }
 
     for (let i = antworten.length - 1; i > 0; i--) {
 
@@ -92,7 +87,7 @@ function antwortenMischen(frage) {
     }
 
     return antworten;
-} 
+}
 
 let aktuelleFrage = 0;
 let punkte = 0;
@@ -345,8 +340,7 @@ quizAuswahlButtons.forEach((button) => {
 
     button.addEventListener("click", () => {
 
-        console.log("Quiz-Auswahl geklickt");
-
+        
         const kategorie =
             button.dataset.startKategorie;
 
@@ -716,22 +710,33 @@ function frageAnzeigen() {
 
     antwortButtons.forEach((button, index) => {
 
-        const antwort = aktuelleAntworten[index];
+    const antwort = aktuelleAntworten[index];
 
-        if (antwort) {
+    button.classList.remove("ausgewaehlt");
 
-            button.style.display = "block";
-            button.textContent = antwort.text;
-            button.disabled = false;
+    if (antwort) {
 
-        } else {
+        button.style.display = "block";
+        button.textContent = antwort.text;
+        button.disabled = false;
 
-            button.style.display = "none";
-            button.textContent = "";
-            button.disabled = true;
-        }
+    } else {
 
-    });
+        button.style.display = "none";
+        button.textContent = "";
+        button.disabled = true;
+    }
+    if (frage.typ === "multiple-choice") {
+
+    antwortPruefenButton.style.display = "block";
+    antwortPruefenButton.disabled = true;
+
+} else {
+
+    antwortPruefenButton.style.display = "none";
+}
+
+});
 
     ergebnis.textContent = "";
 
@@ -745,6 +750,8 @@ antwortButtons.forEach((button, index) => {
 
     button.addEventListener("click", () => {
 
+        const frage = aktiveFragen[aktuelleFrage];
+
         const ausgewaehlteAntwort =
             aktuelleAntworten[index];
 
@@ -752,6 +759,25 @@ antwortButtons.forEach((button, index) => {
             return;
         }
 
+
+        // MULTIPLE-CHOICE
+        if (frage.typ === "multiple-choice") {
+
+            button.classList.toggle("ausgewaehlt");
+
+            const mindestensEineAusgewaehlt =
+                Array.from(antwortButtons).some((button) => {
+                    return button.classList.contains("ausgewaehlt");
+                });
+
+            antwortPruefenButton.disabled =
+                !mindestensEineAusgewaehlt;
+
+            return;
+        }
+
+
+        // SINGLE-CHOICE
         if (ausgewaehlteAntwort.richtig) {
 
             ergebnis.textContent = "✓ Richtig!";
@@ -779,6 +805,58 @@ antwortButtons.forEach((button, index) => {
     });
 
 });
+antwortPruefenButton.addEventListener("click", () => {
+
+    const frage = aktiveFragen[aktuelleFrage];
+
+    if (frage.typ !== "multiple-choice") {
+        return;
+    }
+
+    const allesRichtig =
+        aktuelleAntworten.every((antwort, index) => {
+
+            const wurdeAusgewaehlt =
+                antwortButtons[index]
+                    .classList.contains("ausgewaehlt");
+
+            return antwort.richtig === wurdeAusgewaehlt;
+        });
+
+
+    if (allesRichtig) {
+
+        ergebnis.textContent = "✓ Richtig!";
+
+        punkte++;
+        punkteAnzeige.textContent = punkte;
+
+    } else {
+
+        const richtigeAntworten =
+            aktuelleAntworten
+                .filter((antwort) => {
+                    return antwort.richtig;
+                })
+                .map((antwort) => {
+                    return antwort.text;
+                })
+                .join(", ");
+
+        ergebnis.textContent =
+            "✗ Falsch! Richtig wären: " +
+            richtigeAntworten;
+    }
+
+
+    antwortButtons.forEach((button) => {
+        button.disabled = true;
+    });
+
+    antwortPruefenButton.disabled = true;
+
+    naechsteFrageButton.disabled = false;
+});
 
 naechsteFrageButton.addEventListener("click", () => {
 
@@ -791,6 +869,8 @@ naechsteFrageButton.addEventListener("click", () => {
     } else {
 
     frageAnzeige.textContent = "Quiz beendet!";
+    antwortPruefenButton.style.display = "none";
+    antwortPruefenButton.disabled = true;
 
     fortschrittAnzeige.textContent =
         "Quiz abgeschlossen";
