@@ -225,7 +225,7 @@ const lf07Fragen = [
     },
     {
         id: "lf07q009",
-        frage: "Welche Zuordnungen sind korrekt?",
+        frage: "Welche Zuordnungen bei A/D- und D/A-Wandlern sind korrekt?",
 
         antworten: [
             {
@@ -558,5 +558,285 @@ const lf07Fragen = [
         themen: ["cps-sicherheit", "iot"],
         schwierigkeit: "mittel",
         typ: "multiple-choice"
-    }
+    },
+    {
+    id: "lf07q021",
+    frage: "Ein intelligentes Gewächshaus misst Temperatur und Bodenfeuchtigkeit und steuert abhängig davon Lüfter und Bewässerung. Warum handelt es sich um ein cyber-physisches System?",
+
+    antworten: [
+        {
+            text: "Sensoren erfassen physische Zustände, die digital verarbeitet werden und anschließend physische Aktionen auslösen",
+            richtig: true
+        },
+        {
+            text: "Weil jedes System mit Strom automatisch ein cyber-physisches System ist",
+            richtig: false
+        },
+        {
+            text: "Weil ausschließlich Daten gespeichert werden und keine Wechselwirkung mit der Umgebung besteht",
+            richtig: false
+        },
+        {
+            text: "Weil cyber-physische Systeme grundsätzlich keinen Mikrocontroller benötigen dürfen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: ["cps-grundlagen", "mikrocontroller"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf07q022",
+    frage: "Ein Mikrocontroller soll dauerhaft eine festgelegte Steuerungsaufgabe innerhalb einer Maschine übernehmen. Welche Aussagen treffen zu?",
+
+    antworten: [
+        {
+            text: "Der Mikrocontroller kann Eingänge einlesen und Ausgänge ansteuern",
+            richtig: true
+        },
+        {
+            text: "Das System kann als Embedded System ausgeführt sein",
+            richtig: true
+        },
+        {
+            text: "Die Software ist typischerweise auf eine konkrete Aufgabe des Geräts ausgerichtet",
+            richtig: true
+        },
+        {
+            text: "Ein Embedded System muss grundsätzlich ein vollständiger Desktop-PC sein",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: ["mikrocontroller", "embedded-systeme"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf07q023",
+    frage: "Ein eingebettetes System verarbeitet das kontinuierliche Spannungssignal eines Temperatursensors. Was ist für die digitale Verarbeitung typischerweise erforderlich?",
+
+    antworten: [
+        {
+            text: "Das analoge Signal muss über einen geeigneten Analog-Digital-Wandler in digitale Werte umgesetzt werden",
+            richtig: true
+        },
+        {
+            text: "Das Signal muss zwingend zuerst über DNS aufgelöst werden",
+            richtig: false
+        },
+        {
+            text: "Analoge Signale können ausschließlich die Werte 0 und 1 besitzen",
+            richtig: false
+        },
+        {
+            text: "Embedded Systems können grundsätzlich keine analogen Sensorwerte verarbeiten",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: ["embedded-systeme", "digitale-analoge-signale"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf07q024",
+    frage: "Ein Sensor liefert einen analogen Messwert, ein anderer nur den Zustand EIN oder AUS. Welche Aussagen sind korrekt?",
+
+    antworten: [
+        {
+            text: "Der analoge Messwert kann innerhalb eines Bereichs viele unterschiedliche Werte annehmen",
+            richtig: true
+        },
+        {
+            text: "EIN und AUS können als zwei digitale Zustände dargestellt werden",
+            richtig: true
+        },
+        {
+            text: "Für die Anbindung verschiedener Sensoren können unterschiedliche Schnittstellen erforderlich sein",
+            richtig: true
+        },
+        {
+            text: "Analoge und digitale Signale sind technisch immer vollständig identisch",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: ["digitale-analoge-signale", "schnittstellen-cps"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf07q025",
+    frage: "Mehrere Sensoren sollen mit einem Mikrocontroller verbunden und ihre Werte automatisch verarbeitet werden. Welche Überlegungen sind sinnvoll?",
+
+    antworten: [
+        {
+            text: "Prüfen, welche Schnittstellen die Sensoren und der Mikrocontroller unterstützen",
+            richtig: true
+        },
+        {
+            text: "Festlegen, unter welchen Bedingungen bestimmte Aktionen ausgelöst werden",
+            richtig: true
+        },
+        {
+            text: "Die Verarbeitung der Sensorwerte kann automatisiert erfolgen",
+            richtig: true
+        },
+        {
+            text: "Die verwendete Schnittstelle ist für die technische Planung grundsätzlich bedeutungslos",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: ["schnittstellen-cps", "automatisierung"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf07q026",
+    frage: "Ein System soll bei Überschreiten eines Temperaturgrenzwerts automatisch eine Warnmeldung an eine zentrale IoT-Plattform senden. Welche Komponenten beziehungsweise Abläufe werden benötigt?",
+
+    antworten: [
+        {
+            text: "Eine automatisierte Auswertung des Messwerts",
+            richtig: true
+        },
+        {
+            text: "Eine geeignete Kommunikationsverbindung zur IoT-Plattform",
+            richtig: true
+        },
+        {
+            text: "Eine definierte Bedingung, ab der die Meldung ausgelöst wird",
+            richtig: true
+        },
+        {
+            text: "Zwingend eine manuelle Bestätigung vor jeder einzelnen Messung",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: ["automatisierung", "kommunikation-iot"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf07q027",
+    frage: "Batteriebetriebene IoT-Sensoren sollen über große Entfernungen nur kleine Messwerte übertragen. Welche Faktoren sollten bei der Auswahl der Kommunikationstechnik besonders berücksichtigt werden?",
+
+    antworten: [
+        {
+            text: "Reichweite",
+            richtig: true
+        },
+        {
+            text: "Energieverbrauch",
+            richtig: true
+        },
+        {
+            text: "Benötigte Datenrate beziehungsweise Datenmenge",
+            richtig: true
+        },
+        {
+            text: "Ausschließlich die Farbe des Sensorgehäuses",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: ["kommunikation-iot", "cps-sicherheit"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf07q028",
+    frage: "Ein vernetztes Zugangssystem steuert elektronische Türschlösser. Welche Maßnahmen sind für einen sicheren Betrieb besonders wichtig?",
+
+    antworten: [
+        {
+            text: "Kommunikation und Zugänge gegen unberechtigte Nutzung absichern",
+            richtig: true
+        },
+        {
+            text: "Sicherheitsupdates für die eingesetzten Komponenten berücksichtigen",
+            richtig: true
+        },
+        {
+            text: "Die Auswirkungen einer Manipulation auf den physischen Prozess berücksichtigen",
+            richtig: true
+        },
+        {
+            text: "Alle Schutzmechanismen deaktivieren, damit das System schneller reagiert",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: ["cps-sicherheit", "cps-grundlagen"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf07q029",
+    frage: "Ein analoger Helligkeitssensor liefert einen Spannungswert, während eine LED über einen digitalen Pin des Mikrocontrollers geschaltet werden soll. Welche Aussagen sind korrekt?",
+
+    antworten: [
+        {
+            text: "Der analoge Sensorwert kann über einen Analog-Digital-Wandler digital verarbeitet werden",
+            richtig: true
+        },
+        {
+            text: "Ein GPIO-Pin kann zur digitalen Ansteuerung der LED verwendet werden",
+            richtig: true
+        },
+        {
+            text: "ADC und GPIO erfüllen dabei unterschiedliche Aufgaben",
+            richtig: true
+        },
+        {
+            text: "Ein GPIO-Pin wandelt grundsätzlich jedes analoge Signal automatisch in einen digitalen Messwert um",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: ["adc-dac", "gpio"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf07q030",
+    frage: "Ein Raumthermostat misst die Temperatur, vergleicht sie mit dem Sollwert und veröffentlicht den aktuellen Messwert zusätzlich per MQTT. Welche Aussagen treffen zu?",
+
+    antworten: [
+        {
+            text: "Der Vergleich von Ist- und Sollwert mit Rückkopplung ist Bestandteil einer Regelung",
+            richtig: true
+        },
+        {
+            text: "Der Temperaturwert kann über ein MQTT-Topic veröffentlicht werden",
+            richtig: true
+        },
+        {
+            text: "Ein Subscriber kann das entsprechende Topic abonnieren und die veröffentlichten Werte empfangen",
+            richtig: true
+        },
+        {
+            text: "MQTT ersetzt den Sensor und führt die physische Temperaturmessung selbst durch",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: ["steuerung-regelung", "mqtt"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+}
 ];

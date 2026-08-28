@@ -558,5 +558,369 @@ const lf01Fragen = [
     themen: ["rechte-pflichten"],
     schwierigkeit: "mittel",
     typ: "multiple-choice"
+},
+{
+    id: "lf01q021",
+    frage: "Welche Faktoren können bei der Wahl einer Unternehmensrechtsform eine wichtige Rolle spielen?",
+
+    antworten: [
+        {
+            text: "Haftung der Beteiligten",
+            richtig: true
+        },
+        {
+            text: "Kapitalbedarf und Finanzierungsmöglichkeiten",
+            richtig: true
+        },
+        {
+            text: "Organisation und Entscheidungsstrukturen",
+            richtig: true
+        },
+        {
+            text: "Die Bildschirmauflösung der Arbeitsplatzrechner",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf01"],
+    themen: ["rechtsformen"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf01q022",
+    frage: "Ein Gründer möchte bei der Wahl der Rechtsform besonders darauf achten, sein persönliches Haftungsrisiko zu begrenzen. Welche Überlegung ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Die Haftungsregelungen verschiedener Rechtsformen miteinander vergleichen",
+            richtig: true
+        },
+        {
+            text: "Die Rechtsform ausschließlich nach dem Unternehmenslogo auswählen",
+            richtig: false
+        },
+        {
+            text: "Die Haftung spielt bei der Wahl einer Rechtsform grundsätzlich keine Rolle",
+            richtig: false
+        },
+        {
+            text: "Nur die Anzahl der vorhandenen Computer berücksichtigen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf01"],
+    themen: ["rechtsformen"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf01q023",
+    frage: "Welche Interessengruppen können unterschiedliche Erwartungen an ein Unternehmen haben?",
+
+    antworten: [
+        {
+            text: "Kunden",
+            richtig: true
+        },
+        {
+            text: "Mitarbeiter",
+            richtig: true
+        },
+        {
+            text: "Eigentümer oder Kapitalgeber",
+            richtig: true
+        },
+        {
+            text: "Ausschließlich der Hersteller des Firmenrouters",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf01"],
+    themen: ["interessengruppen"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf01q024",
+    frage: "Kunden wünschen niedrige Preise, Mitarbeiter gute Arbeitsbedingungen und Eigentümer eine hohe Rendite. Was zeigt dieses Beispiel?",
+
+    antworten: [
+        {
+            text: "Unterschiedliche Interessengruppen können teilweise gegensätzliche Ziele verfolgen",
+            richtig: true
+        },
+        {
+            text: "Alle Interessengruppen verfolgen grundsätzlich exakt dieselben Ziele",
+            richtig: false
+        },
+        {
+            text: "Nur Kunden beeinflussen unternehmerische Entscheidungen",
+            richtig: false
+        },
+        {
+            text: "Unternehmen müssen grundsätzlich nur technische Ziele berücksichtigen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf01"],
+    themen: ["interessengruppen", "zielkonflikte"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf01q025",
+    frage: "Warum ist es wichtig, die eigene Rolle und Zuständigkeit innerhalb eines Unternehmens zu kennen?",
+
+    antworten: [
+        {
+            text: "Aufgaben und Verantwortlichkeiten können klarer wahrgenommen werden",
+            richtig: true
+        },
+        {
+            text: "Abstimmungen mit anderen Bereichen werden erleichtert",
+            richtig: true
+        },
+        {
+            text: "Eigene Entscheidungsbefugnisse können besser eingeschätzt werden",
+            richtig: true
+        },
+        {
+            text: "Dadurch darf man automatisch jede Entscheidung im Unternehmen selbst treffen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf01"],
+    themen: ["eigene-rolle"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf01q026",
+    frage: "Ein Mitarbeiter erkennt ein Problem, dessen Behebung außerhalb seiner eigenen Berechtigung liegt. Welche Vorgehensweise ist am sinnvollsten?",
+
+    antworten: [
+        {
+            text: "Das Problem nachvollziehbar weitergeben beziehungsweise eskalieren und die eigene Zuständigkeit beachten",
+            richtig: true
+        },
+        {
+            text: "Ohne Berechtigung beliebige Änderungen am System durchführen",
+            richtig: false
+        },
+        {
+            text: "Das Problem grundsätzlich ignorieren",
+            richtig: false
+        },
+        {
+            text: "Die Zuständigkeit eines Mitarbeiters spielt bei Problemen keine Rolle",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf01"],
+    themen: ["eigene-rolle"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf01q027",
+    frage: "Welche Merkmale unterstützen eine professionelle Kommunikation im Unternehmen?",
+
+    antworten: [
+        {
+            text: "Informationen verständlich formulieren",
+            richtig: true
+        },
+        {
+            text: "Die Sprache an die Zielgruppe anpassen",
+            richtig: true
+        },
+        {
+            text: "Wichtige Informationen eindeutig und vollständig weitergeben",
+            richtig: true
+        },
+        {
+            text: "Unbekannte Fachbegriffe möglichst ohne Erklärung verwenden",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf01"],
+    themen: ["kommunikation"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf01q028",
+    frage: "Ein Administrator erklärt einer nichttechnischen Abteilung eine geplante Systemumstellung. Welche Vorgehensweise ist besonders geeignet?",
+
+    antworten: [
+        {
+            text: "Die Auswirkungen verständlich erklären und unnötigen Fachjargon vermeiden",
+            richtig: true
+        },
+        {
+            text: "Möglichst viele technische Abkürzungen ohne Erklärung verwenden",
+            richtig: false
+        },
+        {
+            text: "Nur technische Details nennen und die Auswirkungen auf die Mitarbeiter verschweigen",
+            richtig: false
+        },
+        {
+            text: "Rückfragen grundsätzlich nicht zulassen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf01"],
+    themen: ["kommunikation"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf01q029",
+    frage: "Welche Maßnahmen können zur kontinuierlichen Verbesserung der Qualität beitragen?",
+
+    antworten: [
+        {
+            text: "Arbeitsabläufe regelmäßig überprüfen",
+            richtig: true
+        },
+        {
+            text: "Fehler und Ursachen analysieren",
+            richtig: true
+        },
+        {
+            text: "Geeignete Verbesserungen umsetzen und anschließend bewerten",
+            richtig: true
+        },
+        {
+            text: "Bekannte Fehler dauerhaft unverändert bestehen lassen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf01"],
+    themen: ["qualitaet"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf01q030",
+    frage: "Nach einer Prozessänderung treten weiterhin regelmäßig dieselben Fehler auf. Was wäre im Sinne einer kontinuierlichen Qualitätsverbesserung sinnvoll?",
+
+    antworten: [
+        {
+            text: "Die Ergebnisse überprüfen, Ursachen erneut analysieren und die Maßnahme gegebenenfalls anpassen",
+            richtig: true
+        },
+        {
+            text: "Die Fehler ignorieren, weil bereits einmal eine Änderung durchgeführt wurde",
+            richtig: false
+        },
+        {
+            text: "Die Qualitätskontrolle vollständig einstellen",
+            richtig: false
+        },
+        {
+            text: "Nur die Dokumentation löschen, damit die Fehler nicht mehr sichtbar sind",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf01"],
+    themen: ["qualitaet"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf01q031",
+    frage: "Ein Unternehmen möchte seine Lieferzeiten verkürzen und gleichzeitig die Kundenzufriedenheit erhöhen. Welche Aussagen sind sinnvoll?",
+
+    antworten: [
+        {
+            text: "Beide Ziele können bei der Planung betrieblicher Maßnahmen berücksichtigt werden",
+            richtig: true
+        },
+        {
+            text: "Verbesserte Abläufe können zur Wertschöpfung des Unternehmens beitragen",
+            richtig: true
+        },
+        {
+            text: "Unternehmensziele müssen grundsätzlich ausschließlich finanzieller Art sein",
+            richtig: false
+        },
+        {
+            text: "Wertschöpfung bedeutet lediglich, möglichst viele Arbeitsplätze einzurichten",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf01"],
+    themen: ["unternehmensziele", "wertschoepfung"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf01q032",
+    frage: "Ein Bestellprozess durchläuft Vertrieb, Lager und Buchhaltung. Warum sind Ablauforganisation und Geschäftsprozesse bei der Betrachtung dieses Vorgangs wichtig?",
+
+    antworten: [
+        {
+            text: "Die Ablauforganisation beschreibt die zeitliche und sachliche Reihenfolge der Tätigkeiten",
+            richtig: true
+        },
+        {
+            text: "Ein Geschäftsprozess kann mehrere Abteilungen miteinander verbinden",
+            richtig: true
+        },
+        {
+            text: "Geschäftsprozesse bestehen grundsätzlich nur aus einer einzelnen Tätigkeit",
+            richtig: false
+        },
+        {
+            text: "Die Ablauforganisation beschreibt ausschließlich die Gebäudeaufteilung des Unternehmens",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf01"],
+    themen: ["ablauforganisation", "geschaeftsprozesse"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf01q033",
+    frage: "Ein neuer Mitarbeiter möchte wissen, wem er organisatorisch unterstellt ist und welche grundlegenden Pflichten er im Arbeitsverhältnis besitzt. Welche Aussagen sind korrekt?",
+
+    antworten: [
+        {
+            text: "Ein Organigramm kann Hierarchien und organisatorische Zuordnungen darstellen",
+            richtig: true
+        },
+        {
+            text: "Zu den Pflichten eines Arbeitnehmers gehört grundsätzlich die vereinbarte Arbeitsleistung",
+            richtig: true
+        },
+        {
+            text: "Ein Organigramm enthält zwingend sämtliche privaten Daten aller Mitarbeiter",
+            richtig: false
+        },
+        {
+            text: "Arbeitgeber und Arbeitnehmer besitzen im Arbeitsverhältnis keinerlei gegenseitige Pflichten",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf01"],
+    themen: ["organigramm", "rechte-pflichten"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
 }
 ];

@@ -563,5 +563,257 @@ const lf12bFragen = [
         ],
         schwierigkeit: "mittel",
         typ: "multiple-choice"
-    }
+    },
+    {
+    id: "lf12bq021",
+    frage: "Ein Kunde beauftragt die Einführung eines neuen zentralen Dateiservers. Welche Vorgehensweise bildet einen sinnvollen Start des Projekts?",
+
+    antworten: [
+        {
+            text: "Auftrag und Anforderungen klären und daraus die weiteren Projektphasen planen",
+            richtig: true
+        },
+        {
+            text: "Sofort einen beliebigen Server installieren und die Anforderungen später erfragen",
+            richtig: false
+        },
+        {
+            text: "Zuerst die Abnahme durchführen und anschließend den Auftrag analysieren",
+            richtig: false
+        },
+        {
+            text: "Die Projektplanung vollständig überspringen, wenn die technische Aufgabe bekannt erscheint",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: ["kundenauftrag", "projektphasen"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+{
+    id: "lf12bq022",
+    frage: "Nach abgeschlossener Analyse und Planung beginnt die technische Umsetzung eines Kundenprojekts. Welche Aussagen sind sinnvoll?",
+
+    antworten: [
+        {
+            text: "Die Umsetzung sollte sich an der zuvor erstellten Planung orientieren",
+            richtig: true
+        },
+        {
+            text: "Notwendige Abweichungen sollten nachvollziehbar dokumentiert werden",
+            richtig: true
+        },
+        {
+            text: "Nach der Umsetzung sollten definierte Tests folgen",
+            richtig: true
+        },
+        {
+            text: "Mit Beginn der Umsetzung sind alle weiteren Projektphasen automatisch abgeschlossen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: ["projektphasen", "projektdurchfuehrung"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf12bq023",
+    frage: "Ein neues Netzwerksystem wurde vollständig eingerichtet. Was sollte geschehen, bevor der Kunde die Lösung endgültig abnimmt?",
+
+    antworten: [
+        {
+            text: "Die umgesetzte Lösung anhand der vereinbarten Anforderungen und Testkriterien überprüfen",
+            richtig: true
+        },
+        {
+            text: "Die Abnahme ohne Funktionsprüfung durchführen",
+            richtig: false
+        },
+        {
+            text: "Alle Projektunterlagen vor der Abnahme löschen",
+            richtig: false
+        },
+        {
+            text: "Die ursprünglich vereinbarten Anforderungen sind bei der Abnahme nicht mehr relevant",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: ["projektdurchfuehrung", "abnahme"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf12bq024",
+    frage: "Bei der Abnahme stellt der Kunde fest, dass eine vereinbarte Funktion noch nicht wie vorgesehen arbeitet. Welche Vorgehensweise ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Die Abweichung beziehungsweise den Mangel nachvollziehbar dokumentieren",
+            richtig: true
+        },
+        {
+            text: "Festhalten, welche Anforderung noch nicht vollständig erfüllt ist",
+            richtig: true
+        },
+        {
+            text: "Das weitere Vorgehen zur Behebung beziehungsweise Nachbesserung abstimmen",
+            richtig: true
+        },
+        {
+            text: "Den Fehler aus der Dokumentation entfernen und das Projekt unabhängig davon als mängelfrei kennzeichnen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: ["abnahme", "projektdokumentation"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf12bq025",
+    frage: "Warum sollte die Projektdokumentation auch nach erfolgreicher technischer Umsetzung vollständig abgeschlossen werden?",
+
+    antworten: [
+        {
+            text: "Entscheidungen, Änderungen und Ergebnisse bleiben für spätere Wartung und Nachvollziehbarkeit erhalten",
+            richtig: true
+        },
+        {
+            text: "Abweichungen zwischen Planung und tatsächlicher Umsetzung können festgehalten werden",
+            richtig: true
+        },
+        {
+            text: "Die Dokumentation unterstützt die spätere Bewertung und Reflexion des Projekts",
+            richtig: true
+        },
+        {
+            text: "Nach erfolgreicher Installation besitzt eine Projektdokumentation grundsätzlich keinen Nutzen mehr",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: ["projektdokumentation", "projektabschluss"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf12bq026",
+    frage: "Ein Kundenprojekt wurde abgeschlossen, das Ziel erreicht und die Lösung übergeben. Welche Schritte sind für einen professionellen Abschluss sinnvoll?",
+
+    antworten: [
+        {
+            text: "Prüfen, ob der ursprüngliche Kundenauftrag und die vereinbarten Ziele erfüllt wurden",
+            richtig: true
+        },
+        {
+            text: "Abweichungen und gewonnene Erfahrungen auswerten",
+            richtig: true
+        },
+        {
+            text: "Verbesserungsmöglichkeiten für zukünftige Projekte festhalten",
+            richtig: true
+        },
+        {
+            text: "Nach der Übergabe sämtliche Informationen über den ursprünglichen Auftrag löschen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: ["projektabschluss", "kundenauftrag"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf12bq027",
+    frage: "Bei einem Kundenprojekt soll eine bestehende Serverlösung ersetzt werden. Warum sind Ist-/Soll-Analyse und Zeitplanung miteinander verknüpft?",
+
+    antworten: [
+        {
+            text: "Der aktuelle und gewünschte Zustand helfen dabei, notwendige Arbeitsschritte und deren Zeitbedarf realistisch zu planen",
+            richtig: true
+        },
+        {
+            text: "Eine Zeitplanung ist erst nach Abschluss des Projekts sinnvoll",
+            richtig: false
+        },
+        {
+            text: "Der Ist-Zustand spielt für die Projektplanung grundsätzlich keine Rolle",
+            richtig: false
+        },
+        {
+            text: "Der Soll-Zustand beschreibt ausschließlich die bereits vorhandene Infrastruktur",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: ["ist-soll-analyse", "zeitplanung"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf12bq028",
+    frage: "Für ein Projekt stehen zwei technische Lösungen zur Auswahl. Lösung A ist günstiger, besitzt aber ein höheres Ausfallrisiko. Lösung B kostet mehr, bietet jedoch höhere Zuverlässigkeit. Welche Aspekte sollten bei der Entscheidung berücksichtigt werden?",
+
+    antworten: [
+        {
+            text: "Mögliche Projektrisiken und deren Auswirkungen",
+            richtig: true
+        },
+        {
+            text: "Anschaffungs- und mögliche Folgekosten",
+            richtig: true
+        },
+        {
+            text: "Nutzen und Wirtschaftlichkeit über die geplante Nutzungsdauer",
+            richtig: true
+        },
+        {
+            text: "Ausschließlich der niedrigste Anschaffungspreis entscheidet automatisch",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: ["risikomanagement", "wirtschaftlichkeit-projekt"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf12bq029",
+    frage: "Eine neue IT-Lösung wurde erfolgreich getestet und vom Kunden abgenommen. Was gehört anschließend zu einer professionellen Übergabe?",
+
+    antworten: [
+        {
+            text: "Erforderliche Dokumentationen und Betriebsinformationen bereitstellen",
+            richtig: true
+        },
+        {
+            text: "Benutzer beziehungsweise Administratoren bei Bedarf einweisen",
+            richtig: true
+        },
+        {
+            text: "Zuständigkeiten und wichtige Hinweise für den späteren Betrieb übergeben",
+            richtig: true
+        },
+        {
+            text: "Nach der Abnahme sämtliche Informationen über die Lösung zurückhalten",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: ["kundenuebergabe"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+}
 ];

@@ -558,5 +558,145 @@ const lf09Fragen = [
         themen: ["netzwerkdokumentation", "netzwerkplanung"],
         schwierigkeit: "mittel",
         typ: "multiple-choice"
-    }
+    },
+    {
+    id: "lf09q021",
+    frage: "Das Monitoring meldet regelmäßig eine sehr hohe Auslastung einer Verbindung zwischen zwei zentralen Switches. Welche Vorgehensweise ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Messwerte und Zeitpunkt dokumentieren, die betroffene Verbindung analysieren und mögliche Engpässe untersuchen",
+            richtig: true
+        },
+        {
+            text: "Die Monitoring-Meldung grundsätzlich deaktivieren",
+            richtig: false
+        },
+        {
+            text: "Die Netzwerkdokumentation löschen, damit keine widersprüchlichen Angaben entstehen",
+            richtig: false
+        },
+        {
+            text: "Ohne weitere Analyse sämtliche Switches ersetzen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf09"],
+    themen: ["netzwerkmonitoring", "netzwerkdokumentation"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf09q022",
+    frage: "Ein Administrator erweitert ein bestehendes Netzwerk um einen neuen Switch und mehrere VLANs. Welche Maßnahmen unterstützen den späteren Betrieb und die Fehlersuche?",
+
+    antworten: [
+        {
+            text: "Neue Geräte, Ports und VLAN-Zuordnungen dokumentieren",
+            richtig: true
+        },
+        {
+            text: "Wichtige Verbindungen und Dienste in das Monitoring aufnehmen",
+            richtig: true
+        },
+        {
+            text: "Änderungen an IP-Adressierung und Netzwerkstruktur nachvollziehbar festhalten",
+            richtig: true
+        },
+        {
+            text: "Die Dokumentation nicht aktualisieren, solange das Netzwerk aktuell funktioniert",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf09"],
+    themen: ["netzwerkmonitoring", "netzwerkdokumentation"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf09q023",
+    frage: "Für ein neues Büro sollen Mitarbeiter-, Server- und Gastnetz logisch getrennt werden. Welche Punkte sollten bereits bei der Netzwerkplanung berücksichtigt werden?",
+
+    antworten: [
+        {
+            text: "Benötigte VLANs und deren Zweck festlegen",
+            richtig: true
+        },
+        {
+            text: "Planen, über welche Verbindungen mehrere VLANs per Trunk transportiert werden müssen",
+            richtig: true
+        },
+        {
+            text: "IP-Adressbereiche und notwendige Kommunikationswege zwischen den Netzen berücksichtigen",
+            richtig: true
+        },
+        {
+            text: "Alle Geräte unabhängig vom Einsatzzweck in dasselbe VLAN aufnehmen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf09"],
+    themen: ["netzwerkplanung", "trunking"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf09q024",
+    frage: "Ein Mitarbeiter soll von unterwegs auf einen internen Server zugreifen dürfen. Welche Kombination ermöglicht einen kontrollierten und geschützten Zugriff?",
+
+    antworten: [
+        {
+            text: "Einen geeigneten VPN-Zugang bereitstellen und den erlaubten Netzwerkverkehr durch Firewallregeln begrenzen",
+            richtig: true
+        },
+        {
+            text: "Den internen Server ohne Zugriffsschutz vollständig aus dem Internet erreichbar machen",
+            richtig: false
+        },
+        {
+            text: "Alle Firewallregeln deaktivieren, sobald ein VPN verwendet wird",
+            richtig: false
+        },
+        {
+            text: "Dem Mitarbeiter ausschließlich eine APIPA-Adresse zuweisen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf09"],
+    themen: ["firewall", "vpn"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf09q025",
+    frage: "Ein Unternehmen richtet ein separates WLAN für Gäste ein. Welche Maßnahmen sind für einen sicheren Betrieb sinnvoll?",
+
+    antworten: [
+        {
+            text: "Das Gästenetz logisch vom internen Unternehmensnetz trennen",
+            richtig: true
+        },
+        {
+            text: "Ein geeignetes aktuelles WLAN-Sicherheitsverfahren einsetzen",
+            richtig: true
+        },
+        {
+            text: "Den Zugriff aus dem Gästenetz auf interne Ressourcen durch geeignete Regeln begrenzen",
+            richtig: true
+        },
+        {
+            text: "Gästen uneingeschränkten Zugriff auf interne Server und Verwaltungsnetze geben",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf09"],
+    themen: ["wlan-sicherheit", "firewall"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+}
 ];

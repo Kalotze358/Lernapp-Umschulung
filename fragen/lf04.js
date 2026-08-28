@@ -558,5 +558,341 @@ const lf04Fragen = [
         themen: ["datenschutz", "schutzziele"],
         schwierigkeit: "mittel",
         typ: "single-choice"
-    }
+    },
+    {
+    id: "lf04q021",
+    frage: "Ein Unternehmen bewertet seinen zentralen Kundendatenbestand. Welche Überlegungen sind für die Schutzbedarfs- und Risikobetrachtung sinnvoll?",
+
+    antworten: [
+        {
+            text: "Welche Auswirkungen ein Verlust oder eine Manipulation der Daten hätte",
+            richtig: true
+        },
+        {
+            text: "Wie wichtig die Daten für Geschäftsprozesse sind",
+            richtig: true
+        },
+        {
+            text: "Welche möglichen Schäden bei einem Sicherheitsvorfall entstehen könnten",
+            richtig: true
+        },
+        {
+            text: "Ausschließlich die Dateigröße der gespeicherten Daten",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf04"],
+    themen: ["schutzobjekte", "risiko"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf04q022",
+    frage: "Ein Serverraum enthält zentrale Systeme und Sicherungsmedien. Welche Bedrohungen sollten bei der Betrachtung dieses Schutzobjekts berücksichtigt werden?",
+
+    antworten: [
+        {
+            text: "Feuer oder Wasserschäden",
+            richtig: true
+        },
+        {
+            text: "Unberechtigter Zutritt",
+            richtig: true
+        },
+        {
+            text: "Stromausfälle oder technische Defekte",
+            richtig: true
+        },
+        {
+            text: "Nur Angriffe aus dem Internet sind relevant",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf04"],
+    themen: ["schutzobjekte", "bedrohungen"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf04q023",
+    frage: "Mitarbeiter erhalten regelmäßig gefälschte E-Mails mit schädlichen Anhängen. Welche Kombination aus Bedrohung und Sicherheitsmaßnahme passt am besten?",
+
+    antworten: [
+        {
+            text: "Phishing beziehungsweise Schadsoftware als Bedrohung und Anwenderschulung sowie technische Schutzmaßnahmen als Gegenmaßnahmen",
+            richtig: true
+        },
+        {
+            text: "Hardwareverschleiß als Bedrohung und Bildschirmreinigung als Gegenmaßnahme",
+            richtig: false
+        },
+        {
+            text: "Stromausfall als Bedrohung und Passwortänderung als einzige Gegenmaßnahme",
+            richtig: false
+        },
+        {
+            text: "Eine Sicherheitsmaßnahme ist nicht notwendig, solange noch kein erfolgreicher Angriff stattgefunden hat",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf04"],
+    themen: ["bedrohungen", "sicherheitsmassnahmen"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf04q024",
+    frage: "Welche Maßnahmen können den physischen und technischen Zugang zu besonders schützenswerten IT-Systemen sinnvoll begrenzen?",
+
+    antworten: [
+        {
+            text: "Serverraum nur für berechtigte Personen zugänglich machen",
+            richtig: true
+        },
+        {
+            text: "Anmeldung am System durch geeignete Authentifizierung absichern",
+            richtig: true
+        },
+        {
+            text: "Berechtigungen auf benötigte Daten und Funktionen beschränken",
+            richtig: true
+        },
+        {
+            text: "Allen Mitarbeitern vorsorglich vollständigen Zugriff geben",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf04"],
+    themen: ["sicherheitsmassnahmen", "zutritt-zugang-zugriff"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf04q025",
+    frage: "Ein Mitarbeiter kann sich an einem Fileserver anmelden, soll aber nur die Dateien seiner eigenen Abteilung lesen können. Welche Kontrollen sind hier besonders relevant?",
+
+    antworten: [
+        {
+            text: "Zugangskontrolle für die Anmeldung und Zugriffskontrolle für die erlaubten Dateien",
+            richtig: true
+        },
+        {
+            text: "Nur die Zutrittskontrolle zum Firmengebäude",
+            richtig: false
+        },
+        {
+            text: "Ausschließlich die IP-Adresse des Arbeitsplatzes",
+            richtig: false
+        },
+        {
+            text: "Nach erfolgreicher Anmeldung sollten grundsätzlich alle Dateien zugänglich sein",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf04"],
+    themen: ["zutritt-zugang-zugriff", "berechtigungen"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf04q026",
+    frage: "In einem Personalverwaltungssystem befinden sich sensible personenbezogene Daten. Welche Vorgehensweise unterstützt sowohl Datenschutz als auch ein sinnvolles Berechtigungskonzept?",
+
+    antworten: [
+        {
+            text: "Nur Benutzer mit dienstlicher Notwendigkeit erhalten die erforderlichen Rechte",
+            richtig: true
+        },
+        {
+            text: "Berechtigungen werden regelmäßig überprüft",
+            richtig: true
+        },
+        {
+            text: "Zugriffe werden nach Aufgaben und Zuständigkeiten begrenzt",
+            richtig: true
+        },
+        {
+            text: "Alle Beschäftigten erhalten aus Gründen der Einfachheit Vollzugriff",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf04"],
+    themen: ["berechtigungen", "datenschutz"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf04q027",
+    frage: "Ein Unternehmen sichert personenbezogene Kundendaten regelmäßig. Welche Punkte sind dabei besonders zu beachten?",
+
+    antworten: [
+        {
+            text: "Auch Sicherungskopien müssen vor unberechtigtem Zugriff geschützt werden",
+            richtig: true
+        },
+        {
+            text: "Die Wiederherstellbarkeit der Daten sollte geprüft werden",
+            richtig: true
+        },
+        {
+            text: "Aufbewahrung und Zugriff auf Sicherungen sollten geregelt sein",
+            richtig: true
+        },
+        {
+            text: "Datenschutz spielt bei Backups grundsätzlich keine Rolle",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf04"],
+    themen: ["datenschutz", "datensicherung"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf04q028",
+    frage: "Ein Arbeitsplatz wird durch Ransomware verschlüsselt. Warum kann eine geeignete Datensicherungsstrategie besonders wichtig sein?",
+
+    antworten: [
+        {
+            text: "Nicht betroffene und funktionsfähige Sicherungen können eine Wiederherstellung der Daten ermöglichen",
+            richtig: true
+        },
+        {
+            text: "Ein Backup verhindert automatisch jede Infektion mit Schadsoftware",
+            richtig: false
+        },
+        {
+            text: "Bei vorhandenen Backups werden Sicherheitsupdates grundsätzlich überflüssig",
+            richtig: false
+        },
+        {
+            text: "Sicherungskopien sollten möglichst dauerhaft direkt durch jedes infizierte System beschreibbar sein",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf04"],
+    themen: ["datensicherung", "malware"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf04q029",
+    frage: "Auf mehreren Arbeitsplatzrechnern läuft veraltete Software mit einer bekannten Schwachstelle, über die Schadsoftware eingeschleust werden könnte. Welche Bewertung ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Die vorhandene Schwachstelle erhöht zusammen mit der Bedrohung durch Schadsoftware das Sicherheitsrisiko",
+            richtig: true
+        },
+        {
+            text: "Ein Risiko besteht erst, nachdem definitiv ein Schaden eingetreten ist",
+            richtig: false
+        },
+        {
+            text: "Bekannte Schwachstellen sind irrelevant, wenn die Computer noch funktionieren",
+            richtig: false
+        },
+        {
+            text: "Schadsoftware kann grundsätzlich keine bekannten Softwarelücken ausnutzen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf04"],
+    themen: ["malware", "risiko"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf04q030",
+    frage: "Ein Unternehmen entdeckt auf einem öffentlich erreichbaren Server eine Schwachstelle, durch die vertrauliche Kundendaten offengelegt werden könnten. Welche Bewertung ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Der mögliche Schaden für die Vertraulichkeit der Kundendaten muss bei der Schutzbedarfs- und Risikobewertung berücksichtigt werden",
+            richtig: true
+        },
+        {
+            text: "Die Schwachstelle ist bedeutungslos, solange sie noch nicht ausgenutzt wurde",
+            richtig: false
+        },
+        {
+            text: "Der Schutzbedarf hängt ausschließlich vom Anschaffungspreis des Servers ab",
+            richtig: false
+        },
+        {
+            text: "Öffentlich erreichbare Systeme benötigen grundsätzlich keinen besonderen Schutz",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf04"],
+    themen: ["schutzbedarf", "schwachstellen"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf04q031",
+    frage: "Ein Mitarbeiter erhält eine täuschend echt wirkende E-Mail und wird aufgefordert, sich über einen enthaltenen Link mit seinem Firmenkonto anzumelden. Welche Maßnahmen reduzieren das Risiko eines erfolgreichen Angriffs?",
+
+    antworten: [
+        {
+            text: "Verdächtige Links und Absender kritisch prüfen",
+            richtig: true
+        },
+        {
+            text: "Mehrfaktor-Authentifizierung für das Benutzerkonto einsetzen",
+            richtig: true
+        },
+        {
+            text: "Mitarbeiter für Phishing und Social Engineering sensibilisieren",
+            richtig: true
+        },
+        {
+            text: "Das Firmenpasswort vorsorglich direkt über den Link in der E-Mail eingeben",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf04"],
+    themen: ["passwoerter-mfa", "social-engineering"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf04q032",
+    frage: "Für eine weit verbreitete Anwendung wird eine kritische Sicherheitslücke bekannt und der Hersteller stellt einen Patch bereit. Welche Vorgehensweise ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Betroffene Systeme identifizieren, den Patch kontrolliert prüfen und entsprechend der Kritikalität zeitnah verteilen",
+            richtig: true
+        },
+        {
+            text: "Den Patch grundsätzlich ignorieren, solange die Anwendung noch startet",
+            richtig: false
+        },
+        {
+            text: "Sicherheitspatches erst installieren, wenn ein erfolgreicher Angriff stattgefunden hat",
+            richtig: false
+        },
+        {
+            text: "Alle Schutzmaßnahmen deaktivieren, damit das Update schneller installiert werden kann",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf04"],
+    themen: ["updates-patches", "schwachstellen"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+}
 ];

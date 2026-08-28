@@ -558,5 +558,285 @@ const lf02Fragen = [
         themen: ["dokumentation-uebergabe"],
         schwierigkeit: "mittel",
         typ: "multiple-choice"
-    }
+    },
+    {
+    id: "lf02q021",
+    frage: "Ein vorhandener PC soll auf ein neues Betriebssystem umgestellt werden. Welche Punkte sollten vor der Installation geprüft werden?",
+
+    antworten: [
+        {
+            text: "Ob die Hardware die Systemanforderungen erfüllt",
+            richtig: true
+        },
+        {
+            text: "Ob benötigte Treiber für die Hardware verfügbar sind",
+            richtig: true
+        },
+        {
+            text: "Ob die vorhandenen Komponenten mit dem Betriebssystem kompatibel sind",
+            richtig: true
+        },
+        {
+            text: "Nur die Farbe des Computergehäuses",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: ["hardwarekomponenten", "betriebssysteme"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf02q022",
+    frage: "Für einen neuen Bildschirmarbeitsplatz soll geeignete Hardware ausgewählt werden. Welche Kombination berücksichtigt sowohl technische als auch ergonomische Anforderungen sinnvoll?",
+
+    antworten: [
+        {
+            text: "Leistungsfähige, bedarfsgerechte Hardware sowie geeigneter Monitor und passende Eingabegeräte",
+            richtig: true
+        },
+        {
+            text: "Ausschließlich die leistungsstärkste CPU unabhängig vom Einsatzzweck",
+            richtig: false
+        },
+        {
+            text: "Möglichst kleiner Monitor und ungeeignete Eingabegeräte, wenn sie günstiger sind",
+            richtig: false
+        },
+        {
+            text: "Die Ergonomie spielt bei der Hardwareauswahl grundsätzlich keine Rolle",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: ["hardwarekomponenten", "ergonomie"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf02q023",
+    frage: "Eine benötigte Fachanwendung soll auf mehreren Arbeitsplätzen eingesetzt werden. Was sollte vor der Softwareauswahl geprüft werden?",
+
+    antworten: [
+        {
+            text: "Ob die Anwendung mit dem eingesetzten Betriebssystem kompatibel ist",
+            richtig: true
+        },
+        {
+            text: "Ob die Systemanforderungen erfüllt werden",
+            richtig: true
+        },
+        {
+            text: "Ob die benötigten Funktionen bereitgestellt werden",
+            richtig: true
+        },
+        {
+            text: "Ob das Programmsymbol farblich zum Desktop-Hintergrund passt",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: ["betriebssysteme", "softwareauswahl"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf02q024",
+    frage: "Zwei Programme erfüllen technisch dieselben Anforderungen. Eines darf laut Lizenz nur auf einem Gerät genutzt werden, das andere besitzt eine passende Mehrplatzlizenz. Was sollte bei der Entscheidung berücksichtigt werden?",
+
+    antworten: [
+        {
+            text: "Neben der Funktionalität müssen auch die Lizenzbedingungen zum geplanten Einsatz passen",
+            richtig: true
+        },
+        {
+            text: "Lizenzbedingungen können ignoriert werden, wenn beide Programme technisch funktionieren",
+            richtig: false
+        },
+        {
+            text: "Es muss grundsätzlich immer das Programm mit dem höchsten Preis gewählt werden",
+            richtig: false
+        },
+        {
+            text: "Softwarelizenzen sind nur für Server relevant",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: ["softwareauswahl", "softwarelizenzen"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf02q025",
+    frage: "Warum kann es sinnvoll sein, bei der Übergabe eines Arbeitsplatzes auch Informationen zu installierter Software und deren Lizenzierung zu dokumentieren?",
+
+    antworten: [
+        {
+            text: "Damit nachvollziehbar bleibt, welche Software installiert und wie sie lizenziert ist",
+            richtig: true
+        },
+        {
+            text: "Damit spätere Wartung und Lizenzprüfung erleichtert werden",
+            richtig: true
+        },
+        {
+            text: "Damit Änderungen am Arbeitsplatz nachvollziehbarer bleiben",
+            richtig: true
+        },
+        {
+            text: "Damit private Benutzerpasswörter im Klartext gespeichert werden können",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: ["softwarelizenzen", "dokumentation-uebergabe"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf02q026",
+    frage: "Ein neuer Arbeitsplatz wurde technisch eingerichtet und ergonomisch an den Benutzer angepasst. Was gehört zu einer professionellen Übergabe?",
+
+    antworten: [
+        {
+            text: "Die wichtigsten Einstellungen und Besonderheiten dokumentieren",
+            richtig: true
+        },
+        {
+            text: "Den Benutzer bei Bedarf in die Nutzung und ergonomische Einstellung des Arbeitsplatzes einweisen",
+            richtig: true
+        },
+        {
+            text: "Prüfen, ob Arbeitsplatz und Peripherie wie vorgesehen funktionieren",
+            richtig: true
+        },
+        {
+            text: "Nach der Einrichtung sämtliche Informationen zur Konfiguration löschen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: ["ergonomie", "dokumentation-uebergabe"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf02q027",
+    frage: "Ein neuer Arbeitsplatz wird für rechenintensive Anwendungen geplant. Welche Komponenten sollten besonders auf die Leistungsanforderungen abgestimmt werden?",
+
+    antworten: [
+        {
+            text: "Prozessor und Arbeitsspeicher",
+            richtig: true
+        },
+        {
+            text: "Nur die Gehäusefarbe",
+            richtig: false
+        },
+        {
+            text: "Ausschließlich Maus und Tastatur",
+            richtig: false
+        },
+        {
+            text: "Nur das Netzwerkkabel",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: ["prozessor", "arbeitsspeicher"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+{
+    id: "lf02q028",
+    frage: "Ein Kunde benötigt einen Arbeitsplatz mit viel dauerhaftem Speicher und mehreren externen Geräten. Welche Punkte müssen bei der Auswahl berücksichtigt werden?",
+
+    antworten: [
+        {
+            text: "Ausreichende Kapazität und geeignete Massenspeichertechnik",
+            richtig: true
+        },
+        {
+            text: "Genügend passende Schnittstellen für die benötigten Geräte",
+            richtig: true
+        },
+        {
+            text: "Art und Geschwindigkeit der benötigten Anschlüsse",
+            richtig: true
+        },
+        {
+            text: "Die Anzahl der Schnittstellen spielt bei der Planung grundsätzlich keine Rolle",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: ["massenspeicher", "schnittstellen"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf02q029",
+    frage: "Vor der Beschaffung eines neuen Arbeitsplatzes werden die Anforderungen des Kunden aufgenommen. Warum sollte dabei auch die benötigte Peripherie berücksichtigt werden?",
+
+    antworten: [
+        {
+            text: "Weil sich aus dem Einsatzzweck beispielsweise Anforderungen an Monitor, Eingabegeräte, Headset oder Drucker ergeben können",
+            richtig: true
+        },
+        {
+            text: "Weil jeder Kunde unabhängig vom Einsatzzweck dieselbe Peripherie benötigt",
+            richtig: false
+        },
+        {
+            text: "Weil Peripheriegeräte grundsätzlich keine Schnittstellen benötigen",
+            richtig: false
+        },
+        {
+            text: "Weil Kundenanforderungen erst nach der Beschaffung berücksichtigt werden sollten",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: ["kundenanforderungen", "peripherie"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf02q030",
+    frage: "Ein Unternehmen richtet 50 neue Arbeitsplätze ein. Welche Maßnahmen können sowohl bei der Bereitstellung als auch beim späteren Energieverbrauch sinnvoll sein?",
+
+    antworten: [
+        {
+            text: "Installation und Konfiguration nach einem einheitlichen Ablauf durchführen",
+            richtig: true
+        },
+        {
+            text: "Energiesparfunktionen passend zum Einsatzzweck konfigurieren",
+            richtig: true
+        },
+        {
+            text: "Bei der Hardwareauswahl den Energieverbrauch berücksichtigen",
+            richtig: true
+        },
+        {
+            text: "Alle Geräte dauerhaft mit maximaler Leistungsaufnahme betreiben, auch wenn sie nicht genutzt werden",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: ["energieeffizienz", "installation-konfiguration"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+}
 ];

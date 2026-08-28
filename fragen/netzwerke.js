@@ -1410,5 +1410,369 @@ const netzwerkFragen = [
     themen: ["wlan-sicherheit", "wlan"],
     schwierigkeit: "mittel",
     typ: "single-choice"
+},
+{
+    id: "netz053",
+    frage: "Ein Unternehmen plant ein neues LAN für 20 Arbeitsplätze. Warum ist eine strukturierte Sterntopologie mit zentralen Switches gegenüber einer direkten Verkettung der Geräte sinnvoll?",
+
+    antworten: [
+        {
+            text: "Einzelne Verbindungen können getrennt verwaltet werden und der Ausfall eines Endgeräts unterbricht nicht automatisch alle anderen Verbindungen",
+            richtig: true
+        },
+        {
+            text: "Alle Geräte benötigen dadurch dieselbe IP-Adresse",
+            richtig: false
+        },
+        {
+            text: "Ein Switch ersetzt dadurch automatisch den Router zum Internet",
+            richtig: false
+        },
+        {
+            text: "Eine Sterntopologie benötigt grundsätzlich keine Netzwerkkabel",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf03"],
+    themen: ["netzwerkgrundlagen", "netzwerktopologien"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "netz054",
+    frage: "Zwei PCs befinden sich im selben Ethernet-LAN und sollen direkt miteinander kommunizieren. Welche Informationen beziehungsweise Mechanismen sind dabei relevant?",
+
+    antworten: [
+        {
+            text: "IP-Adressen zur logischen Adressierung",
+            richtig: true
+        },
+        {
+            text: "MAC-Adressen für die Übertragung innerhalb des lokalen Ethernet-Netzes",
+            richtig: true
+        },
+        {
+            text: "Ein Switch kann Ethernet-Frames zwischen den Geräten weiterleiten",
+            richtig: true
+        },
+        {
+            text: "Für jede Kommunikation im selben LAN ist zwingend ein Internetzugang erforderlich",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf03"],
+    themen: ["netzwerkgrundlagen", "ethernet"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "netz055",
+    frage: "Mehrere Büroarbeitsplätze werden über einen zentralen Switch miteinander verbunden. Welche Aussagen zur physischen Netzwerkstruktur sind korrekt?",
+
+    antworten: [
+        {
+            text: "Die Struktur entspricht grundsätzlich einer Sterntopologie",
+            richtig: true
+        },
+        {
+            text: "Kupferleitungen können für die Verbindung der Arbeitsplätze zum Switch eingesetzt werden",
+            richtig: true
+        },
+        {
+            text: "Glasfaser kann beispielsweise für längere oder leistungsfähige Verbindungen zwischen Netzwerkbereichen eingesetzt werden",
+            richtig: true
+        },
+        {
+            text: "In einer Sterntopologie müssen alle Endgeräte direkt miteinander verkabelt werden",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf03"],
+    themen: ["netzwerktopologien", "uebertragungsmedien"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "netz056",
+    frage: "Ein Ethernet-Switch wertet MAC-Adressen aus, um Frames im lokalen Netzwerk weiterzuleiten. Welcher OSI-Schicht wird diese Funktion hauptsächlich zugeordnet?",
+
+    antworten: [
+        {
+            text: "Schicht 2 – Sicherungsschicht",
+            richtig: true
+        },
+        {
+            text: "Schicht 1 – Bitübertragungsschicht",
+            richtig: false
+        },
+        {
+            text: "Schicht 4 – Transportschicht",
+            richtig: false
+        },
+        {
+            text: "Schicht 7 – Anwendungsschicht",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf03"],
+    themen: ["osi-modell", "ethernet"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "netz057",
+    frage: "Ein Ethernet-Frame wird als Broadcast an alle Geräte innerhalb derselben Broadcast-Domain gesendet. Welche Aussagen sind korrekt?",
+
+    antworten: [
+        {
+            text: "Broadcast-Kommunikation richtet sich an alle Teilnehmer der betreffenden Broadcast-Domain",
+            richtig: true
+        },
+        {
+            text: "Ethernet arbeitet bei der Frameübertragung auf der Sicherungsschicht des OSI-Modells",
+            richtig: true
+        },
+        {
+            text: "Router leiten Layer-2-Broadcasts normalerweise nicht einfach in andere Netze weiter",
+            richtig: true
+        },
+        {
+            text: "Broadcast bedeutet eine Kommunikation ausschließlich zwischen genau zwei Geräten",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf03"],
+    themen: ["osi-modell", "unicast-broadcast-multicast"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "netz058",
+    frage: "Zwischen zwei Gebäudeteilen soll eine längere Netzwerkverbindung mit hoher Datenrate und möglichst geringer Empfindlichkeit gegenüber elektromagnetischen Störungen aufgebaut werden. Welche Lösung ist besonders geeignet?",
+
+    antworten: [
+        {
+            text: "Eine geeignete Glasfaserverbindung",
+            richtig: true
+        },
+        {
+            text: "Ein beliebiges ungeschirmtes Kupferkabel unabhängig von Entfernung und Umgebung",
+            richtig: false
+        },
+        {
+            text: "Eine analoge Telefonleitung",
+            richtig: false
+        },
+        {
+            text: "Die Übertragungsart muss nicht dokumentiert werden, weil sie für spätere Wartung bedeutungslos ist",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf03"],
+    themen: ["uebertragungsmedien", "netzwerkdokumentation"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "netz059",
+    frage: "Ein Administrator dokumentiert, welche Netzwerksegmente Broadcast- und Multicast-Verkehr verwenden. Warum ist diese Information für den späteren Betrieb sinnvoll?",
+
+    antworten: [
+        {
+            text: "Kommunikationswege und mögliche Auswirkungen von Netzwerkverkehr lassen sich besser nachvollziehen",
+            richtig: true
+        },
+        {
+            text: "Fehlersuche und spätere Änderungen werden erleichtert",
+            richtig: true
+        },
+        {
+            text: "Die Dokumentation kann bei der Analyse unerwarteten Netzwerkverkehrs helfen",
+            richtig: true
+        },
+        {
+            text: "Eine Netzwerkdokumentation macht technische Kenntnisse überflüssig",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf03"],
+    themen: ["netzwerkdokumentation", "unicast-broadcast-multicast"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "netz060",
+    frage: "Ein Client besitzt die Adresse 192.168.20.130/26. Welches Standardgateway wäre grundsätzlich möglich, wenn es sich im selben Subnetz befinden soll?",
+
+    antworten: [
+        {
+            text: "192.168.20.129",
+            richtig: true
+        },
+        {
+            text: "192.168.20.65",
+            richtig: false
+        },
+        {
+            text: "192.168.20.191",
+            richtig: false
+        },
+        {
+            text: "192.168.20.192",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf03"],
+    themen: ["subnetting", "standardgateway"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "netz061",
+    frage: "Ein Rechner erreicht einen Webserver über dessen IP-Adresse, aber nicht über seinen Namen. Welche Schritte sind für die Fehlersuche sinnvoll?",
+
+    antworten: [
+        {
+            text: "Die konfigurierte DNS-Serveradresse überprüfen",
+            richtig: true
+        },
+        {
+            text: "Mit geeigneten Netzwerkbefehlen die Namensauflösung testen",
+            richtig: true
+        },
+        {
+            text: "Prüfen, ob der DNS-Dienst erreichbar ist",
+            richtig: true
+        },
+        {
+            text: "Sofort die Netzwerkkarte austauschen, ohne weitere Tests durchzuführen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf03"],
+    themen: ["dns", "netzwerkbefehle"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "netz062",
+    frage: "Ein Windows-PC erhält die Adresse 169.254.45.12 und kann keine Server im Unternehmensnetz erreichen. Welche Schlussfolgerung und Vorgehensweise sind sinnvoll?",
+
+    antworten: [
+        {
+            text: "Die APIPA-Adresse deutet darauf hin, dass wahrscheinlich keine reguläre DHCP-Konfiguration bezogen wurde",
+            richtig: true
+        },
+        {
+            text: "Die Verbindung zum Netzwerk und die Erreichbarkeit des DHCP-Dienstes sollten geprüft werden",
+            richtig: true
+        },
+        {
+            text: "Die Fehlersuche sollte die aktuelle IP-Konfiguration einbeziehen",
+            richtig: true
+        },
+        {
+            text: "Eine Adresse aus 169.254.0.0/16 bestätigt, dass DHCP erfolgreich gearbeitet hat",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf03"],
+    themen: ["apipa", "fehlersuche"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "netz063",
+    frage: "Ein PC möchte innerhalb seines lokalen IPv4-Netzes ein Paket an ein anderes Gerät senden. Die Ziel-IP ist bekannt, die MAC-Adresse jedoch nicht. Was geschieht typischerweise?",
+
+    antworten: [
+        {
+            text: "ARP wird verwendet, um die zur IPv4-Adresse gehörende MAC-Adresse zu ermitteln",
+            richtig: true
+        },
+        {
+            text: "NAT übersetzt die Ziel-IP automatisch in eine MAC-Adresse",
+            richtig: false
+        },
+        {
+            text: "DNS ermittelt grundsätzlich die MAC-Adresse des Zielsystems",
+            richtig: false
+        },
+        {
+            text: "Ohne öffentliche IPv4-Adresse ist lokale Kommunikation unmöglich",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf03"],
+    themen: ["arp", "nat"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+{
+    id: "netz064",
+    frage: "Ein Administrator prüft die Kommunikation zwischen verschiedenen VLANs. Welche Aussagen sind korrekt?",
+
+    antworten: [
+        {
+            text: "Geräte in unterschiedlichen VLANs benötigen für die Kommunikation normalerweise Routing",
+            richtig: true
+        },
+        {
+            text: "ICMP kann beispielsweise mit ping zur Prüfung der Erreichbarkeit verwendet werden",
+            richtig: true
+        },
+        {
+            text: "Eine fehlgeschlagene ICMP-Antwort beweist allein noch nicht eindeutig, dass das Zielsystem ausgeschaltet ist",
+            richtig: true
+        },
+        {
+            text: "VLANs sorgen automatisch dafür, dass alle Geräte ohne Routing miteinander kommunizieren können",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf03"],
+    themen: ["vlan", "icmp"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "netz065",
+    frage: "Ein Unternehmen erweitert sein kabelgebundenes LAN um WLAN-Access-Points. Welche Maßnahmen unterstützen einen sicheren und funktionierenden Betrieb?",
+
+    antworten: [
+        {
+            text: "Geeignete WLAN-Sicherheitsverfahren wie WPA2 oder WPA3 einsetzen",
+            richtig: true
+        },
+        {
+            text: "Switch-Ports und Netzwerkzuordnungen passend zur geplanten Infrastruktur konfigurieren",
+            richtig: true
+        },
+        {
+            text: "Die Einbindung der Access-Points in die vorhandene Switching-Infrastruktur berücksichtigen",
+            richtig: true
+        },
+        {
+            text: "Für ein sicheres WLAN grundsätzlich sämtliche Authentifizierung deaktivieren",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf03"],
+    themen: ["switching", "wlan-sicherheit"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
 }
 ];

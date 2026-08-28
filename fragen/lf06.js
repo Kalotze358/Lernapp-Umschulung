@@ -558,5 +558,257 @@ const lf06Fragen = [
         themen: ["support-dokumentation", "fehlersuche-support", "anwenderkommunikation"],
         schwierigkeit: "mittel",
         typ: "multiple-choice"
-    }
+    },
+    {
+    id: "lf06q021",
+    frage: "Ein Mitarbeiter beantragt die Installation einer bereits freigegebenen Software. Laut SLA gelten für solche Anfragen andere Bearbeitungszeiten als für Störungen. Welche Aussagen sind korrekt?",
+
+    antworten: [
+        {
+            text: "Die Installation kann als Serviceanfrage behandelt werden",
+            richtig: true
+        },
+        {
+            text: "Die im SLA vereinbarten Bearbeitungszeiten sollten berücksichtigt werden",
+            richtig: true
+        },
+        {
+            text: "Serviceanfragen und Störungen können unterschiedlich priorisiert und behandelt werden",
+            richtig: true
+        },
+        {
+            text: "Jede Serviceanfrage ist automatisch ein kritischer Incident",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: ["serviceanfragen", "sla"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf06q022",
+    frage: "Ein Benutzer meldet eine Störung, deren vereinbarte Reaktionszeit laut SLA bald überschritten wird. Was sollte der First-Level-Support tun?",
+
+    antworten: [
+        {
+            text: "Den Fall entsprechend der Vorgaben priorisieren und bei Bedarf rechtzeitig eskalieren",
+            richtig: true
+        },
+        {
+            text: "Das Ticket schließen, damit die SLA-Zeit nicht überschritten wird",
+            richtig: false
+        },
+        {
+            text: "Die Zeitvorgaben ignorieren, solange der Benutzer nicht erneut anruft",
+            richtig: false
+        },
+        {
+            text: "Sämtliche anderen Tickets unabhängig von deren Priorität löschen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: ["sla", "first-level-support"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf06q023",
+    frage: "Der First-Level-Support hat einen Fehler aufgenommen, bekannte Lösungsschritte durchgeführt und das Problem ausreichend dokumentiert, kann es aber nicht beheben. Wie sollte sinnvoll weiter vorgegangen werden?",
+
+    antworten: [
+        {
+            text: "Das Ticket mit den bereits gewonnenen Informationen an den zuständigen Second-Level-Support weitergeben",
+            richtig: true
+        },
+        {
+            text: "Alle bisherigen Diagnoseinformationen vor der Weitergabe löschen",
+            richtig: false
+        },
+        {
+            text: "Dem Benutzer mitteilen, dass das Problem nicht mehr bearbeitet wird",
+            richtig: false
+        },
+        {
+            text: "Ohne Fachkenntnis beliebige tiefgreifende Änderungen am System durchführen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: ["first-level-support", "second-level-support"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf06q024",
+    frage: "Der Second-Level-Support muss eine komplexe Fehlkonfiguration auf dem Rechner eines entfernten Mitarbeiters untersuchen. Welche Vorgehensweisen beim Remote-Support sind sinnvoll?",
+
+    antworten: [
+        {
+            text: "Vor dem Fernzugriff die notwendige Autorisierung beziehungsweise Zustimmung sicherstellen",
+            richtig: true
+        },
+        {
+            text: "Nur die für die Fehlerbehebung erforderlichen Aktionen durchführen",
+            richtig: true
+        },
+        {
+            text: "Durchgeführte Änderungen nachvollziehbar dokumentieren",
+            richtig: true
+        },
+        {
+            text: "Den Rechner jederzeit ohne Wissen des Benutzers für beliebige Zwecke fernsteuern",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: ["second-level-support", "remote-support"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf06q025",
+    frage: "Ein Benutzer benötigt Unterstützung bei einer Anwendung und erlaubt einen Remote-Zugriff auf seinen Arbeitsplatz. Welche Aussagen treffen auf diesen Supportfall zu?",
+
+    antworten: [
+        {
+            text: "Das Anliegen sollte als Support- beziehungsweise Servicefall nachvollziehbar erfasst werden",
+            richtig: true
+        },
+        {
+            text: "Beim Fernzugriff müssen Datenschutz- und Sicherheitsvorgaben beachtet werden",
+            richtig: true
+        },
+        {
+            text: "Nur für den Support erforderliche Informationen und Aktionen sollten berücksichtigt werden",
+            richtig: true
+        },
+        {
+            text: "Ein Remote-Zugriff erlaubt dem Support automatisch uneingeschränkten Zugriff auf sämtliche privaten Daten des Benutzers",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: ["remote-support", "serviceanfragen"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf06q026",
+    frage: "Ein Benutzer meldet eine wiederkehrende Fehlermeldung an seinem Arbeitsplatz. Welche Informationen sollten im Ticketsystem für die weitere Bearbeitung erfasst werden?",
+
+    antworten: [
+        {
+            text: "Betroffener Benutzer beziehungsweise Arbeitsplatz",
+            richtig: true
+        },
+        {
+            text: "Genaue Fehlermeldung und Zeitpunkt des Auftretens",
+            richtig: true
+        },
+        {
+            text: "Bereits durchgeführte Maßnahmen",
+            richtig: true
+        },
+        {
+            text: "Private Informationen ohne Bezug zum Supportfall",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: ["ticketsystem", "ticketaufnahme"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf06q027",
+    frage: "Ein unternehmenskritischer Dienst fällt aus und die vereinbarte Lösungszeit droht überschritten zu werden. Welche Vorgehensweise ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Das Ticket aufgrund von Auswirkung und Dringlichkeit hoch priorisieren und bei Bedarf rechtzeitig eskalieren",
+            richtig: true
+        },
+        {
+            text: "Das Ticket niedriger priorisieren, weil bereits daran gearbeitet wird",
+            richtig: false
+        },
+        {
+            text: "Die SLA-Zeit ignorieren und das Ticket erst am nächsten Tag bearbeiten",
+            richtig: false
+        },
+        {
+            text: "Das Ticket schließen, bevor die vereinbarte Zeit überschritten wird",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: ["priorisierung", "eskalation"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf06q028",
+    frage: "Ein bekanntes Problem wurde erfolgreich gelöst und die Lösung könnte zukünftig auch bei anderen Supportfällen helfen. Welche Maßnahmen sind sinnvoll?",
+
+    antworten: [
+        {
+            text: "Die Lösung nachvollziehbar im Ticket dokumentieren",
+            richtig: true
+        },
+        {
+            text: "Geeignete Informationen zusätzlich in einer Wissensdatenbank festhalten",
+            richtig: true
+        },
+        {
+            text: "Vor dem Ticketabschluss prüfen, ob das Problem tatsächlich behoben ist",
+            richtig: true
+        },
+        {
+            text: "Nach erfolgreicher Lösung sämtliche Diagnoseinformationen löschen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: ["wissensdatenbank", "abschluss-ticket"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf06q029",
+    frage: "Mehrere Mitarbeiter melden unabhängig voneinander denselben Ausfall einer Anwendung. Nach der Wiederherstellung tritt die Störung einige Tage später erneut auf. Welche Betrachtung ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Die einzelnen Ausfälle können als Incidents betrachtet werden, während zusätzlich die zugrunde liegende Ursache als Problem untersucht wird",
+            richtig: true
+        },
+        {
+            text: "Jeder Incident muss vollständig unabhängig betrachtet werden und darf niemals mit anderen Fällen in Verbindung gebracht werden",
+            richtig: false
+        },
+        {
+            text: "Nach der ersten Wiederherstellung darf die Ursache nicht weiter untersucht werden",
+            richtig: false
+        },
+        {
+            text: "Ein wiederkehrender Incident beweist, dass kein Problem vorhanden ist",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: ["incident-problem"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+}
 ];

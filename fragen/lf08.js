@@ -558,5 +558,229 @@ const lf08Fragen = [
         themen: ["sicherheit-datenaustausch"],
         schwierigkeit: "mittel",
         typ: "multiple-choice"
-    }
+    },
+    {
+    id: "lf08q021",
+    frage: "Ein System exportiert einfache tabellarische Kundendaten für den Import in eine Datenbank. Welche Überlegungen sind bei der Wahl des Datenformats und beim anschließenden Datenbankzugriff sinnvoll?",
+
+    antworten: [
+        {
+            text: "CSV kann für einfache tabellarische Daten geeignet sein",
+            richtig: true
+        },
+        {
+            text: "Die Anwendung sollte für den Datenbankzugriff nur die tatsächlich benötigten Berechtigungen besitzen",
+            richtig: true
+        },
+        {
+            text: "Vor dem Import sollten Struktur und Datentypen berücksichtigt werden",
+            richtig: true
+        },
+        {
+            text: "Das verwendete Datenformat bestimmt automatisch, dass uneingeschränkte Administratorrechte benötigt werden",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf08"],
+    themen: ["datenformate-vergleich", "datenbankzugriff"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf08q022",
+    frage: "Eine Anwendung kann eine Datenbank während eines automatischen Imports plötzlich nicht mehr erreichen. Welche Vorgehensweise ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Den Fehler erkennen und protokollieren, den Import kontrolliert abbrechen beziehungsweise behandeln und die Datenbankverbindung prüfen",
+            richtig: true
+        },
+        {
+            text: "Alle vorhandenen Daten vorsorglich löschen",
+            richtig: false
+        },
+        {
+            text: "Den Fehler ignorieren und unabhängig vom Ergebnis einen erfolgreichen Import melden",
+            richtig: false
+        },
+        {
+            text: "Der Anwendung dauerhaft uneingeschränkte Administratorrechte geben, ohne die Ursache zu untersuchen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf08"],
+    themen: ["datenbankzugriff", "fehlerbehandlung-daten"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf08q023",
+    frage: "Ein Fremdsystem liefert verschachtelte Daten als JSON. Einzelne Datensätze enthalten jedoch unerwartete oder fehlende Felder. Welche Maßnahmen sind sinnvoll?",
+
+    antworten: [
+        {
+            text: "Prüfen, ob JSON für die benötigte komplexere Datenstruktur geeignet ist",
+            richtig: true
+        },
+        {
+            text: "Eingehende Daten vor der Weiterverarbeitung validieren",
+            richtig: true
+        },
+        {
+            text: "Fehlerhafte Datensätze kontrolliert behandeln und den Fehler nachvollziehbar protokollieren",
+            richtig: true
+        },
+        {
+            text: "Alle Daten ungeprüft weiterverarbeiten, weil JSON grundsätzlich fehlerfrei ist",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf08"],
+    themen: ["fehlerbehandlung-daten", "datenformate-vergleich"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf08q024",
+    frage: "Zwei unterschiedliche Anwendungen sollen automatisch Daten miteinander austauschen. Welche Punkte müssen dabei berücksichtigt werden?",
+
+    antworten: [
+        {
+            text: "Es muss eine geeignete Schnittstelle zwischen den Systemen vorhanden sein",
+            richtig: true
+        },
+        {
+            text: "Beide Systeme müssen sich über Struktur und Format der übertragenen Daten verständigen können",
+            richtig: true
+        },
+        {
+            text: "Der Übertragungsweg und mögliche Fehler sollten berücksichtigt werden",
+            richtig: true
+        },
+        {
+            text: "Beide Anwendungen müssen zwingend vom selben Hersteller stammen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf08"],
+    themen: ["datenaustausch", "schnittstellen"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf08q025",
+    frage: "Eine Anwendung soll Kundendaten über eine REST-API eines anderen Systems abrufen. Welche Aussagen sind korrekt?",
+
+    antworten: [
+        {
+            text: "Die API stellt eine definierte Schnittstelle für den Zugriff auf Funktionen oder Daten bereit",
+            richtig: true
+        },
+        {
+            text: "Bei einer REST-API kann eine Ressource beispielsweise über eine URL angesprochen werden",
+            richtig: true
+        },
+        {
+            text: "Für das reine Abrufen einer Ressource wird typischerweise GET verwendet",
+            richtig: true
+        },
+        {
+            text: "Eine API erlaubt grundsätzlich uneingeschränkten Zugriff auf alle Daten des Zielsystems",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf08"],
+    themen: ["api", "rest-api"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf08q026",
+    frage: "Eine REST-API soll einen vorhandenen Datensatz abrufen, einen neuen Datensatz anlegen und einen anderen löschen. Welche HTTP-Methoden passen typischerweise dazu?",
+
+    antworten: [
+        {
+            text: "GET zum Abrufen",
+            richtig: true
+        },
+        {
+            text: "POST zum Erstellen",
+            richtig: true
+        },
+        {
+            text: "DELETE zum Löschen",
+            richtig: true
+        },
+        {
+            text: "GET wird typischerweise zum Löschen einer Ressource verwendet",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf08"],
+    themen: ["http-methoden", "rest-api"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf08q027",
+    frage: "Ein System exportiert einfache Tabellendaten als CSV, ein anderes liefert hierarchisch strukturierte Daten als XML. Welche Aussagen sind sinnvoll?",
+
+    antworten: [
+        {
+            text: "CSV eignet sich besonders für einfache tabellarische Strukturen",
+            richtig: true
+        },
+        {
+            text: "XML kann Daten mithilfe verschachtelter Elemente und Tags strukturieren",
+            richtig: true
+        },
+        {
+            text: "Beim späteren Import müssen Struktur und erwartete Felder berücksichtigt werden",
+            richtig: true
+        },
+        {
+            text: "CSV und XML besitzen grundsätzlich exakt dieselbe Datenstruktur",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf08"],
+    themen: ["xml", "csv", "import-export"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf08q028",
+    frage: "Eine Anwendung importiert Datensätze aus einem externen System. Welche Maßnahmen helfen dabei, fehlerhafte oder unzulässige Daten sicher zu behandeln?",
+
+    antworten: [
+        {
+            text: "Eingehende Daten vor der Verarbeitung validieren",
+            richtig: true
+        },
+        {
+            text: "Nur erwartete Datenstrukturen und zulässige Werte akzeptieren",
+            richtig: true
+        },
+        {
+            text: "Beim Datenaustausch geeignete Authentifizierungs- und Zugriffsschutzmaßnahmen einsetzen",
+            richtig: true
+        },
+        {
+            text: "Externe Daten grundsätzlich ungeprüft mit maximalen Berechtigungen verarbeiten",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf08"],
+    themen: ["datenvalidierung", "sicherheit-datenaustausch", "import-export"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+}
 ];

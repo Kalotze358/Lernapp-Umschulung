@@ -558,5 +558,285 @@ const lf11bFragen = [
         themen: ["hochverfuegbarkeit", "backup-wiederherstellung", "monitoring-sicherheit"],
         schwierigkeit: "mittel",
         typ: "multiple-choice"
-    }
+    },
+    {
+    id: "lf11bq021",
+    frage: "Ein Administrator soll den Zugriff auf besonders schützenswerte Serverdienste absichern. Welche Maßnahmen sind sinnvoll?",
+
+    antworten: [
+        {
+            text: "Berechtigungen nach dem Least-Privilege-Prinzip vergeben",
+            richtig: true
+        },
+        {
+            text: "Zugriffe möglichst über geeignete Rollen oder Gruppen steuern",
+            richtig: true
+        },
+        {
+            text: "Zertifikate können zur sicheren Identifikation von Systemen eingesetzt werden",
+            richtig: true
+        },
+        {
+            text: "Allen Benutzern vorsorglich Administratorrechte geben",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf11b"],
+    themen: ["berechtigungskonzepte", "zertifikate-pki"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf11bq022",
+    frage: "Ein interner Webdienst soll ausschließlich für berechtigte Systeme erreichbar sein und eine vertrauenswürdige Identität nachweisen. Welche Kombination ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Zugriffsrechte gezielt beschränken und ein geeignetes digitales Zertifikat verwenden",
+            richtig: true
+        },
+        {
+            text: "Allen Benutzern Vollzugriff geben und Zertifikatsprüfungen deaktivieren",
+            richtig: false
+        },
+        {
+            text: "Nur den Servernamen ändern",
+            richtig: false
+        },
+        {
+            text: "Berechtigungen und Zertifikate sind für sichere Dienste grundsätzlich bedeutungslos",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf11b"],
+    themen: ["zertifikate-pki", "berechtigungskonzepte"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf11bq023",
+    frage: "Ein IDS meldet ungewöhnlich viele verdächtige Verbindungsversuche auf einen Server. Welche Vorgehensweise ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Die Meldungen und betroffenen Systeme analysieren",
+            richtig: true
+        },
+        {
+            text: "Prüfen, ob tatsächlich ein Sicherheitsvorfall vorliegt",
+            richtig: true
+        },
+        {
+            text: "Bei bestätigtem Vorfall geeignete Maßnahmen zur Begrenzung einleiten",
+            richtig: true
+        },
+        {
+            text: "Die IDS-Meldungen grundsätzlich löschen und ignorieren",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf11b"],
+    themen: ["ids-ips", "security-incident"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf11bq024",
+    frage: "Ein IPS erkennt Netzwerkverkehr, der eindeutig einem bekannten Angriffsmuster entspricht. Was unterscheidet das IPS hierbei grundsätzlich von einem reinen IDS?",
+
+    antworten: [
+        {
+            text: "Das IPS kann zusätzlich versuchen, den erkannten Angriff automatisch zu blockieren",
+            richtig: true
+        },
+        {
+            text: "Ein IDS kann grundsätzlich keine Ereignisse erkennen",
+            richtig: false
+        },
+        {
+            text: "Ein IPS dient ausschließlich zur Datensicherung",
+            richtig: false
+        },
+        {
+            text: "Ein IPS ersetzt automatisch sämtliche Maßnahmen zur Behandlung eines Sicherheitsvorfalls",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf11b"],
+    themen: ["ids-ips", "security-incident"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+{
+    id: "lf11bq025",
+    frage: "Ein wichtiger Unternehmensdienst soll auch beim Ausfall eines einzelnen Servers möglichst verfügbar bleiben. Welche Maßnahmen sind sinnvoll?",
+
+    antworten: [
+        {
+            text: "Redundante Systeme oder Komponenten vorsehen",
+            richtig: true
+        },
+        {
+            text: "Ausfälle und ungewöhnliche Zustände überwachen",
+            richtig: true
+        },
+        {
+            text: "Für Störungen und Sicherheitsvorfälle geeignete Wiederherstellungs- und Notfallmaßnahmen planen",
+            richtig: true
+        },
+        {
+            text: "Den gesamten Dienst bewusst von einer einzigen nicht redundanten Komponente abhängig machen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf11b"],
+    themen: ["hochverfuegbarkeit", "security-incident"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf11bq026",
+    frage: "Warum können hochverfügbare Systeme auch für die IT-Sicherheit wichtig sein?",
+
+    antworten: [
+        {
+            text: "Redundanz kann helfen, Dienste trotz Ausfall einzelner Komponenten weiter bereitzustellen",
+            richtig: true
+        },
+        {
+            text: "Ein Angriff oder technischer Fehler muss dadurch nicht zwangsläufig den gesamten Dienst lahmlegen",
+            richtig: true
+        },
+        {
+            text: "Ausfallsicherheit unterstützt das Schutzziel Verfügbarkeit",
+            richtig: true
+        },
+        {
+            text: "Hochverfügbarkeit macht Sicherheitsupdates und Zugriffskontrollen überflüssig",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf11b"],
+    themen: ["hochverfuegbarkeit", "security-incident"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf11bq027",
+    frage: "Ein neu installierter Server soll vor der Inbetriebnahme abgesichert werden. Welche Maßnahmen sind sinnvoll?",
+
+    antworten: [
+        {
+            text: "Nicht benötigte Dienste und Funktionen deaktivieren",
+            richtig: true
+        },
+        {
+            text: "Verfügbare Sicherheitsupdates kontrolliert installieren",
+            richtig: true
+        },
+        {
+            text: "Nur tatsächlich benötigte Netzwerkdienste bereitstellen",
+            richtig: true
+        },
+        {
+            text: "Sämtliche vorhandenen Dienste vorsorglich aktivieren",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf11b"],
+    themen: ["systemhaertung", "patchmanagement"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf11bq028",
+    frage: "Bei einem Schwachstellenscan wird auf mehreren Clients eine kritische Sicherheitslücke entdeckt. Die Geräte befinden sich im gleichen Netz wie wichtige Server. Welche Maßnahmen sind sinnvoll?",
+
+    antworten: [
+        {
+            text: "Die Schwachstelle bewerten und möglichst zeitnah beheben",
+            richtig: true
+        },
+        {
+            text: "Die betroffenen Systeme bei Bedarf durch geeignete Netzsegmentierung von besonders kritischen Bereichen trennen",
+            richtig: true
+        },
+        {
+            text: "Mögliche Kommunikationswege zu wichtigen Systemen kontrollieren",
+            richtig: true
+        },
+        {
+            text: "Die Schwachstelle ignorieren, solange noch kein erfolgreicher Angriff bekannt ist",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf11b"],
+    themen: ["schwachstellenmanagement", "netzsegmentierung"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf11bq029",
+    frage: "Ein Administrator greift von außerhalb des Unternehmens auf ein sensibles Verwaltungssystem zu. Welche Kombination erhöht die Sicherheit besonders?",
+
+    antworten: [
+        {
+            text: "Die Identität des Administrators zuverlässig authentifizieren und die übertragenen Daten verschlüsseln",
+            richtig: true
+        },
+        {
+            text: "Die Anmeldung ohne Identitätsprüfung ermöglichen, wenn die Verbindung verschlüsselt ist",
+            richtig: false
+        },
+        {
+            text: "Auf Verschlüsselung verzichten, sobald ein Passwort verwendet wird",
+            richtig: false
+        },
+        {
+            text: "Für Administratorzugänge grundsätzlich ein gemeinsames Benutzerkonto verwenden",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf11b"],
+    themen: ["authentifizierung", "verschluesselung"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf11bq030",
+    frage: "Das Monitoring meldet ungewöhnliche Fehler auf einem wichtigen Server. Kurz darauf fällt der Dienst vollständig aus. Welche Maßnahmen unterstützen eine schnelle Wiederherstellung?",
+
+    antworten: [
+        {
+            text: "Monitoring- und Ereignisdaten zur Ursachenanalyse verwenden",
+            richtig: true
+        },
+        {
+            text: "Vorhandene und getestete Sicherungen für eine notwendige Wiederherstellung nutzen",
+            richtig: true
+        },
+        {
+            text: "Nach der Wiederherstellung prüfen, ob der Dienst wieder ordnungsgemäß funktioniert",
+            richtig: true
+        },
+        {
+            text: "Monitoring abschalten und vorhandene Backups löschen, damit der Fehler nicht erneut gemeldet wird",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf11b"],
+    themen: ["monitoring-sicherheit", "backup-wiederherstellung"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+}
 ];

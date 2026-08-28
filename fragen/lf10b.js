@@ -558,5 +558,229 @@ const lf10bFragen = [
         themen: ["server-dokumentation"],
         schwierigkeit: "mittel",
         typ: "multiple-choice"
-    }
+    },
+    {
+    id: "lf10bq021",
+    frage: "Ein Unternehmen plant einen neuen Dateiserver. Welche Punkte sollten bei der Auswahl und Einrichtung des Serverbetriebssystems berücksichtigt werden?",
+
+    antworten: [
+        {
+            text: "Unterstützung der benötigten Serverrollen und Dienste",
+            richtig: true
+        },
+        {
+            text: "Kompatibilität mit der bestehenden Infrastruktur",
+            richtig: true
+        },
+        {
+            text: "Möglichkeiten für Wartung, Updates und Sicherung",
+            richtig: true
+        },
+        {
+            text: "Ausschließlich das Hintergrundbild der Benutzeroberfläche",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: ["serverbetriebssysteme", "backup-server"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf10bq022",
+    frage: "Nach einem Update startet ein wichtiger Serverdienst nicht mehr. Warum sind eine geeignete Backupstrategie und vorherige Planung besonders wichtig?",
+
+    antworten: [
+        {
+            text: "Damit Daten und relevante Konfigurationen im Fehlerfall möglichst kontrolliert wiederhergestellt werden können",
+            richtig: true
+        },
+        {
+            text: "Damit Serverupdates grundsätzlich niemals getestet werden müssen",
+            richtig: false
+        },
+        {
+            text: "Damit Ereignisprotokolle nach jedem Fehler automatisch gelöscht werden",
+            richtig: false
+        },
+        {
+            text: "Damit jedes Serverbetriebssystem ohne Administrator vollständig verwaltet werden kann",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: ["backup-server", "serverbetriebssysteme"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf10bq023",
+    frage: "Das Monitoring meldet, dass der freie Speicherplatz eines Servers seit mehreren Tagen stark abnimmt. Welche Vorgehensweise ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Die Entwicklung der Messwerte analysieren",
+            richtig: true
+        },
+        {
+            text: "Die Ursache des steigenden Speicherverbrauchs untersuchen",
+            richtig: true
+        },
+        {
+            text: "Festgestellte Änderungen und notwendige Maßnahmen nachvollziehbar dokumentieren",
+            richtig: true
+        },
+        {
+            text: "Die Warnung deaktivieren, damit sie nicht mehr angezeigt wird",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: ["server-monitoring", "server-dokumentation"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf10bq024",
+    frage: "Ein neuer Server wird produktiv in Betrieb genommen. Welche Maßnahmen erleichtern den späteren Betrieb und die Fehlersuche?",
+
+    antworten: [
+        {
+            text: "Wichtige Dienste und Ressourcen in das Monitoring aufnehmen",
+            richtig: true
+        },
+        {
+            text: "Installierte Rollen, IP-Adressen und besondere Konfigurationen dokumentieren",
+            richtig: true
+        },
+        {
+            text: "Abhängigkeiten zu anderen Systemen nachvollziehbar festhalten",
+            richtig: true
+        },
+        {
+            text: "Monitoring und Dokumentation nach erfolgreicher Installation grundsätzlich weglassen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: ["server-monitoring", "server-dokumentation"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf10bq025",
+    frage: "Ein Unternehmen möchte mehrere Serverdienste auf einem leistungsfähigen physischen System betreiben. Welche Vorgehensweise ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Geeignete Serverrollen auf getrennte virtuelle Maschinen verteilen und deren Ressourcen über einen Hypervisor verwalten",
+            richtig: true
+        },
+        {
+            text: "Jeder Serverdienst benötigt zwingend einen eigenen physischen Computer",
+            richtig: false
+        },
+        {
+            text: "Ein Hypervisor dient ausschließlich zur DNS-Namensauflösung",
+            richtig: false
+        },
+        {
+            text: "Virtuelle Maschinen benötigen grundsätzlich keinerlei CPU- oder Arbeitsspeicherressourcen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: ["server-grundlagen", "hypervisor"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "lf10bq026",
+    frage: "In einer Windows-Domäne sollen Mitarbeiter abhängig von ihrer Abteilung unterschiedliche Zugriffsrechte erhalten. Welche Vorgehensweise ist administrativ sinnvoll?",
+
+    antworten: [
+        {
+            text: "Benutzer zentral über den Verzeichnisdienst verwalten",
+            richtig: true
+        },
+        {
+            text: "Geeignete Gruppen für unterschiedliche Aufgaben oder Abteilungen verwenden",
+            richtig: true
+        },
+        {
+            text: "Berechtigungen möglichst über Gruppen statt einzeln für jeden Benutzer vergeben",
+            richtig: true
+        },
+        {
+            text: "Allen Domänenbenutzern vorsorglich Vollzugriff auf sämtliche Ressourcen geben",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: ["verzeichnisdienste", "berechtigungen-server"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "lf10bq027",
+    frage: "Ein Unternehmen stellt für mehrere Abteilungen gemeinsame Netzwerkordner bereit. Welche zentrale Verwaltung ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Dateifreigaben mit passenden Zugriffsberechtigungen konfigurieren",
+            richtig: true
+        },
+        {
+            text: "Gruppenrichtlinien für geeignete zentrale Benutzereinstellungen einsetzen",
+            richtig: true
+        },
+        {
+            text: "Berechtigungen und Konfigurationen entsprechend den organisatorischen Anforderungen planen",
+            richtig: true
+        },
+        {
+            text: "Alle Freigaben grundsätzlich ohne Zugriffsbeschränkung bereitstellen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: ["dateidienste", "gruppenrichtlinien"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "lf10bq028",
+    frage: "Ein Administrator muss regelmäßig für viele Benutzer dieselben Verzeichnisstrukturen anlegen und Berechtigungen setzen. Warum eignet sich Skripting für diese Aufgabe?",
+
+    antworten: [
+        {
+            text: "Der Ablauf kann automatisiert und reproduzierbar für viele Benutzer durchgeführt werden",
+            richtig: true
+        },
+        {
+            text: "Wiederkehrende manuelle Eingaben und mögliche Eingabefehler können reduziert werden",
+            richtig: true
+        },
+        {
+            text: "Das Skript kann nach definierten Regeln dieselben Arbeitsschritte wiederholen",
+            richtig: true
+        },
+        {
+            text: "Ein Skript benötigt grundsätzlich keine Prüfung und kann niemals Fehler enthalten",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: ["skripting"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+}
 ];

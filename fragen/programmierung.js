@@ -552,5 +552,313 @@ const programmierungFragen = [
     themen: ["datenformate"],
     schwierigkeit: "leicht",
     typ: "multiple-choice"
+},
+{
+    id: "prog021",
+    frage: "Eine Variable enthält den Wert 10. Anschließend wird der Ausdruck variable = variable + 5 ausgeführt. Welchen Wert besitzt die Variable danach?",
+
+    antworten: [
+        {
+            text: "15",
+            richtig: true
+        },
+        {
+            text: "10",
+            richtig: false
+        },
+        {
+            text: "5",
+            richtig: false
+        },
+        {
+            text: "Die Variable verliert automatisch ihren Wert",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf05"],
+    themen: ["variablen", "operatoren"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+{
+    id: "prog022",
+    frage: "Eine Funktion soll zwei übergebene Zahlen addieren und das Ergebnis zurückgeben. Welche Konzepte werden dabei benötigt?",
+
+    antworten: [
+        {
+            text: "Parameter beziehungsweise Eingabewerte",
+            richtig: true
+        },
+        {
+            text: "Ein Additionsoperator",
+            richtig: true
+        },
+        {
+            text: "Eine Rückgabe des berechneten Ergebnisses",
+            richtig: true
+        },
+        {
+            text: "Zwingend eine Datenbankverbindung",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf05"],
+    themen: ["operatoren", "funktionen"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "prog023",
+    frage: "Eine Funktion erhält eine Liste von Temperaturen und soll den höchsten Wert ermitteln. Welche Vorgehensweise ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Die Werte der Liste nacheinander vergleichen und den bisher größten Wert speichern",
+            richtig: true
+        },
+        {
+            text: "Nur das erste Element betrachten und alle weiteren ignorieren",
+            richtig: false
+        },
+        {
+            text: "Die Liste vor jeder Prüfung vollständig löschen",
+            richtig: false
+        },
+        {
+            text: "Eine Funktion kann grundsätzlich keine Liste verarbeiten",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf05"],
+    themen: ["funktionen", "listen-arrays"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "prog024",
+    frage: "Ein Programm greift auf ein Element außerhalb des gültigen Bereichs eines Arrays zu und erzeugt einen Fehler. Welche Vorgehensweise hilft bei der Analyse?",
+
+    antworten: [
+        {
+            text: "Den verwendeten Index und die Länge des Arrays überprüfen",
+            richtig: true
+        },
+        {
+            text: "Die Fehlermeldung beziehungsweise den betroffenen Programmabschnitt untersuchen",
+            richtig: true
+        },
+        {
+            text: "Den Programmablauf gegebenenfalls schrittweise nachvollziehen",
+            richtig: true
+        },
+        {
+            text: "Beliebige Codezeilen löschen, bis der Fehler nicht mehr sichtbar ist",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf05"],
+    themen: ["listen-arrays", "debugging"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "prog025",
+    frage: "Beim Einlesen einer CSV-Datei schlägt die Verarbeitung einzelner Datensätze fehl. Welche Schritte sind für die Fehlersuche sinnvoll?",
+
+    antworten: [
+        {
+            text: "Prüfen, ob das erwartete Trennzeichen verwendet wird",
+            richtig: true
+        },
+        {
+            text: "Fehlerhafte beziehungsweise ungewöhnliche Datensätze untersuchen",
+            richtig: true
+        },
+        {
+            text: "Die Zeichencodierung und Datenstruktur kontrollieren",
+            richtig: true
+        },
+        {
+            text: "Alle Fehlermeldungen grundsätzlich ignorieren",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf05"],
+    themen: ["debugging", "datenformate"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "prog026",
+    frage: "Kundendaten aus einer CSV-Datei sollen in eine bestehende Datenbank übernommen werden. Welche Vorgehensweise ist sinnvoll?",
+
+    antworten: [
+        {
+            text: "Die eingelesenen Daten vor der Übernahme auf Struktur und gültige Werte prüfen",
+            richtig: true
+        },
+        {
+            text: "Für neue Datensätze eine geeignete INSERT-Anweisung verwenden",
+            richtig: true
+        },
+        {
+            text: "Bestehende Datensätze bei Bedarf gezielt mit UPDATE verändern",
+            richtig: true
+        },
+        {
+            text: "Vor jedem Import grundsätzlich alle Tabellen löschen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf05"],
+    themen: ["datenformate", "sql-aendern"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "prog027",
+    frage: "In einer Kundentabelle werden Name und Adresse eines Kunden in vielen Datensätzen mehrfach gespeichert. Welche Folge kann diese Struktur haben?",
+
+    antworten: [
+        {
+            text: "Bei Änderungen können widersprüchliche Daten entstehen, weshalb eine sinnvoll normalisierte Struktur vorteilhaft sein kann",
+            richtig: true
+        },
+        {
+            text: "Mehrfach gespeicherte Daten verhindern grundsätzlich jede Änderung",
+            richtig: false
+        },
+        {
+            text: "Normalisierung bedeutet, alle Informationen möglichst oft zu wiederholen",
+            richtig: false
+        },
+        {
+            text: "UPDATE kann ausschließlich bei vollständig normalisierten Datenbanken eingesetzt werden",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf05"],
+    themen: ["sql-aendern", "normalisierung"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+{
+    id: "prog028",
+    frage: "Warum werden bei der Normalisierung zusammengehörige Informationen häufig auf mehrere Tabellen verteilt und über Schlüssel miteinander verbunden?",
+
+    antworten: [
+        {
+            text: "Um unnötige Datenredundanz zu reduzieren",
+            richtig: true
+        },
+        {
+            text: "Um Beziehungen zwischen Datensätzen eindeutig herstellen zu können",
+            richtig: true
+        },
+        {
+            text: "Um Änderungsanomalien zu vermeiden beziehungsweise zu reduzieren",
+            richtig: true
+        },
+        {
+            text: "Damit jede Tabelle zwingend dieselben Daten enthält",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf05"],
+    themen: ["normalisierung", "primaerschluessel"],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+{
+    id: "prog029",
+    frage: "Eine Anwendung liest einen Datensatz aus einer Datenbank. Warum kann es sinnvoll sein, den Primärschlüssel des Datensatzes in einer Variablen zu speichern?",
+
+    antworten: [
+        {
+            text: "Der Datensatz kann später eindeutig referenziert und gezielt weiterverarbeitet werden",
+            richtig: true
+        },
+        {
+            text: "Der Primärschlüssel macht dadurch automatisch sämtliche anderen Daten überflüssig",
+            richtig: false
+        },
+        {
+            text: "Eine Variable kann grundsätzlich keine ID enthalten",
+            richtig: false
+        },
+        {
+            text: "Primärschlüssel werden ausschließlich zur Verschlüsselung verwendet",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf05"],
+    themen: ["primaerschluessel", "variablen"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+{
+    id: "prog030",
+    frage: "Ein Programm soll prüfen, ob ein eingegebenes Alter mindestens 18 beträgt. Welche Schritte gehören zu einem sinnvollen Algorithmus?",
+
+    antworten: [
+        {
+            text: "Das Alter in einer geeigneten Variablen mit passendem Datentyp speichern",
+            richtig: true
+        },
+        {
+            text: "Den gespeicherten Wert mit 18 vergleichen",
+            richtig: true
+        },
+        {
+            text: "Abhängig vom Ergebnis des Vergleichs eine passende Aktion ausführen",
+            richtig: true
+        },
+        {
+            text: "Der Datentyp spielt bei der Verarbeitung von Werten grundsätzlich keine Rolle",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf05"],
+    themen: ["algorithmen", "datentypen"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+{
+    id: "prog031",
+    frage: "Aus der Tabelle kunden sollen nur Kunden aus Berlin ausgegeben und alphabetisch nach dem Namen sortiert werden. Welche SQL-Abfrage beschreibt dies grundsätzlich korrekt?",
+
+    antworten: [
+        {
+            text: "SELECT * FROM kunden WHERE ort = 'Berlin' ORDER BY name;",
+            richtig: true
+        },
+        {
+            text: "DELETE FROM kunden WHERE ort = 'Berlin';",
+            richtig: false
+        },
+        {
+            text: "UPDATE kunden SET ort = 'Berlin' ORDER BY name;",
+            richtig: false
+        },
+        {
+            text: "INSERT INTO kunden WHERE ort = 'Berlin';",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf05"],
+    themen: ["sql-select"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
 }
 ];
