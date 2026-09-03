@@ -362,7 +362,9 @@ const lernfelder = [
             "Beim Subnetting wird ein IP-Netz in kleinere Teilnetze unterteilt. Dadurch können Adressbereiche effizient genutzt und Netzwerke logisch getrennt werden.",
 
         merksatz:
-            "Subnetting teilt ein großes Netzwerk in kleinere Netze."
+            "Subnetting teilt ein großes Netzwerk in kleinere Netze.",
+
+        vertiefung: "subnetting"
     },
 
     {

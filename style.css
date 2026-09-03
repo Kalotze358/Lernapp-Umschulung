@@ -1,3 +1,17 @@
+:root {
+    --suche-hintergrund: #ffffff;
+    --suche-text: #222222;
+    --suche-info: #666666;
+    --suche-hover: #eeeeee;
+    --suche-trennlinie: rgba(0, 0, 0, 0.15);
+}
+body.dark-mode {
+    --suche-hintergrund: #252525;
+    --suche-text: #f5f5f5;
+    --suche-info: #bdbdbd;
+    --suche-hover: #383838;
+    --suche-trennlinie: rgba(255, 255, 255, 0.15);
+}
 * {
     box-sizing: border-box;
 }
@@ -459,4 +473,328 @@ body.dark-mode #antworten button.ausgewaehlt {
 #antwort-pruefen {
     display: none;
     margin-top: 15px;
+}
+/* =========================================
+   Vertiefungsmodule
+========================================= */
+
+.vertiefungs-kapitel {
+    grid-column: 1 / -1;
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-top: 20px;
+    padding: 22px;
+
+    border: 1px solid rgba(127, 127, 127, 0.3);
+    border-radius: 10px;
+
+    background-color: rgba(127, 127, 127, 0.06);
+}
+
+.vertiefungs-kapitel h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.vertiefungs-kapitel p {
+    line-height: 1.6;
+}
+
+.vertiefungs-kapitel ul {
+    line-height: 1.7;
+    padding-left: 25px;
+}
+
+
+/* Beispielbox */
+
+.vertiefungs-beispiel {
+    margin-top: 20px;
+    padding: 16px;
+
+    border-left: 4px solid #4a90e2;
+    border-radius: 6px;
+
+    background-color: rgba(74, 144, 226, 0.1);
+}
+
+.vertiefungs-beispiel p {
+    margin-bottom: 0;
+}
+
+
+/* Hinweisbox */
+
+.vertiefungs-hinweis {
+    margin-top: 20px;
+    padding: 16px;
+
+    border-left: 4px solid #e6a23c;
+    border-radius: 6px;
+
+    background-color: rgba(230, 162, 60, 0.1);
+
+    line-height: 1.6;
+}
+
+
+/* Merksatz */
+
+.vertiefungs-merksatz {
+    margin-top: 20px;
+    padding: 16px;
+
+    border-left: 4px solid #67c23a;
+    border-radius: 6px;
+
+    background-color: rgba(103, 194, 58, 0.1);
+
+    font-weight: 600;
+}
+
+
+/* Tabellen */
+
+.vertiefungs-tabelle {
+    width: 100%;
+    margin-top: 20px;
+
+    border-collapse: collapse;
+}
+
+.vertiefungs-tabelle th,
+.vertiefungs-tabelle td {
+    padding: 12px;
+
+    border: 1px solid rgba(127, 127, 127, 0.35);
+
+    text-align: left;
+}
+
+.vertiefungs-tabelle th {
+    background-color: rgba(127, 127, 127, 0.15);
+}
+
+
+/* Smartphone */
+
+@media (max-width: 700px) {
+
+    .vertiefungs-kapitel {
+        padding: 16px;
+    }
+
+    .vertiefungs-tabelle {
+        font-size: 14px;
+    }
+
+    .vertiefungs-tabelle th,
+    .vertiefungs-tabelle td {
+        padding: 8px;
+    }
+}
+/* =========================================
+   Vertiefungsübungen
+========================================= */
+
+.vertiefungs-uebung {
+    margin-top: 20px;
+    padding: 20px;
+
+    border: 1px solid rgba(127, 127, 127, 0.3);
+    border-radius: 10px;
+}
+
+.vertiefungs-uebung h4 {
+    margin-top: 0;
+}
+
+.uebungs-zeile {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 12px;
+}
+
+.uebungs-zeile input {
+    padding: 10px;
+
+    border: 1px solid rgba(127, 127, 127, 0.4);
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+.uebungs-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Richtige Antwort */
+
+.uebung-richtig {
+    border: 2px solid #67c23a !important;
+    background-color: rgba(103, 194, 58, 0.12);
+}
+
+
+/* Falsche Antwort */
+
+.uebung-falsch {
+    border: 2px solid #e74c3c !important;
+    background-color: rgba(231, 76, 60, 0.12);
+}
+
+
+/* Smartphone */
+
+@media (max-width: 700px) {
+
+    .uebungs-zeile {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+}
+/* =========================================
+   Subnetting-Rechner
+========================================= */
+
+.subnetz-rechner {
+    margin-top: 20px;
+}
+
+.subnetz-rechner > button {
+    margin-top: 20px;
+}
+
+.rechner-fehler {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.rechner-ergebnis {
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid
+        rgba(127, 127, 127, 0.3);
+}
+
+.rechner-zeile {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+
+    gap: 15px;
+
+    padding: 8px 0;
+}
+
+.rechenweg-box {
+    margin-top: 25px;
+    padding: 18px;
+
+    border-left: 4px solid #4a90e2;
+    border-radius: 6px;
+
+    background-color:
+        rgba(74, 144, 226, 0.1);
+}
+
+.rechenweg-box h4 {
+    margin-top: 0;
+}
+
+.rechenweg-box p {
+    margin: 10px 0;
+}
+
+@media (max-width: 700px) {
+
+    .rechner-zeile {
+        grid-template-columns: 1fr;
+        gap: 3px;
+    }
+}
+/* =========================================
+   Suche
+========================================= */
+
+.suche-container {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#suche-input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px 12px;
+
+    border: 1px solid rgba(127, 127, 127, 0.4);
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+#suche-ergebnisse {
+    display: none;
+
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+
+    z-index: 1000;
+
+    max-height: 350px;
+    overflow-y: auto;
+
+    border: 1px solid var(--suche-trennlinie);
+    border-radius: 8px;
+
+    background-color: var(--suche-hintergrund);
+    color: var(--suche-text);
+}
+
+.suche-treffer {
+    padding: 10px 12px;
+
+    cursor: pointer;
+
+    color: var(--suche-text);
+
+    border-bottom: 1px solid
+        var(--suche-trennlinie);
+}
+
+.suche-treffer:last-child {
+    border-bottom: none;
+}
+
+.suche-treffer:hover {
+    background-color: var(--suche-hover);
+}
+
+.suche-treffer-titel {
+    font-weight: 600;
+}
+
+.suche-treffer-info {
+    margin-top: 3px;
+
+    font-size: 12px;
+
+    color: var(--suche-info);
 }

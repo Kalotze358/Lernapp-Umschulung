@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="style.css">
 <script src="daten/lernfelder.js" defer></script>
+<script src="daten/vertiefungen.js" defer></script>
 <script src="fragen/netzwerke.js" defer></script>
 <script src="fragen/programmierung.js" defer></script>
 <script src="fragen/lf01.js" defer></script>
@@ -63,7 +64,18 @@
              </button>
 
             </nav>
-            
+            <div class="suche-container">
+
+    <input
+        type="text"
+        id="suche-input"
+        placeholder="🔎 Lerninhalt suchen ..."
+        autocomplete="off"
+    >
+
+    <div id="suche-ergebnisse"></div>
+
+</div>
             <button id="darkmode-button">
                 🌙 Dark Mode
             </button>

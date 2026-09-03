@@ -860,5 +860,309 @@ const programmierungFragen = [
     themen: ["sql-select"],
     schwierigkeit: "schwer",
     typ: "single-choice"
+},
+{
+    id: "prog032",
+    frage: "Welche SQL-Funktion wird verwendet, um die Anzahl von Datensätzen zu ermitteln?",
+    antworten: [
+        { text: "COUNT()", richtig: true },
+        { text: "SUM()", richtig: false },
+        { text: "AVG()", richtig: false },
+        { text: "MAX()", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-select"],
+    schwierigkeit: "leicht",
+    typ: "single-choice"
+},
+{
+    id: "prog033",
+    frage: "Welche SQL-Funktion berechnet den Durchschnitt numerischer Werte?",
+    antworten: [
+        { text: "AVG()", richtig: true },
+        { text: "SUM()", richtig: false },
+        { text: "COUNT()", richtig: false },
+        { text: "ROUND()", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-select"],
+    schwierigkeit: "leicht",
+    typ: "single-choice"
+},
+{
+    id: "prog034",
+    frage: "Zu welcher Gruppe von SQL-Funktionen gehören COUNT() und AVG()?",
+    antworten: [
+        { text: "Aggregatfunktionen", richtig: true },
+        { text: "Datendefinitionsbefehle", richtig: false },
+        { text: "Verknüpfungsoperatoren", richtig: false },
+        { text: "Sortierfunktionen", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-select"],
+    schwierigkeit: "leicht",
+    typ: "single-choice"
+},
+{
+    id: "prog035",
+    frage: "Wofür wird GROUP BY in einer SQL-Abfrage verwendet?",
+    antworten: [
+        { text: "Um Datensätze mit gleichen Werten zu Gruppen zusammenzufassen", richtig: true },
+        { text: "Um das Ergebnis ausschließlich alphabetisch zu sortieren", richtig: false },
+        { text: "Um zwei Tabellen über gemeinsame Spalten zu verbinden", richtig: false },
+        { text: "Um einzelne Datensätze aus einer Tabelle zu löschen", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-select"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+{
+    id: "prog036",
+    frage: "Welche SQL-Klausel wird verwendet, um Datensätze nach einem Merkmal zu gruppieren?",
+    antworten: [
+        { text: "GROUP BY", richtig: true },
+        { text: "ORDER BY", richtig: false },
+        { text: "WHERE", richtig: false },
+        { text: "HAVING", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-select"],
+    schwierigkeit: "leicht",
+    typ: "single-choice"
+},
+{
+    id: "prog037",
+    frage: "Du möchtest ermitteln, wie viele Kunden aus jeder Stadt kommen. Welche SQL-Abfrage ist dafür geeignet?",
+    antworten: [
+        {
+            text: "SELECT stadt, COUNT(*) FROM kunden GROUP BY stadt;",
+            richtig: true
+        },
+        {
+            text: "SELECT stadt, COUNT(*) FROM kunden ORDER BY stadt;",
+            richtig: false
+        },
+        {
+            text: "SELECT COUNT(*) FROM kunden WHERE stadt;",
+            richtig: false
+        },
+        {
+            text: "SELECT stadt FROM kunden GROUP BY COUNT(*);",
+            richtig: false
+        }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-select"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+{
+    id: "prog038",
+    frage: "Welche Aufgabe erfüllt ein JOIN in SQL?",
+    antworten: [
+        { text: "Er kombiniert zusammengehörige Daten aus mehreren Tabellen", richtig: true },
+        { text: "Er berechnet automatisch den Durchschnitt einer Spalte", richtig: false },
+        { text: "Er verändert den Datentyp einer vorhandenen Spalte", richtig: false },
+        { text: "Er gruppiert automatisch alle gleichen Datensätze", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-select"],
+    schwierigkeit: "leicht",
+    typ: "single-choice"
+},
+{
+    id: "prog039",
+    frage: "Welche Klausel wird häufig verwendet, um bei einem JOIN die Verknüpfungsbedingung anzugeben?",
+    antworten: [
+        { text: "ON", richtig: true },
+        { text: "WHERE", richtig: false },
+        { text: "ORDER BY", richtig: false },
+        { text: "GROUP BY", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-select"],
+    schwierigkeit: "leicht",
+    typ: "single-choice"
+},
+{
+    id: "prog040",
+    frage: "Welche Aufgabe hat die ON-Klausel bei einem JOIN?",
+    antworten: [
+        { text: "Sie legt fest, anhand welcher Bedingung Datensätze der Tabellen miteinander verknüpft werden", richtig: true },
+        { text: "Sie bestimmt die Sortierreihenfolge des Ergebnisses", richtig: false },
+        { text: "Sie legt fest, welche Datensätze gruppiert werden", richtig: false },
+        { text: "Sie erstellt automatisch einen Primärschlüssel", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-select"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+{
+    id: "prog041",
+    frage: "Die Tabellen kunden und bestellungen enthalten beide die Spalte kundennr. Welche Konstruktion eignet sich, um zusammengehörige Datensätze zu verbinden?",
+    antworten: [
+        {
+            text: "JOIN bestellungen ON kunden.kundennr = bestellungen.kundennr",
+            richtig: true
+        },
+        {
+            text: "GROUP BY kunden.kundennr = bestellungen.kundennr",
+            richtig: false
+        },
+        {
+            text: "ORDER BY kunden.kundennr = bestellungen.kundennr",
+            richtig: false
+        },
+        {
+            text: "VALUES kunden.kundennr = bestellungen.kundennr",
+            richtig: false
+        }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-select"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+{
+    id: "prog042",
+    frage: "Was bewirkt die SQL-Anweisung CREATE TABLE?",
+    antworten: [
+        { text: "Sie erstellt eine neue Tabelle", richtig: true },
+        { text: "Sie fügt einen Datensatz in eine vorhandene Tabelle ein", richtig: false },
+        { text: "Sie erstellt eine Verbindung zwischen zwei vorhandenen Tabellen", richtig: false },
+        { text: "Sie gruppiert die Datensätze einer Tabelle", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-aendern"],
+    schwierigkeit: "leicht",
+    typ: "single-choice"
+},
+{
+    id: "prog043",
+    frage: "Welcher SQL-Befehl wird verwendet, um eine neue Tabelle anzulegen?",
+    antworten: [
+        { text: "CREATE TABLE", richtig: true },
+        { text: "ALTER TABLE", richtig: false },
+        { text: "INSERT INTO", richtig: false },
+        { text: "SELECT INTO", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-aendern"],
+    schwierigkeit: "leicht",
+    typ: "single-choice"
+},
+{
+    id: "prog044",
+    frage: "Welche SQL-Anweisung fügt neue Datensätze in eine bestehende Tabelle ein?",
+    antworten: [
+        { text: "INSERT INTO", richtig: true },
+        { text: "CREATE TABLE", richtig: false },
+        { text: "UPDATE TABLE", richtig: false },
+        { text: "ALTER INTO", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-aendern"],
+    schwierigkeit: "leicht",
+    typ: "single-choice"
+},
+{
+    id: "prog045",
+    frage: "Welche SQL-Klausel enthält bei einem INSERT die einzufügenden Werte?",
+    antworten: [
+        { text: "VALUES", richtig: true },
+        { text: "SET", richtig: false },
+        { text: "ON", richtig: false },
+        { text: "GROUP BY", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-aendern"],
+    schwierigkeit: "leicht",
+    typ: "single-choice"
+},
+{
+    id: "prog046",
+    frage: "Welche Kombination wird typischerweise verwendet, um einen neuen Datensatz in eine Tabelle einzufügen?",
+    antworten: [
+        { text: "INSERT INTO ... VALUES", richtig: true },
+        { text: "CREATE TABLE ... VALUES", richtig: false },
+        { text: "UPDATE ... GROUP BY", richtig: false },
+        { text: "SELECT ... INSERT", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-aendern"],
+    schwierigkeit: "leicht",
+    typ: "single-choice"
+},
+{
+    id: "prog047",
+    frage: "Was bewirkt die SQL-Anweisung INSERT INTO kunden (name) VALUES ('Max');?",
+    antworten: [
+        { text: "Ein neuer Datensatz mit dem Namen Max wird in die Tabelle kunden eingefügt", richtig: true },
+        { text: "Der vorhandene Datensatz Max wird aus der Tabelle kunden gelöscht", richtig: false },
+        { text: "Alle Kundennamen werden auf Max geändert", richtig: false },
+        { text: "Eine neue Tabelle mit dem Namen Max wird erstellt", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-aendern"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+{
+    id: "prog048",
+    frage: "Was liefert die Abfrage SELECT COUNT(*) FROM kunden;?",
+    antworten: [
+        { text: "Die Anzahl der Datensätze in der Tabelle kunden", richtig: true },
+        { text: "Den Durchschnitt aller numerischen Kundendaten", richtig: false },
+        { text: "Die Namen aller Kunden in alphabetischer Reihenfolge", richtig: false },
+        { text: "Die Anzahl der Spalten der Tabelle kunden", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-select"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+{
+    id: "prog049",
+    frage: "Was liefert die Abfrage SELECT AVG(preis) FROM produkte;?",
+    antworten: [
+        { text: "Den durchschnittlichen Wert der Spalte preis", richtig: true },
+        { text: "Die Anzahl aller Produktdatensätze", richtig: false },
+        { text: "Den höchsten Wert der Spalte preis", richtig: false },
+        { text: "Die Summe aller Werte der Spalte preis", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-select"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+{
+    id: "prog050",
+    frage: "Was bewirkt GROUP BY stadt in einer SQL-Abfrage?",
+    antworten: [
+        { text: "Datensätze mit demselben Wert in der Spalte stadt werden zu Gruppen zusammengefasst", richtig: true },
+        { text: "Die Spalte stadt wird automatisch alphabetisch sortiert", richtig: false },
+        { text: "Für jede Stadt wird automatisch eine neue Tabelle erstellt", richtig: false },
+        { text: "Datensätze mit gleichem Stadtwert werden aus der Tabelle entfernt", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-select"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+{
+    id: "prog051",
+    frage: "Welche SQL-Konstruktion wird verwendet, um zusammengehörige Daten aus zwei Tabellen in einer Abfrage zu kombinieren?",
+    antworten: [
+        { text: "JOIN", richtig: true },
+        { text: "GROUP BY", richtig: false },
+        { text: "VALUES", richtig: false },
+        { text: "AVG", richtig: false }
+    ],
+    lernfelder: ["lf05"],
+    themen: ["sql-select"],
+    schwierigkeit: "leicht",
+    typ: "single-choice"
 }
 ];

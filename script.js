@@ -462,6 +462,1309 @@ function themaDetailsAnzeigen(lernfeld, thema) {
         lernfeldDetailsAnzeigen(lernfeld);
 
     });
+    function vertiefungAnzeigen(lernfeld, thema, vertiefung) {
+
+    lernfelderListe.innerHTML = "";
+
+    // Zurück-Button
+    const zurueckButton = document.createElement("button");
+
+    zurueckButton.textContent =
+        "← Zurück zu " + thema.titel;
+
+    zurueckButton.classList.add("zurueck-button");
+
+    zurueckButton.addEventListener("click", () => {
+
+        themaDetailsAnzeigen(
+            lernfeld,
+            thema
+        );
+
+    });
+
+    lernfelderListe.appendChild(zurueckButton);
+
+
+    // Lernfeld anzeigen
+    const lernfeldNummer = document.createElement("p");
+
+    lernfeldNummer.classList.add(
+        "lernfeld-detail-nummer"
+    );
+
+    lernfeldNummer.textContent =
+        lernfeld.nummer +
+        " – " +
+        lernfeld.kurzTitel;
+
+    lernfelderListe.appendChild(lernfeldNummer);
+
+
+    // Titel
+    const titel = document.createElement("h2");
+
+    titel.textContent =
+        vertiefung.titel;
+
+    lernfelderListe.appendChild(titel);
+
+
+    // Untertitel
+    const untertitel = document.createElement("p");
+
+    untertitel.textContent =
+        vertiefung.untertitel;
+
+    lernfelderListe.appendChild(untertitel);
+
+
+    // Kapitelüberschrift
+    const kapitelTitel = document.createElement("h3");
+
+    kapitelTitel.textContent =
+        "Lerninhalte";
+
+    lernfelderListe.appendChild(kapitelTitel);
+
+
+    // Kapitel erzeugen
+    vertiefung.abschnitte.forEach(abschnitt => {
+
+        const kapitel = document.createElement("div");
+
+        kapitel.classList.add(
+            "vertiefungs-kapitel"
+        );
+        kapitel.id =
+            "vertiefung-" + abschnitt.id;
+
+
+        const kapitelUeberschrift =
+            document.createElement("h3");
+
+        kapitelUeberschrift.textContent =
+            abschnitt.titel;
+
+
+        kapitel.appendChild(
+            kapitelUeberschrift
+        );
+        // Erklärungstexte
+if (abschnitt.texte) {
+
+    abschnitt.texte.forEach(text => {
+
+        const absatz = document.createElement("p");
+
+        absatz.textContent = text;
+
+        kapitel.appendChild(absatz);
+
+    });
+}
+
+
+
+// Aufzählung
+if (abschnitt.liste) {
+
+    const liste = document.createElement("ul");
+
+    abschnitt.liste.forEach(eintrag => {
+
+        const listenPunkt =
+            document.createElement("li");
+
+        listenPunkt.textContent =
+            eintrag;
+
+        liste.appendChild(listenPunkt);
+
+    });
+
+    kapitel.appendChild(liste);
+}
+
+
+// Beispiel
+if (abschnitt.beispiel) {
+
+    const beispielBox =
+        document.createElement("div");
+
+    beispielBox.classList.add(
+        "vertiefungs-beispiel"
+    );
+
+
+    const beispielTitel =
+        document.createElement("strong");
+
+    beispielTitel.textContent =
+        abschnitt.beispiel.titel;
+
+
+    const beispielText =
+        document.createElement("p");
+
+    beispielText.textContent =
+        abschnitt.beispiel.text;
+
+
+    beispielBox.appendChild(
+        beispielTitel
+    );
+
+    beispielBox.appendChild(
+        beispielText
+    );
+
+    kapitel.appendChild(
+        beispielBox
+    );
+}
+
+
+// Tabelle
+if (abschnitt.tabelle) {
+
+    const tabelle =
+        document.createElement("table");
+
+    tabelle.classList.add(
+        "vertiefungs-tabelle"
+    );
+
+
+    tabelle.innerHTML = `
+        <thead>
+            <tr>
+                <th>Klasse</th>
+                <th>1. Oktett</th>
+                <th>Standard</th>
+                <th>Subnetzmaske</th>
+            </tr>
+        </thead>
+    `;
+
+
+    const tbody =
+        document.createElement("tbody");
+
+
+    abschnitt.tabelle.forEach(eintrag => {
+
+        const zeile =
+            document.createElement("tr");
+
+        zeile.innerHTML = `
+            <td>${eintrag.klasse}</td>
+            <td>${eintrag.bereich}</td>
+            <td>${eintrag.cidr}</td>
+            <td>${eintrag.maske}</td>
+        `;
+
+        tbody.appendChild(zeile);
+
+    });
+
+
+    tabelle.appendChild(tbody);
+
+    kapitel.appendChild(tabelle);
+}
+
+
+// Hinweis
+if (abschnitt.hinweis) {
+
+    const hinweis =
+        document.createElement("div");
+
+    hinweis.classList.add(
+        "vertiefungs-hinweis"
+    );
+
+    hinweis.textContent =
+        abschnitt.hinweis;
+
+    kapitel.appendChild(hinweis);
+}
+
+// Interaktive Übungen
+if (abschnitt.uebungen) {
+
+    abschnitt.uebungen.forEach(uebung => {
+
+        const uebungsBox =
+            document.createElement("div");
+
+        uebungsBox.classList.add(
+            "vertiefungs-uebung"
+        );
+
+
+        const titel =
+            document.createElement("h4");
+
+        titel.textContent =
+            uebung.titel;
+
+        uebungsBox.appendChild(titel);
+
+
+        const aufgabe =
+            document.createElement("p");
+
+        aufgabe.textContent =
+            uebung.aufgabe;
+
+        uebungsBox.appendChild(aufgabe);
+
+
+        const eingaben = [];
+
+
+        uebung.felder.forEach(feld => {
+
+            const zeile =
+                document.createElement("div");
+
+            zeile.classList.add(
+                "uebungs-zeile"
+            );
+
+
+            const label =
+                document.createElement("label");
+
+            label.textContent =
+                feld.label;
+
+
+            const input =
+                document.createElement("input");
+
+            input.type = "text";
+
+            input.placeholder =
+                "Antwort eingeben";
+
+
+            zeile.appendChild(label);
+            zeile.appendChild(input);
+
+            uebungsBox.appendChild(zeile);
+
+
+            eingaben.push({
+                input: input,
+                antwort: feld.antwort
+            });
+
+        });
+
+
+        const buttonBereich =
+            document.createElement("div");
+
+        buttonBereich.classList.add(
+            "uebungs-buttons"
+        );
+
+
+        // Antwort prüfen
+        const pruefenButton =
+            document.createElement("button");
+
+        pruefenButton.textContent =
+            "Antworten prüfen";
+
+        pruefenButton.classList.add(
+            "themen-quiz-button"
+        );
+
+
+        pruefenButton.addEventListener(
+            "click",
+            () => {
+
+                eingaben.forEach(eintrag => {
+
+                    const eingabe =
+                        eintrag.input.value
+                            .trim()
+                            .toLowerCase();
+
+                    const richtig =
+                        eintrag.antwort
+                            .trim()
+                            .toLowerCase();
+
+
+                    eintrag.input.classList.remove(
+                        "uebung-richtig",
+                        "uebung-falsch"
+                    );
+
+
+                    if (eingabe === richtig) {
+
+                        eintrag.input.classList.add(
+                            "uebung-richtig"
+                        );
+
+                    } else {
+
+                        eintrag.input.classList.add(
+                            "uebung-falsch"
+                        );
+
+                    }
+
+                });
+
+            }
+        );
+
+
+        // Lösung anzeigen
+        const loesungButton =
+            document.createElement("button");
+
+        loesungButton.textContent =
+            "Lösung anzeigen";
+
+        loesungButton.classList.add(
+            "themen-quiz-button"
+        );
+
+
+        loesungButton.addEventListener(
+            "click",
+            () => {
+
+                eingaben.forEach(eintrag => {
+
+                    eintrag.input.value =
+                        eintrag.antwort;
+
+                    eintrag.input.classList.remove(
+                        "uebung-falsch"
+                    );
+
+                    eintrag.input.classList.add(
+                        "uebung-richtig"
+                    );
+
+                });
+
+            }
+        );
+
+
+        buttonBereich.appendChild(
+            pruefenButton
+        );
+
+        buttonBereich.appendChild(
+            loesungButton
+        );
+
+
+        uebungsBox.appendChild(
+            buttonBereich
+        );
+
+
+        kapitel.appendChild(
+            uebungsBox
+        );
+
+    });
+
+}
+// Zufällige Subnetting-Aufgabe
+if (abschnitt.zufallsGenerator) {
+
+    const zufallsBox =
+        document.createElement("div");
+
+    zufallsBox.classList.add(
+        "vertiefungs-uebung"
+    );
+
+
+    const aufgabenText =
+        document.createElement("h4");
+
+    zufallsBox.appendChild(
+        aufgabenText
+    );
+
+
+    const feldDefinitionen = [
+        {
+            label: "Subnetzmaske",
+            key: "subnetzmaske"
+        },
+        {
+            label: "Netzadresse",
+            key: "netzadresse"
+        },
+        {
+            label: "Broadcastadresse",
+            key: "broadcastadresse"
+        },
+        {
+            label: "Erster Host",
+            key: "ersterHost"
+        },
+        {
+            label: "Letzter Host",
+            key: "letzterHost"
+        },
+        {
+            label: "Nutzbare Hosts",
+            key: "nutzbareHosts"
+        }
+    ];
+
+
+    const eingaben = {};
+
+    let aktuelleAufgabe = null;
+
+
+    feldDefinitionen.forEach(feld => {
+
+        const zeile =
+            document.createElement("div");
+
+        zeile.classList.add(
+            "uebungs-zeile"
+        );
+
+
+        const label =
+            document.createElement("label");
+
+        label.textContent =
+            feld.label;
+
+
+        const input =
+            document.createElement("input");
+
+        input.type = "text";
+
+        input.placeholder =
+            "Antwort eingeben";
+
+
+        eingaben[feld.key] = input;
+
+
+        zeile.appendChild(label);
+        zeile.appendChild(input);
+
+        zufallsBox.appendChild(zeile);
+
+    });
+
+
+    const buttonBereich =
+        document.createElement("div");
+
+    buttonBereich.classList.add(
+        "uebungs-buttons"
+    );
+
+
+    // Neue Aufgabe
+    const neueAufgabeButton =
+        document.createElement("button");
+
+    neueAufgabeButton.textContent =
+        "🎲 Neue Aufgabe";
+
+    neueAufgabeButton.classList.add(
+        "themen-quiz-button"
+    );
+
+
+    // Antworten prüfen
+    const pruefenButton =
+        document.createElement("button");
+
+    pruefenButton.textContent =
+        "Antworten prüfen";
+
+    pruefenButton.classList.add(
+        "themen-quiz-button"
+    );
+
+
+    // Lösung anzeigen
+    const loesungButton =
+        document.createElement("button");
+
+    loesungButton.textContent =
+        "Lösung anzeigen";
+
+    loesungButton.classList.add(
+        "themen-quiz-button"
+    );
+
+
+    function neueAufgabeErzeugen() {
+
+        aktuelleAufgabe =
+            zufaelligeSubnettingAufgabe();
+
+
+        aufgabenText.textContent =
+            "Berechne: " +
+            aktuelleAufgabe.ip +
+            "/" +
+            aktuelleAufgabe.praefix;
+
+
+        Object.values(eingaben).forEach(input => {
+
+            input.value = "";
+
+            input.classList.remove(
+                "uebung-richtig",
+                "uebung-falsch"
+            );
+
+        });
+
+    }
+
+
+    neueAufgabeButton.addEventListener(
+        "click",
+        neueAufgabeErzeugen
+    );
+
+
+    pruefenButton.addEventListener(
+        "click",
+        () => {
+
+            feldDefinitionen.forEach(feld => {
+
+                const input =
+                    eingaben[feld.key];
+
+                const eingabe =
+                    input.value
+                        .trim()
+                        .toLowerCase();
+
+                const richtig =
+                    String(
+                        aktuelleAufgabe[feld.key]
+                    )
+                        .trim()
+                        .toLowerCase();
+
+
+                input.classList.remove(
+                    "uebung-richtig",
+                    "uebung-falsch"
+                );
+
+
+                if (eingabe === richtig) {
+
+                    input.classList.add(
+                        "uebung-richtig"
+                    );
+
+                } else {
+
+                    input.classList.add(
+                        "uebung-falsch"
+                    );
+
+                }
+
+            });
+
+        }
+    );
+
+
+    loesungButton.addEventListener(
+        "click",
+        () => {
+
+            feldDefinitionen.forEach(feld => {
+
+                const input =
+                    eingaben[feld.key];
+
+                input.value =
+                    aktuelleAufgabe[feld.key];
+
+                input.classList.remove(
+                    "uebung-falsch"
+                );
+
+                input.classList.add(
+                    "uebung-richtig"
+                );
+
+            });
+
+        }
+    );
+
+
+    buttonBereich.appendChild(
+        neueAufgabeButton
+    );
+
+    buttonBereich.appendChild(
+        pruefenButton
+    );
+
+    buttonBereich.appendChild(
+        loesungButton
+    );
+
+
+    zufallsBox.appendChild(
+        buttonBereich
+    );
+
+    kapitel.appendChild(
+        zufallsBox
+    );
+
+
+    // Direkt beim Öffnen eine Aufgabe erzeugen
+    neueAufgabeErzeugen();
+}
+// Subnetting-Rechner
+if (abschnitt.subnetzRechner) {
+
+    const rechnerBox =
+        document.createElement("div");
+
+    rechnerBox.classList.add(
+        "vertiefungs-uebung",
+        "subnetz-rechner"
+    );
+
+
+    // IP-Adresse
+    const ipZeile =
+        document.createElement("div");
+
+    ipZeile.classList.add(
+        "uebungs-zeile"
+    );
+
+
+    const ipLabel =
+        document.createElement("label");
+
+    ipLabel.textContent =
+        "IPv4-Adresse";
+
+
+    const ipInput =
+        document.createElement("input");
+
+    ipInput.type = "text";
+
+    ipInput.placeholder =
+        "z. B. 192.168.10.130";
+
+
+    ipZeile.appendChild(ipLabel);
+    ipZeile.appendChild(ipInput);
+
+    rechnerBox.appendChild(ipZeile);
+
+
+    // CIDR
+    const cidrZeile =
+        document.createElement("div");
+
+    cidrZeile.classList.add(
+        "uebungs-zeile"
+    );
+
+
+    const cidrLabel =
+        document.createElement("label");
+
+    cidrLabel.textContent =
+        "CIDR-Präfix";
+
+
+    const cidrInput =
+        document.createElement("input");
+
+    cidrInput.type = "text";
+
+    cidrInput.placeholder =
+        "z. B. /26";
+
+
+    cidrZeile.appendChild(cidrLabel);
+    cidrZeile.appendChild(cidrInput);
+
+    rechnerBox.appendChild(cidrZeile);
+
+
+    // Berechnen-Button
+    const berechnenButton =
+        document.createElement("button");
+
+    berechnenButton.textContent =
+        "🧮 Subnetz berechnen";
+
+    berechnenButton.classList.add(
+        "themen-quiz-button"
+    );
+
+    rechnerBox.appendChild(
+        berechnenButton
+    );
+
+
+    // Fehlermeldung
+    const fehlerText =
+        document.createElement("p");
+
+    fehlerText.classList.add(
+        "rechner-fehler"
+    );
+
+    rechnerBox.appendChild(
+        fehlerText
+    );
+
+
+    // Ergebnisbereich
+    const ergebnisBox =
+        document.createElement("div");
+
+    ergebnisBox.classList.add(
+        "rechner-ergebnis"
+    );
+
+    ergebnisBox.style.display = "none";
+
+
+    const ergebnisTitel =
+        document.createElement("h4");
+
+    ergebnisTitel.textContent =
+        "Ergebnis";
+
+    ergebnisBox.appendChild(
+        ergebnisTitel
+    );
+
+
+    const ergebnisFelder = [
+        ["Subnetzmaske", "subnetzmaske"],
+        ["Netzadresse", "netzadresse"],
+        ["Broadcastadresse", "broadcastadresse"],
+        ["Erster Host", "ersterHost"],
+        ["Letzter Host", "letzterHost"],
+        ["Nutzbare Hosts", "nutzbareHosts"]
+    ];
+
+
+    const ausgaben = {};
+
+
+    ergebnisFelder.forEach(([labelText, key]) => {
+
+        const zeile =
+            document.createElement("div");
+
+        zeile.classList.add(
+            "rechner-zeile"
+        );
+
+
+        const label =
+            document.createElement("strong");
+
+        label.textContent =
+            labelText;
+
+
+        const wert =
+            document.createElement("span");
+
+
+        ausgaben[key] = wert;
+
+
+        zeile.appendChild(label);
+        zeile.appendChild(wert);
+
+        ergebnisBox.appendChild(zeile);
+
+    });
+
+
+    // Rechenweg
+    const rechenwegBox =
+        document.createElement("div");
+
+    rechenwegBox.classList.add(
+        "rechenweg-box"
+    );
+
+
+    const rechenwegTitel =
+        document.createElement("h4");
+
+    rechenwegTitel.textContent =
+        "Rechenweg";
+
+
+    const rechenwegText =
+        document.createElement("div");
+
+
+    rechenwegBox.appendChild(
+        rechenwegTitel
+    );
+
+    rechenwegBox.appendChild(
+        rechenwegText
+    );
+
+
+    ergebnisBox.appendChild(
+        rechenwegBox
+    );
+
+    rechnerBox.appendChild(
+        ergebnisBox
+    );
+
+
+    // IPv4-Adresse prüfen
+    function ipv4IstGueltig(ip) {
+
+        const teile =
+            ip.trim().split(".");
+
+
+        if (teile.length !== 4) {
+            return false;
+        }
+
+
+        return teile.every(teil => {
+
+            if (!/^\d{1,3}$/.test(teil)) {
+                return false;
+            }
+
+            const zahl = Number(teil);
+
+            return (
+                zahl >= 0 &&
+                zahl <= 255
+            );
+
+        });
+    }
+
+
+    // Berechnung durchführen
+    function rechnerAusfuehren() {
+
+        const ip =
+            ipInput.value.trim();
+
+        const praefixText =
+            cidrInput.value
+                .trim()
+                .replace("/", "");
+
+        const praefix =
+            Number(praefixText);
+
+
+        fehlerText.textContent = "";
+
+
+        if (!ipv4IstGueltig(ip)) {
+
+            ergebnisBox.style.display =
+                "none";
+
+            fehlerText.textContent =
+                "Bitte eine gültige IPv4-Adresse eingeben.";
+
+            return;
+        }
+
+
+        if (
+            !Number.isInteger(praefix) ||
+            praefix < 8 ||
+            praefix > 30
+        ) {
+
+            ergebnisBox.style.display =
+                "none";
+
+            fehlerText.textContent =
+                "Bitte eine CIDR-Präfixlänge zwischen /8 und /30 eingeben.";
+
+            return;
+        }
+
+
+        const ergebnis =
+            subnetzBerechnen(
+                ip,
+                praefix
+            );
+
+
+        ausgaben.subnetzmaske.textContent =
+            ergebnis.subnetzmaske;
+
+        ausgaben.netzadresse.textContent =
+            ergebnis.netzadresse;
+
+        ausgaben.broadcastadresse.textContent =
+            ergebnis.broadcastadresse;
+
+        ausgaben.ersterHost.textContent =
+            ergebnis.ersterHost;
+
+        ausgaben.letzterHost.textContent =
+            ergebnis.letzterHost;
+
+        ausgaben.nutzbareHosts.textContent =
+            ergebnis.nutzbareHosts;
+
+
+        // Binäre Subnetzmaske
+        const binaereMaske =
+            ergebnis.subnetzmaske
+                .split(".")
+                .map(oktett =>
+                    Number(oktett)
+                        .toString(2)
+                        .padStart(8, "0")
+                )
+                .join(".");
+
+
+        const hostBits =
+            32 - praefix;
+
+        const gesamtAdressen =
+            2 ** hostBits;
+
+
+        rechenwegText.innerHTML = `
+            <p>
+                <strong>1.</strong>
+                /${praefix} bedeutet:
+                ${praefix} Netzbits und
+                ${hostBits} Hostbits.
+            </p>
+
+            <p>
+                <strong>2.</strong>
+                Binäre Subnetzmaske:
+                <br>
+                ${binaereMaske}
+            </p>
+
+            <p>
+                <strong>3.</strong>
+                Subnetzmaske:
+                ${ergebnis.subnetzmaske}
+            </p>
+
+            <p>
+                <strong>4.</strong>
+                2^${hostBits} =
+                ${gesamtAdressen}
+                Adressen.
+                ${gesamtAdressen} - 2 =
+                ${ergebnis.nutzbareHosts}
+                nutzbare Hosts.
+            </p>
+
+            <p>
+                <strong>5.</strong>
+                Netzadresse:
+                ${ergebnis.netzadresse}
+                <br>
+                Broadcastadresse:
+                ${ergebnis.broadcastadresse}
+            </p>
+        `;
+
+
+        ergebnisBox.style.display =
+            "block";
+    }
+
+
+    berechnenButton.addEventListener(
+        "click",
+        rechnerAusfuehren
+    );
+
+
+    // Enter funktioniert ebenfalls
+    ipInput.addEventListener(
+        "keydown",
+        event => {
+
+            if (event.key === "Enter") {
+                rechnerAusfuehren();
+            }
+
+        }
+    );
+
+
+    cidrInput.addEventListener(
+        "keydown",
+        event => {
+
+            if (event.key === "Enter") {
+                rechnerAusfuehren();
+            }
+
+        }
+    );
+
+
+    kapitel.appendChild(
+        rechnerBox
+    );
+}
+// Merksatz
+if (abschnitt.merksatz) {
+
+    const merksatz =
+        document.createElement("div");
+
+    merksatz.classList.add(
+        "vertiefungs-merksatz"
+    );
+
+    merksatz.textContent =
+        "Merksatz: " +
+        abschnitt.merksatz;
+
+    kapitel.appendChild(merksatz);
+}
+
+        lernfelderListe.appendChild(
+            kapitel
+        );
+
+    });
+
+}
+function ipZuZahl(ip) {
+
+    const teile =
+        ip.split(".").map(Number);
+
+    return (
+        (
+            (
+                (
+                    teile[0] * 256 +
+                    teile[1]
+                ) * 256 +
+                teile[2]
+            ) * 256 +
+            teile[3]
+        ) >>> 0
+    );
+}
+
+
+function zahlZuIp(zahl) {
+
+    return [
+        (zahl >>> 24) & 255,
+        (zahl >>> 16) & 255,
+        (zahl >>> 8) & 255,
+        zahl & 255
+    ].join(".");
+}
+
+
+function subnetzBerechnen(ip, praefix) {
+
+    const ipZahl =
+        ipZuZahl(ip);
+
+    const hostBits =
+        32 - praefix;
+
+    const maskeZahl =
+        (0xffffffff << hostBits) >>> 0;
+
+    const netzZahl =
+        (ipZahl & maskeZahl) >>> 0;
+
+    const wildcard =
+        (~maskeZahl) >>> 0;
+
+    const broadcastZahl =
+        (netzZahl | wildcard) >>> 0;
+
+
+    return {
+
+        subnetzmaske:
+            zahlZuIp(maskeZahl),
+
+        netzadresse:
+            zahlZuIp(netzZahl),
+
+        broadcastadresse:
+            zahlZuIp(broadcastZahl),
+
+        ersterHost:
+            zahlZuIp(
+                (netzZahl + 1) >>> 0
+            ),
+
+        letzterHost:
+            zahlZuIp(
+                (broadcastZahl - 1) >>> 0
+            ),
+
+        nutzbareHosts:
+            (2 ** hostBits) - 2
+    };
+}
+
+
+function zufaelligeSubnettingAufgabe() {
+
+    // Zufälliges Präfix zwischen /24 und /30
+    const praefix =
+        Math.floor(Math.random() * 7) + 24;
+
+
+    const blockgroesse =
+        2 ** (32 - praefix);
+
+
+    // Gültigen Subnetzstart bestimmen
+    const netzStart =
+        Math.floor(
+            Math.random() *
+            (256 / blockgroesse)
+        ) * blockgroesse;
+
+
+    let oktett1;
+    let oktett2;
+    let oktett3;
+
+
+    // Einen privaten IPv4-Bereich auswählen
+    const bereich =
+        Math.floor(Math.random() * 3);
+
+
+    if (bereich === 0) {
+
+        // 192.168.0.0/16
+
+        oktett1 = 192;
+        oktett2 = 168;
+
+        oktett3 =
+            Math.floor(Math.random() * 256);
+
+    } else if (bereich === 1) {
+
+        // 10.0.0.0/8
+
+        oktett1 = 10;
+
+        oktett2 =
+            Math.floor(Math.random() * 256);
+
+        oktett3 =
+            Math.floor(Math.random() * 256);
+
+    } else {
+
+        // 172.16.0.0/12
+
+        oktett1 = 172;
+
+        oktett2 =
+            16 +
+            Math.floor(Math.random() * 16);
+
+        oktett3 =
+            Math.floor(Math.random() * 256);
+    }
+
+
+    // Eine gültige Hostadresse innerhalb
+    // des zufälligen Subnetzes erzeugen
+    const hostOffset =
+        1 +
+        Math.floor(
+            Math.random() *
+            (blockgroesse - 2)
+        );
+
+
+    const oktett4 =
+        netzStart + hostOffset;
+
+
+    const ip =
+        oktett1 + "." +
+        oktett2 + "." +
+        oktett3 + "." +
+        oktett4;
+
+
+    const loesung =
+        subnetzBerechnen(
+            ip,
+            praefix
+        );
+
+
+    return {
+
+        ip: ip,
+        praefix: praefix,
+
+        ...loesung
+    };
+}
 
 
     const lernfeldNummer = document.createElement("p");
@@ -519,6 +1822,36 @@ function themaDetailsAnzeigen(lernfeld, thema) {
         lernfelderListe.appendChild(merksatzBox);
 
     }
+
+    if (thema.vertiefung && vertiefungen[thema.vertiefung]) {
+
+    const vertiefungsButton = document.createElement("button");
+
+    vertiefungsButton.classList.add(
+    "themen-quiz-button",
+    "vertiefungs-button"
+);
+
+    vertiefungsButton.textContent =
+        "📖 Thema ausführlich lernen";
+
+    vertiefungsButton.addEventListener("click", () => {
+
+    const vertiefung =
+        vertiefungen[thema.vertiefung];
+
+    vertiefungAnzeigen(
+        lernfeld,
+        thema,
+        vertiefung
+    );
+
+});
+
+
+
+    lernfelderListe.appendChild(vertiefungsButton);
+}
 
 if (thema.id) {
 
@@ -1069,3 +2402,459 @@ darkModeAktualisieren();
 
 lernfelderAnzeigen();
 frageAnzeigen();
+// =========================================
+// Globale Lerninhalt-Suche
+// =========================================
+
+const sucheInput =
+    document.getElementById("suche-input");
+
+const sucheErgebnisse =
+    document.getElementById("suche-ergebnisse");
+
+
+const suchIndex = [];
+
+
+// Hilfsfunktion für Vertiefungsinhalte
+function abschnittSuchtextErzeugen(abschnitt) {
+
+    const texte = [
+        abschnitt.id,
+        abschnitt.titel,
+        abschnitt.merksatz,
+        abschnitt.hinweis
+    ];
+
+
+    if (abschnitt.texte) {
+        texte.push(...abschnitt.texte);
+    }
+
+
+    if (abschnitt.liste) {
+        texte.push(...abschnitt.liste);
+    }
+
+
+    if (abschnitt.beispiel) {
+
+        texte.push(
+            abschnitt.beispiel.titel,
+            abschnitt.beispiel.text
+        );
+    }
+
+
+    return texte
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+}
+
+
+// Suchindex aufbauen
+lernfelder.forEach(lernfeld => {
+
+    // Lernfeld selbst
+    suchIndex.push({
+
+        typ: "lernfeld",
+
+        titel:
+            lernfeld.nummer +
+            " – " +
+            lernfeld.kurzTitel,
+
+        info:
+            "Lernfeld",
+
+        suchtext: [
+            lernfeld.id,
+            lernfeld.nummer,
+            lernfeld.titel,
+            lernfeld.kurzTitel,
+            lernfeld.beschreibung
+        ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase(),
+
+        lernfeld: lernfeld
+    });
+
+
+    // Themen des Lernfelds
+    lernfeld.themen.forEach(thema => {
+
+        suchIndex.push({
+
+            typ: "thema",
+
+            titel:
+                thema.titel,
+
+            info:
+                lernfeld.nummer +
+                " – " +
+                lernfeld.kurzTitel,
+
+            suchtext: [
+                thema.id,
+                thema.titel,
+                thema.erklaerung,
+                thema.merksatz
+            ]
+                .filter(Boolean)
+                .join(" ")
+                .toLowerCase(),
+
+            lernfeld: lernfeld,
+            thema: thema
+        });
+
+
+        // Gibt es zu diesem Thema eine Vertiefung?
+        if (
+            thema.vertiefung &&
+            vertiefungen[thema.vertiefung]
+        ) {
+
+            const vertiefung =
+                vertiefungen[
+                    thema.vertiefung
+                ];
+
+
+            vertiefung.abschnitte.forEach(
+                abschnitt => {
+
+                    suchIndex.push({
+
+                        typ: "kapitel",
+
+                        titel:
+                            abschnitt.titel,
+
+                        info:
+                            vertiefung.titel +
+                            " – Vertiefung",
+
+                        suchtext:
+                            abschnittSuchtextErzeugen(
+                                abschnitt
+                            ),
+
+                        lernfeld: lernfeld,
+                        thema: thema,
+                        vertiefung: vertiefung,
+                        abschnitt: abschnitt
+                    });
+
+                }
+            );
+        }
+
+    });
+
+});
+
+
+// Bewertung eines Treffers
+function suchTrefferBewerten(
+    treffer,
+    suchbegriff
+) {
+
+    const titel =
+        treffer.titel.toLowerCase();
+
+
+    if (titel === suchbegriff) {
+        return 100;
+    }
+
+
+    if (titel.startsWith(suchbegriff)) {
+        return 80;
+    }
+
+
+    if (titel.includes(suchbegriff)) {
+        return 60;
+    }
+
+
+    if (
+        treffer.suchtext.includes(
+            suchbegriff
+        )
+    ) {
+        return 20;
+    }
+
+
+    return 0;
+}
+
+
+// Lernfelder-Bereich öffnen
+function lernfelderBereichOeffnen() {
+
+    const button =
+        document.querySelector(
+            '.nav-button[data-bereich="lernfelder-bereich"]'
+        );
+
+
+    if (button) {
+        button.click();
+    }
+}
+
+
+// Treffer öffnen
+function suchTrefferOeffnen(treffer) {
+
+    lernfelderBereichOeffnen();
+
+
+    // Lernfeld
+    if (treffer.typ === "lernfeld") {
+
+        lernfeldDetailsAnzeigen(
+            treffer.lernfeld
+        );
+
+    }
+
+
+    // Normales Thema
+    if (treffer.typ === "thema") {
+
+        themaDetailsAnzeigen(
+            treffer.lernfeld,
+            treffer.thema
+        );
+
+    }
+
+
+    // Kapitel einer Vertiefung
+    if (treffer.typ === "kapitel") {
+
+        // Erst normale Themenseite öffnen
+        themaDetailsAnzeigen(
+            treffer.lernfeld,
+            treffer.thema
+        );
+
+
+        // Vertiefungsbutton anklicken
+        const vertiefungsButton =
+            lernfelderListe.querySelector(
+                ".vertiefungs-button"
+            );
+
+
+        if (vertiefungsButton) {
+
+            vertiefungsButton.click();
+
+
+            // Anschließend zum Kapitel scrollen
+            requestAnimationFrame(() => {
+
+                const ziel =
+                    document.getElementById(
+                        "vertiefung-" +
+                        treffer.abschnitt.id
+                    );
+
+
+                if (ziel) {
+
+                    ziel.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+
+            });
+
+        }
+
+    }
+
+
+    // Suche danach schließen
+    sucheInput.value = "";
+
+    sucheErgebnisse.innerHTML = "";
+
+    sucheErgebnisse.style.display =
+        "none";
+}
+
+
+// Treffer anzeigen
+function sucheAusfuehren() {
+
+    const suchbegriff =
+        sucheInput.value
+            .trim()
+            .toLowerCase();
+
+
+    sucheErgebnisse.innerHTML = "";
+
+
+    // Erst ab zwei Zeichen suchen
+    if (suchbegriff.length < 2) {
+
+        sucheErgebnisse.style.display =
+            "none";
+
+        return;
+    }
+
+
+    const treffer =
+        suchIndex
+            .map(eintrag => ({
+                eintrag: eintrag,
+
+                punkte:
+                    suchTrefferBewerten(
+                        eintrag,
+                        suchbegriff
+                    )
+            }))
+            .filter(
+                treffer =>
+                    treffer.punkte > 0
+            )
+            .sort(
+                (a, b) =>
+                    b.punkte - a.punkte
+            )
+            .slice(0, 8);
+
+
+    // Keine Treffer
+    if (treffer.length === 0) {
+
+        const keineTreffer =
+            document.createElement("div");
+
+        keineTreffer.classList.add(
+            "suche-keine-treffer"
+        );
+
+        keineTreffer.textContent =
+            "Keine passenden Lerninhalte gefunden.";
+
+        sucheErgebnisse.appendChild(
+            keineTreffer
+        );
+
+        sucheErgebnisse.style.display =
+            "block";
+
+        return;
+    }
+
+
+    // Treffer erzeugen
+    treffer.forEach(
+        ({ eintrag }) => {
+
+            const trefferElement =
+                document.createElement("div");
+
+            trefferElement.classList.add(
+                "suche-treffer"
+            );
+
+
+            const titel =
+                document.createElement("div");
+
+            titel.classList.add(
+                "suche-treffer-titel"
+            );
+
+            titel.textContent =
+                eintrag.titel;
+
+
+            const info =
+                document.createElement("div");
+
+            info.classList.add(
+                "suche-treffer-info"
+            );
+
+            info.textContent =
+                eintrag.info;
+
+
+            trefferElement.appendChild(
+                titel
+            );
+
+            trefferElement.appendChild(
+                info
+            );
+
+
+            trefferElement.addEventListener(
+                "click",
+                () => {
+
+                    suchTrefferOeffnen(
+                        eintrag
+                    );
+
+                }
+            );
+
+
+            sucheErgebnisse.appendChild(
+                trefferElement
+            );
+
+        }
+    );
+
+
+    sucheErgebnisse.style.display =
+        "block";
+}
+
+
+// Während der Eingabe suchen
+sucheInput.addEventListener(
+    "input",
+    sucheAusfuehren
+);
+
+
+// Suche beim Klick außerhalb schließen
+document.addEventListener(
+    "click",
+    event => {
+
+        if (
+            !event.target.closest(
+                ".suche-container"
+            )
+        ) {
+
+            sucheErgebnisse.style.display =
+                "none";
+        }
+
+    }
+);
