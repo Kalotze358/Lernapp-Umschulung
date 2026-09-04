@@ -798,3 +798,323 @@ body.dark-mode #antworten button.ausgewaehlt {
 
     color: var(--suche-info);
 }
+/* =========================================
+   Prüfungsvorbereitung
+========================================= */
+
+.pruefung-auswahl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.pruefung-karte {
+    min-height: 150px;
+    padding: 22px;
+
+    border: 1px solid rgba(127, 127, 127, 0.3);
+    border-radius: 12px;
+
+    background: transparent;
+    color: inherit;
+
+    cursor: pointer;
+    text-align: left;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.pruefung-karte:hover {
+    transform: translateY(-3px);
+    background-color: rgba(127, 127, 127, 0.1);
+    border-color: rgba(127, 127, 127, 0.6);
+}
+
+.pruefung-karte strong {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 22px;
+}
+
+.pruefung-karte span {
+    display: block;
+
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+/* Smartphone */
+@media (max-width: 900px) {
+
+    .pruefung-auswahl {
+        grid-template-columns: 1fr;
+    }
+
+    .pruefung-karte {
+        min-height: 120px;
+    }
+}
+.pruefung-detail {
+    display: none;
+}
+/* =========================================
+   Prüfungsaufgaben
+========================================= */
+
+.pruefungs-situation,
+.pruefungs-aufgabe {
+    margin-top: 25px;
+    padding: 20px;
+
+    border: 1px solid rgba(127, 127, 127, 0.3);
+    border-radius: 12px;
+
+    background-color: rgba(127, 127, 127, 0.06);
+}
+
+.pruefungs-situation p,
+.pruefungs-aufgabe p,
+#ap1-musterloesung p {
+    white-space: pre-line;
+    line-height: 1.6;
+}
+
+.pruefungs-systeme {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+.pruefungs-system {
+    padding: 20px;
+
+    border: 1px solid rgba(127, 127, 127, 0.3);
+    border-radius: 12px;
+}
+
+.pruefungs-system h3 {
+    margin-top: 0;
+}
+
+.pruefungs-system ul {
+    padding-left: 20px;
+    line-height: 1.7;
+}
+
+#ap1-freie-antwort {
+    width: 100%;
+    min-height: 180px;
+
+    margin-top: 15px;
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(127, 127, 127, 0.4);
+    border-radius: 10px;
+
+    background: transparent;
+    color: inherit;
+
+    font: inherit;
+    line-height: 1.5;
+
+    resize: vertical;
+}
+
+#ap1-freie-antwort:focus {
+    outline: 2px solid rgba(127, 127, 127, 0.5);
+}
+
+.pruefung-aktion-button {
+    margin-top: 15px;
+    padding: 12px 18px;
+
+    border: 1px solid rgba(127, 127, 127, 0.4);
+    border-radius: 8px;
+
+    background: transparent;
+    color: inherit;
+
+    cursor: pointer;
+}
+
+.pruefung-aktion-button:hover {
+    background-color: rgba(127, 127, 127, 0.12);
+}
+
+#ap1-musterloesung {
+    margin-top: 20px;
+    padding: 20px;
+
+    border: 1px solid rgba(127, 127, 127, 0.3);
+    border-radius: 12px;
+
+    background-color: rgba(127, 127, 127, 0.08);
+}
+
+@media (max-width: 800px) {
+
+    .pruefungs-systeme {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* Selbstbewertung bei Prüfungsaufgaben */
+
+.ap1-selbstbewertung {
+    margin-top: 20px;
+    padding: 20px;
+
+    border: 1px solid rgba(127, 127, 127, 0.3);
+    border-radius: 12px;
+
+    background-color: rgba(127, 127, 127, 0.06);
+}
+
+#ap1-punkte-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.punkte-button {
+    min-width: 45px;
+    padding: 10px 14px;
+
+    border: 1px solid rgba(127, 127, 127, 0.4);
+    border-radius: 8px;
+
+    background: transparent;
+    color: inherit;
+
+    font: inherit;
+    cursor: pointer;
+}
+
+.punkte-button:hover {
+    background-color: rgba(127, 127, 127, 0.12);
+}
+
+.punkte-button.ausgewaehlt {
+    outline: 2px solid currentColor;
+    font-weight: bold;
+}
+
+#ap1-punkte-ergebnis {
+    margin-top: 15px;
+    font-weight: bold;
+}
+/* =========================================
+   AP1 Fortschritt
+========================================= */
+
+.ap1-fortschritt {
+    margin: 25px 0;
+    padding: 20px;
+
+    border: 1px solid rgba(127, 127, 127, 0.3);
+    border-radius: 12px;
+
+    background-color: rgba(127, 127, 127, 0.06);
+}
+
+.ap1-fortschritt h3 {
+    margin-top: 0;
+}
+
+.fortschritt-gesamt {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+
+    margin: 20px 0;
+}
+
+.fortschritt-gesamt > div {
+    padding: 15px;
+
+    border: 1px solid rgba(127, 127, 127, 0.25);
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.fortschritt-gesamt span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+.fortschritt-gesamt strong {
+    font-size: 22px;
+}
+
+.fortschritt-bereiche {
+    display: grid;
+    gap: 8px;
+}
+
+.fortschritt-zeile {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 10px 0;
+
+    border-bottom:
+        1px solid rgba(127, 127, 127, 0.2);
+}
+
+.fortschritt-zeile:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 700px) {
+
+    .fortschritt-gesamt {
+        grid-template-columns: 1fr;
+    }
+
+}
+.pruefungs-aufgabenstand {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.pruefungs-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.pruefungs-navigation button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+
+    .pruefungs-navigation {
+        flex-direction: column;
+    }
+
+}

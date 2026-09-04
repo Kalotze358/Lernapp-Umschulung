@@ -19,8 +19,11 @@ const ergebnis = document.getElementById("ergebnis");
 const punkteAnzeige = document.getElementById("punkte");
 const naechsteFrageButton = document.getElementById("naechste-frage");
 const kategorieButtons = document.querySelectorAll(".kategorie-button");
+
 const kategorieTitel = document.getElementById("kategorie-titel");
+
 const lernfelderListe = document.getElementById("lernfelder-liste");
+
 const fortschrittAnzeige = document.getElementById("fortschritt");
 const quizAuswertung =
     document.getElementById("quiz-auswertung");
@@ -2858,3 +2861,65 @@ document.addEventListener(
 
     }
 );
+
+// =========================================
+// Prüfungsvorbereitung
+// AP2 und WiSo
+// AP1 befindet sich in pruefungen/ap1-ui.js
+// =========================================
+
+const pruefungAuswahl =
+    document.querySelector(
+        "#pruefung-bereich > .pruefung-auswahl"
+    );
+
+const ap2Bereich =
+    document.getElementById("ap2-bereich");
+
+const ap2Button =
+    document.querySelector(
+        '.pruefung-karte[data-pruefung="ap2"]'
+    );
+
+const ap2Zurueck =
+    document.getElementById("ap2-zurueck");
+
+
+const wisoBereich =
+    document.getElementById("wiso-bereich");
+
+const wisoButton =
+    document.querySelector(
+        '.pruefung-karte[data-pruefung="wiso"]'
+    );
+
+const wisoZurueck =
+    document.getElementById("wiso-zurueck");
+
+
+ap2Button.addEventListener("click", () => {
+
+    pruefungAuswahl.style.display = "none";
+    ap2Bereich.style.display = "block";
+});
+
+
+ap2Zurueck.addEventListener("click", () => {
+
+    ap2Bereich.style.display = "none";
+    pruefungAuswahl.style.display = "grid";
+});
+
+
+wisoButton.addEventListener("click", () => {
+
+    pruefungAuswahl.style.display = "none";
+    wisoBereich.style.display = "block";
+});
+
+
+wisoZurueck.addEventListener("click", () => {
+
+    wisoBereich.style.display = "none";
+    pruefungAuswahl.style.display = "grid";
+});

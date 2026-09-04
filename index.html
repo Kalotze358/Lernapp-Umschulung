@@ -22,7 +22,9 @@
 <script src="fragen/lf10b.js" defer></script>
 <script src="fragen/lf11b.js" defer></script>
 <script src="fragen/lf12b.js" defer></script>
+<script src="pruefungen/ap1.js" defer></script>
 <script src="script.js" defer></script>
+<script src="pruefungen/ap1-ui.js" defer></script>
 <script src="pruefung.js" defer></script>
 </head>
 
@@ -54,7 +56,9 @@
                 <button class="nav-button" data-bereich="lernfelder-bereich">
                         Lernfelder
                 </button>
-                
+                <button class="nav-button" data-bereich="pruefung-bereich">
+                    Prüfungsvorbereitung
+                </button>
                 <button class="nav-button" data-bereich="wissen-bereich">
                   Wissenswertes
              </button>
@@ -105,39 +109,8 @@
                 </div>
 
             </section>
-            <main>
-
-    <section id="start-bereich" class="bereich aktiv">
-
-        ...
-        Inhalt deiner Startseite
-        ...
-
-    </section>
-
-
-    <section id="quiz-auswahl-bereich" class="bereich">
-
-        <h1>Quiz auswählen</h1>
-
-        <p>
-            Wähle eine Kategorie aus.
-        </p>
-
-        <div class="quiz-auswahl-buttons">
-
-            <button data-start-kategorie="netzwerk">
-                Netzwerktechnik
-            </button>
-
-            <button data-start-kategorie="programmierung">
-                Programmierung
-            </button>
-
-        </div>
-
-    </section>
-
+           
+            
 
     <section id="quiz-bereich" class="bereich">
 
@@ -190,7 +163,291 @@
 
                 <div id="lernfelder-liste"></div>
 
-</section>
+            </section>
+           <section id="pruefung-bereich" class="bereich">
+
+                <h1>Prüfungsvorbereitung</h1>
+
+                <p>
+                    Bereite dich gezielt auf die Abschlussprüfungen
+                    für Fachinformatiker Systemintegration vor.
+                </p>
+            <div id="ap1-fortschritt" class="ap1-fortschritt">
+
+                <h3>Dein AP1-Fortschritt</h3>
+
+                <div id="ap1-fortschritt-inhalt">
+                    Noch keine Aufgaben bearbeitet.
+                </div>
+
+            </div>
+                <div class="pruefung-auswahl">
+
+                    <button class="pruefung-karte" data-pruefung="ap1">
+                        <strong>AP1</strong>
+                        <span>Einrichten eines IT-gestützten Arbeitsplatzes</span>
+                    </button>
+
+                    <button class="pruefung-karte" data-pruefung="ap2">
+                        <strong>AP2 – FISI</strong>
+                        <span>Fachqualifikation Systemintegration</span>
+                    </button>
+
+                    <button class="pruefung-karte" data-pruefung="wiso">
+                        <strong>WiSo</strong>
+                        <span>Wirtschafts- und Sozialkunde</span>
+                    </button>
+
+                </div>
+                            <div id="ap1-aufgabe-bereich" class="pruefung-detail">
+
+                <button id="ap1-aufgabe-zurueck" class="zurueck-button">
+                    ← Zurück zu Hardware & Arbeitsplatz
+                </button>
+
+                <div id="ap1-aufgabe-inhalt"></div>
+
+            </div>
+                <div id="ap1-bereich" class="pruefung-detail">
+
+                    <button id="ap1-zurueck" class="zurueck-button">
+                        ← Zurück zur Prüfungsauswahl
+                    </button>
+
+                    <h2>AP1 – Prüfungsvorbereitung</h2>
+
+                    <p>
+                        Einrichten eines IT-gestützten Arbeitsplatzes
+                    </p>
+
+                    <div class="pruefung-auswahl">
+
+                        <button class="pruefung-karte" data-ap1="themen">
+                            <strong>Themen-Training</strong>
+                            <span>
+                                AP1-Inhalte gezielt nach Themen üben.
+                            </span>
+                        </button>
+
+                        <button class="pruefung-karte" data-ap1="simulation">
+                            <strong>Prüfungssimulation</strong>
+                            <span>
+                                Eine gemischte AP1-Prüfung unter
+                                prüfungsnahen Bedingungen bearbeiten.
+                            </span>
+                        </button>
+
+                    </div>
+
+                </div>
+                <div id="ap1-themen-bereich" class="pruefung-detail">
+
+    <button id="ap1-themen-zurueck" class="zurueck-button">
+        ← Zurück zu AP1
+    </button>
+
+    <h2>AP1 – Themen-Training</h2>
+
+    <p>
+        Wähle einen Themenbereich für dein Training.
+    </p>
+
+    <div class="pruefung-auswahl">
+
+        <button class="pruefung-karte" data-ap1-thema="hardware">
+            <strong>🖥️ Hardware & Arbeitsplatz</strong>
+            <span>
+                Hardware auswählen, Schnittstellen,
+                Peripherie und Arbeitsplatzsysteme.
+            </span>
+        </button>
+
+        <button class="pruefung-karte" data-ap1-thema="netzwerk">
+            <strong>🌐 Netzwerkgrundlagen</strong>
+            <span>
+                IPv4, DHCP, Gateway, Verkabelung
+                und grundlegende Fehlersuche.
+            </span>
+        </button>
+
+        <button class="pruefung-karte" data-ap1-thema="sicherheit">
+            <strong>🔐 IT-Sicherheit & Datenschutz</strong>
+            <span>
+                Schutzmaßnahmen, Risiken,
+                Berechtigungen und Datenschutz.
+            </span>
+        </button>
+
+        <button class="pruefung-karte" data-ap1-thema="projekt">
+            <strong>📋 Projektmanagement</strong>
+            <span>
+                SMART-Ziele, Projektphasen,
+                Netzpläne und Zeitplanung.
+            </span>
+        </button>
+
+        <button class="pruefung-karte" data-ap1-thema="wirtschaft">
+            <strong>💰 Wirtschaftlichkeit & Beschaffung</strong>
+            <span>
+                Angebote, Kosten, Rabatte,
+                Rechnungen und Wirtschaftlichkeit.
+            </span>
+        </button>
+
+        <button class="pruefung-karte" data-ap1-thema="daten">
+            <strong>💾 Daten & Programmierung</strong>
+            <span>
+                Datenverarbeitung, Datenbanken
+                und grundlegende Programmlogik.
+            </span>
+        </button>
+
+    </div>
+
+</div>
+<div id="ap1-hardware-bereich" class="pruefung-detail">
+
+    <button id="ap1-hardware-zurueck" class="zurueck-button">
+        ← Zurück zum AP1 Themen-Training
+    </button>
+
+    <h2>🖥️ Hardware & Arbeitsplatz</h2>
+
+    <p>
+        Trainiere typische AP1-Aufgaben rund um
+        Arbeitsplatzsysteme und Hardware.
+    </p>
+
+    <div class="pruefung-auswahl">
+
+        <button class="pruefung-karte" data-hardware-thema="auswahl">
+            <strong>Hardware auswählen & vergleichen</strong>
+            <span>
+                Anforderungen analysieren und geeignete
+                Hardware anhand technischer Daten auswählen.
+            </span>
+        </button>
+
+        <button class="pruefung-karte" data-hardware-thema="schnittstellen">
+            <strong>Schnittstellen & Anschlüsse</strong>
+            <span>
+                USB, Netzwerkanschlüsse und weitere
+                typische Schnittstellen unterscheiden.
+            </span>
+        </button>
+
+        <button class="pruefung-karte" data-hardware-thema="peripherie">
+            <strong>Peripherie & Arbeitsplatzgeräte</strong>
+            <span>
+                Drucker, Monitore, Eingabegeräte und
+                andere Arbeitsplatzkomponenten beurteilen.
+            </span>
+        </button>
+
+        <button class="pruefung-karte" data-hardware-thema="leistung">
+            <strong>Strom, Leistung & Energie</strong>
+            <span>
+                Spannung, Stromstärke, Leistung und
+                Energiebedarf berechnen.
+            </span>
+        </button>
+
+        <button class="pruefung-karte" data-hardware-thema="speicher">
+            <strong>Speicher & Datenträger</strong>
+            <span>
+                Arbeitsspeicher und Massenspeicher
+                vergleichen und passend dimensionieren.
+            </span>
+        </button>
+
+        <button class="pruefung-karte" data-hardware-thema="kompatibilitaet">
+            <strong>Kompatibilität & Fehlersuche</strong>
+            <span>
+                Technische Probleme erkennen und
+                systematisch geeignete Lösungen finden.
+            </span>
+        </button>
+
+    </div>
+
+</div>
+                <div id="ap2-bereich" class="pruefung-detail">
+
+    <button id="ap2-zurueck" class="zurueck-button">
+        ← Zurück zur Prüfungsauswahl
+    </button>
+
+    <h2>AP2 – FISI</h2>
+
+    <p>
+        Fachspezifische Prüfung für Fachinformatiker Systemintegration
+    </p>
+
+    <div class="pruefung-auswahl">
+
+        <button class="pruefung-karte">
+            <strong>Konzeption & Administration</strong>
+            <span>
+                IT-Systeme planen, auswählen, administrieren
+                und absichern.
+            </span>
+        </button>
+
+        <button class="pruefung-karte">
+            <strong>Analyse & Entwicklung von Netzwerken</strong>
+            <span>
+                Netzwerke analysieren, planen,
+                konfigurieren und Fehler beheben.
+            </span>
+        </button>
+
+        <button class="pruefung-karte">
+            <strong>Prüfungssimulation</strong>
+            <span>
+                Gemischte AP2-Aufgaben unter
+                prüfungsnahen Bedingungen bearbeiten.
+            </span>
+        </button>
+
+    </div>
+
+</div>
+
+
+            <div id="wiso-bereich" class="pruefung-detail">
+
+                <button id="wiso-zurueck" class="zurueck-button">
+                    ← Zurück zur Prüfungsauswahl
+                </button>
+
+                <h2>WiSo – Prüfungsvorbereitung</h2>
+
+                <p>
+                    Wirtschafts- und Sozialkunde
+                </p>
+
+                <div class="pruefung-auswahl">
+
+                    <button class="pruefung-karte">
+                        <strong>Themen-Training</strong>
+                        <span>
+                            Arbeitsrecht, Ausbildung, Wirtschaft
+                            und Sozialversicherung gezielt üben.
+                        </span>
+                    </button>
+
+                    <button class="pruefung-karte">
+                        <strong>Prüfungssimulation</strong>
+                        <span>
+                            Gemischte WiSo-Aufgaben unter
+                            prüfungsnahen Bedingungen bearbeiten.
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+            </section>
             <section id="wissen-bereich" class="bereich">
 
                 <h1>Wissenswertes</h1>
