@@ -810,5 +810,290 @@ const lf06Fragen = [
     themen: ["incident-problem"],
     schwierigkeit: "schwer",
     typ: "single-choice"
+},
+{
+    id: "lf06q030",
+    frage:
+        "Ein Mitarbeiter meldet, dass sein Drucker seit heute keine Dokumente mehr ausgibt. Um welche Art von Supportfall handelt es sich am ehesten?",
+
+    antworten: [
+        {
+            text:
+                "Eine Störung, weil ein bisher nutzbarer IT-Service nicht wie vorgesehen funktioniert.",
+            richtig: true
+        },
+        {
+            text:
+                "Eine Serviceanfrage, weil der Mitarbeiter grundsätzlich einen Drucker benötigt.",
+            richtig: false
+        },
+        {
+            text:
+                "Ein Problem, weil jede Druckerstörung automatisch als Problem eingestuft wird.",
+            richtig: false
+        },
+        {
+            text:
+                "Eine Änderung, weil der Drucker neu konfiguriert werden muss.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: ["serviceanfragen", "incident-problem"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf06q031",
+    frage:
+        "Welche Informationen sollten bei der Aufnahme eines Supporttickets möglichst erfasst werden?",
+
+    antworten: [
+        {
+            text:
+                "Betroffener Benutzer beziehungsweise Ansprechpartner",
+            richtig: true
+        },
+        {
+            text:
+                "Fehlerbeschreibung und beobachtete Symptome",
+            richtig: true
+        },
+        {
+            text:
+                "Zeitpunkt, Auswirkungen und bereits durchgeführte Maßnahmen",
+            richtig: true
+        },
+        {
+            text:
+                "Nur die vermutete technische Ursache des Mitarbeiters",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: ["ticketaufnahme", "ticketsystem"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+
+{
+    id: "lf06q032",
+    frage:
+        "Zwei Tickets treffen gleichzeitig ein. Ticket A betrifft einen einzelnen Benutzer, dessen zweiter Monitor ausgefallen ist. Ticket B betrifft den Ausfall des zentralen Warenwirtschaftssystems für 80 Mitarbeiter. Welches Ticket sollte normalerweise höher priorisiert werden?",
+
+    antworten: [
+        {
+            text:
+                "Ticket B, weil deutlich mehr Benutzer und ein wichtiger Geschäftsprozess betroffen sind.",
+            richtig: true
+        },
+        {
+            text:
+                "Ticket A, weil Hardwarefehler grundsätzlich die höchste Priorität erhalten.",
+            richtig: false
+        },
+        {
+            text:
+                "Beide müssen immer dieselbe Priorität erhalten, weil sie gleichzeitig eingegangen sind.",
+            richtig: false
+        },
+        {
+            text:
+                "Ticket A, weil Probleme einzelner Benutzer schneller gelöst werden können.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: ["priorisierung", "ticketsystem"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf06q033",
+    frage:
+        "In einem SLA ist für kritische Störungen eine Reaktionszeit von 30 Minuten vereinbart. Was bedeutet diese Angabe?",
+
+    antworten: [
+        {
+            text:
+                "Innerhalb von 30 Minuten muss mit der Bearbeitung beziehungsweise einer vereinbarten Reaktion begonnen werden.",
+            richtig: true
+        },
+        {
+            text:
+                "Die Störung muss zwingend innerhalb von 30 Minuten vollständig behoben sein.",
+            richtig: false
+        },
+        {
+            text:
+                "Das Ticket darf frühestens nach 30 Minuten an den Support weitergeleitet werden.",
+            richtig: false
+        },
+        {
+            text:
+                "Nach 30 Minuten wird das Ticket unabhängig vom Status automatisch geschlossen.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: ["sla", "priorisierung"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf06q034",
+    frage:
+        "Der First-Level-Support hat eine Störung aufgenommen, grundlegende Prüfungen durchgeführt und festgestellt, dass eine tiefergehende Analyse eines Servers notwendig ist. Wie sollte weiter vorgegangen werden?",
+
+    antworten: [
+        {
+            text:
+                "Das Ticket mit allen bisherigen Erkenntnissen gezielt an den zuständigen Second-Level-Support eskalieren.",
+            richtig: true
+        },
+        {
+            text:
+                "Das Ticket schließen und den Benutzer bitten, bei erneutem Auftreten ein neues Ticket anzulegen.",
+            richtig: false
+        },
+        {
+            text:
+                "Alle bisherigen Diagnoseinformationen löschen, damit der Second-Level-Support unvoreingenommen beginnt.",
+            richtig: false
+        },
+        {
+            text:
+                "Das Problem ohne weitere Dokumentation an einen beliebigen Mitarbeiter weitergeben.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: [
+        "first-level-support",
+        "second-level-support",
+        "eskalation",
+        "support-dokumentation"
+    ],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+
+{
+    id: "lf06q035",
+    frage:
+        "Ein Benutzer kann eine interne Webseite nicht öffnen. Andere Benutzer haben keine Probleme. Welche Vorgehensweise entspricht am ehesten einer systematischen Fehlersuche?",
+
+    antworten: [
+        {
+            text:
+                "Zuerst Symptome und Rahmenbedingungen erfassen, anschließend mögliche Ursachen schrittweise prüfen und Änderungen kontrolliert testen.",
+            richtig: true
+        },
+        {
+            text:
+                "Sofort mehrere Netzwerkeinstellungen gleichzeitig verändern und anschließend prüfen, ob die Webseite wieder funktioniert.",
+            richtig: false
+        },
+        {
+            text:
+                "Den Rechner direkt neu installieren, weil dadurch die meisten Softwareprobleme beseitigt werden.",
+            richtig: false
+        },
+        {
+            text:
+                "Das Ticket ohne weitere Prüfung an den höchsten Supportlevel weiterleiten.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: ["fehlersuche-support", "ticketaufnahme"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+
+{
+    id: "lf06q036",
+    frage:
+        "Welche Maßnahmen sind bei einem Remote-Support-Zugriff auf den Rechner eines Mitarbeiters sinnvoll?",
+
+    antworten: [
+        {
+            text:
+                "Der Zugriff sollte nur mit entsprechender Berechtigung beziehungsweise Zustimmung erfolgen.",
+            richtig: true
+        },
+        {
+            text:
+                "Die durchgeführten Maßnahmen sollten nachvollziehbar dokumentiert werden.",
+            richtig: true
+        },
+        {
+            text:
+                "Sicherheits- und Datenschutzvorgaben müssen berücksichtigt werden.",
+            richtig: true
+        },
+        {
+            text:
+                "Für eine schnellere Bearbeitung sollte ein dauerhaftes gemeinsames Administratorkonto verwendet werden.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: [
+        "remote-support",
+        "support-dokumentation",
+        "anwenderkommunikation"
+    ],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+
+{
+    id: "lf06q037",
+    frage:
+        "In einem Unternehmen treten innerhalb einer Woche mehrfach ähnliche Ausfälle desselben Dienstes auf. Die einzelnen Störungen werden jeweils kurzfristig behoben, die eigentliche Ursache ist jedoch unbekannt. Welche Vorgehensweise ist am sinnvollsten?",
+
+    antworten: [
+        {
+            text:
+                "Die wiederkehrenden Incidents untersuchen, um das zugrunde liegende Problem und dessen Ursache zu identifizieren.",
+            richtig: true
+        },
+        {
+            text:
+                "Jedes Ticket nach der kurzfristigen Behebung schließen und die wiederholten Ausfälle getrennt betrachten.",
+            richtig: false
+        },
+        {
+            text:
+                "Die Priorität aller zukünftigen Tickets automatisch auf niedrig setzen, weil bereits eine Zwischenlösung existiert.",
+            richtig: false
+        },
+        {
+            text:
+                "Den betroffenen Dienst ohne Ursachenanalyse dauerhaft deaktivieren.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf06"],
+    themen: [
+        "incident-problem",
+        "fehlersuche-support",
+        "wissensdatenbank",
+        "support-dokumentation"
+    ],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
 }
 ];

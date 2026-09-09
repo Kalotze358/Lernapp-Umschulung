@@ -838,5 +838,309 @@ const lf07Fragen = [
     themen: ["steuerung-regelung", "mqtt"],
     schwierigkeit: "schwer",
     typ: "multiple-choice"
+},
+{
+    id: "lf07q031",
+    frage:
+        "Ein Temperatursensor misst die Raumtemperatur. Ein Mikrocontroller verarbeitet den Messwert und schaltet bei mehr als 28 °C einen Lüfter ein. Welche Komponenten übernehmen dabei Sensor- und Aktorfunktion?",
+
+    antworten: [
+        {
+            text:
+                "Der Temperatursensor ist der Sensor und der Lüfter beziehungsweise dessen Ansteuerung der Aktor.",
+            richtig: true
+        },
+        {
+            text:
+                "Der Mikrocontroller ist der Sensor und der Temperatursensor der Aktor.",
+            richtig: false
+        },
+        {
+            text:
+                "Der Lüfter ist der Sensor und der Mikrocontroller der Aktor.",
+            richtig: false
+        },
+        {
+            text:
+                "Sensor und Aktor sind in diesem Beispiel dieselbe Komponente.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: [
+        "cps-grundlagen",
+        "sensoren",
+        "aktoren",
+        "mikrocontroller",
+        "automatisierung"
+    ],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf07q032",
+    frage:
+        "Ein analoger Helligkeitssensor liefert eine kontinuierliche Spannung. Der Mikrocontroller soll diesen Messwert digital verarbeiten. Welche Komponente wird benötigt?",
+
+    antworten: [
+        {
+            text:
+                "Ein Analog-Digital-Wandler (ADC)",
+            richtig: true
+        },
+        {
+            text:
+                "Ein Digital-Analog-Wandler (DAC)",
+            richtig: false
+        },
+        {
+            text:
+                "Ein ausschließlich digitaler GPIO-Ausgang",
+            richtig: false
+        },
+        {
+            text:
+                "Ein Netzwerk-Switch",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: [
+        "digitale-analoge-signale",
+        "adc-dac",
+        "sensoren"
+    ],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf07q033",
+    frage:
+        "Welche Aussagen über GPIO-Anschlüsse eines Mikrocontrollers sind richtig?",
+
+    antworten: [
+        {
+            text:
+                "GPIO-Pins können je nach Konfiguration digitale Eingangssignale einlesen.",
+            richtig: true
+        },
+        {
+            text:
+                "GPIO-Pins können digitale Ausgangssignale zur Ansteuerung externer Komponenten bereitstellen.",
+            richtig: true
+        },
+        {
+            text:
+                "GPIO steht für General Purpose Input/Output.",
+            richtig: true
+        },
+        {
+            text:
+                "GPIO ist ein Protokoll, das ausschließlich für die Kommunikation über das Internet verwendet wird.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: [
+        "gpio",
+        "schnittstellen-cps",
+        "mikrocontroller"
+    ],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+
+{
+    id: "lf07q034",
+    frage:
+        "Eine Heizungssteuerung schaltet die Heizung für fünf Minuten ein, sobald ein Benutzer einen Taster drückt. Die tatsächliche Raumtemperatur wird dabei nicht gemessen. Handelt es sich eher um eine Steuerung oder eine Regelung?",
+
+    antworten: [
+        {
+            text:
+                "Um eine Steuerung, weil keine kontinuierliche Rückmeldung des Ergebnisses erfolgt.",
+            richtig: true
+        },
+        {
+            text:
+                "Um eine Regelung, weil jede automatische Aktion grundsätzlich eine Regelung ist.",
+            richtig: false
+        },
+        {
+            text:
+                "Um eine Regelung, weil ein Aktor verwendet wird.",
+            richtig: false
+        },
+        {
+            text:
+                "Weder um eine Steuerung noch um eine Regelung, weil ein Taster beteiligt ist.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: [
+        "steuerung-regelung",
+        "automatisierung"
+    ],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf07q035",
+    frage:
+        "Bei einer automatischen Heizungsregelung wird die Raumtemperatur ständig gemessen und mit einem Sollwert von 21 °C verglichen. Warum handelt es sich um eine Regelung?",
+
+    antworten: [
+        {
+            text:
+                "Weil der aktuelle Zustand zurückgemeldet und mit einem Sollwert verglichen wird.",
+            richtig: true
+        },
+        {
+            text:
+                "Weil ausschließlich digitale Signale verwendet werden.",
+            richtig: false
+        },
+        {
+            text:
+                "Weil das System zwingend mit dem Internet verbunden sein muss.",
+            richtig: false
+        },
+        {
+            text:
+                "Weil jeder Mikrocontroller automatisch einen geschlossenen Regelkreis erzeugt.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: [
+        "steuerung-regelung",
+        "sensoren",
+        "aktoren",
+        "automatisierung"
+    ],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+
+{
+    id: "lf07q036",
+    frage:
+        "Mehrere IoT-Sensoren veröffentlichen regelmäßig Temperaturwerte unter dem Topic 'halle/temperatur'. Eine zentrale Anwendung möchte diese Werte empfangen. Welche Aussage beschreibt MQTT korrekt?",
+
+    antworten: [
+        {
+            text:
+                "Die Sensoren können als Publisher Nachrichten veröffentlichen und die zentrale Anwendung kann das Topic abonnieren.",
+            richtig: true
+        },
+        {
+            text:
+                "Die zentrale Anwendung muss jeden Sensor permanent über HDMI abfragen.",
+            richtig: false
+        },
+        {
+            text:
+                "Jeder Subscriber darf ausschließlich Nachrichten senden, aber keine empfangen.",
+            richtig: false
+        },
+        {
+            text:
+                "MQTT kann nur verwendet werden, wenn alle Geräte direkt per USB miteinander verbunden sind.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: [
+        "iot",
+        "kommunikation-iot",
+        "mqtt"
+    ],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf07q037",
+    frage:
+        "Ein Unternehmen plant batteriebetriebene IoT-Sensoren, die nur kleine Messwerte übertragen müssen und weit voneinander entfernt installiert sind. Welche Kriterien sind bei der Wahl der Kommunikationstechnik besonders wichtig?",
+
+    antworten: [
+        {
+            text:
+                "Benötigte Reichweite",
+            richtig: true
+        },
+        {
+            text:
+                "Zu übertragende Datenmenge",
+            richtig: true
+        },
+        {
+            text:
+                "Energiebedarf der Kommunikation",
+            richtig: true
+        },
+        {
+            text:
+                "Die Farbe des Sensorgehäuses",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: [
+        "kommunikation-iot",
+        "iot"
+    ],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+
+{
+    id: "lf07q038",
+    frage:
+        "Ein vernetztes Produktionssystem besitzt Sensoren und Aktoren. Die Geräte verwenden noch Standardpasswörter, übertragen Steuerdaten unverschlüsselt und erhalten keine Sicherheitsupdates. Welche Maßnahmen sind besonders sinnvoll?",
+
+    antworten: [
+        {
+            text:
+                "Standardpasswörter durch individuelle sichere Zugangsdaten ersetzen.",
+            richtig: true
+        },
+        {
+            text:
+                "Kommunikation nach Möglichkeit verschlüsseln und Systeme regelmäßig aktualisieren.",
+            richtig: true
+        },
+        {
+            text:
+                "Netzwerkzugriffe beschränken beziehungsweise die Geräte sinnvoll segmentieren.",
+            richtig: true
+        },
+        {
+            text:
+                "Alle Geräte direkt und uneingeschränkt aus dem Internet erreichbar machen.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf07"],
+    themen: [
+        "cps-sicherheit",
+        "iot",
+        "kommunikation-iot"
+    ],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
 }
 ];

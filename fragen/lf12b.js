@@ -815,5 +815,305 @@ const lf12bFragen = [
     themen: ["kundenuebergabe"],
     schwierigkeit: "mittel",
     typ: "multiple-choice"
+},
+{
+    id: "lf12bq030",
+    frage:
+        "Ein Kunde möchte ein neues Dokumentenmanagementsystem einführen. Bevor konkrete Produkte ausgewählt werden, sollen zunächst Ziele, Anforderungen und Rahmenbedingungen geklärt werden. Welcher Schritt ist besonders wichtig?",
+
+    antworten: [
+        {
+            text:
+                "Eine Anforderungsanalyse durchführen.",
+            richtig: true
+        },
+        {
+            text:
+                "Sofort mit der Installation eines geeigneten Systems beginnen.",
+            richtig: false
+        },
+        {
+            text:
+                "Die Projektdokumentation erst nach Abschluss des Projekts erstellen.",
+            richtig: false
+        },
+        {
+            text:
+                "Den Soll-Zustand zunächst durch den aktuellen Ist-Zustand ersetzen.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: [
+        "kundenauftrag",
+        "anforderungsanalyse"
+    ],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf12bq031",
+    frage:
+        "Ein Unternehmen besitzt derzeit einen einzelnen Server ohne Redundanz. Nach dem Projekt sollen zwei virtualisierte Server, regelmäßige Backups und eine höhere Verfügbarkeit vorhanden sein. Welche Zuordnung ist korrekt?",
+
+    antworten: [
+        {
+            text:
+                "Der einzelne Server beschreibt den Ist-Zustand, die geplante neue Umgebung den Soll-Zustand.",
+            richtig: true
+        },
+        {
+            text:
+                "Die geplante neue Umgebung beschreibt den Ist-Zustand.",
+            richtig: false
+        },
+        {
+            text:
+                "Ist- und Soll-Zustand dürfen erst nach Projektabschluss definiert werden.",
+            richtig: false
+        },
+        {
+            text:
+                "Nur die Kosten eines Systems gehören zum Ist-Zustand.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: [
+        "ist-soll-analyse",
+        "anforderungsanalyse"
+    ],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf12bq032",
+    frage:
+        "Welche Punkte gehören typischerweise zu einer sinnvollen Projektplanung?",
+
+    antworten: [
+        {
+            text:
+                "Benötigte Aufgaben und Arbeitspakete festlegen.",
+            richtig: true
+        },
+        {
+            text:
+                "Zeitbedarf und Abhängigkeiten berücksichtigen.",
+            richtig: true
+        },
+        {
+            text:
+                "Benötigte Ressourcen und Verantwortlichkeiten planen.",
+            richtig: true
+        },
+        {
+            text:
+                "Alle möglichen Risiken ignorieren, solange noch kein Problem eingetreten ist.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: [
+        "projektplanung",
+        "zeitplanung",
+        "risikomanagement"
+    ],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+
+{
+    id: "lf12bq033",
+    frage:
+        "Während eines Projekts wird erkannt, dass ein wichtiger Liefertermin für Hardware gefährdet ist. Welche Vorgehensweise entspricht einem sinnvollen Risikomanagement?",
+
+    antworten: [
+        {
+            text:
+                "Das Risiko bewerten und frühzeitig geeignete Gegenmaßnahmen planen.",
+            richtig: true
+        },
+        {
+            text:
+                "Abwarten, bis die Hardware tatsächlich zu spät geliefert wurde.",
+            richtig: false
+        },
+        {
+            text:
+                "Das Risiko aus der Dokumentation entfernen, damit das Projekt weiterhin planmäßig erscheint.",
+            richtig: false
+        },
+        {
+            text:
+                "Alle anderen Projektaufgaben sofort stoppen.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: [
+        "risikomanagement",
+        "projektplanung"
+    ],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf12bq034",
+    frage:
+        "Für einen Kunden kommen zwei technische Lösungen infrage. Lösung A erfüllt alle Anforderungen und kostet über fünf Jahre 18.000 Euro. Lösung B bietet deutlich mehr Leistung als benötigt und kostet 31.000 Euro. Welcher Aspekt sollte bei der Entscheidung berücksichtigt werden?",
+
+    antworten: [
+        {
+            text:
+                "Neben der technischen Eignung müssen auch Kosten, Nutzen und tatsächlicher Bedarf betrachtet werden.",
+            richtig: true
+        },
+        {
+            text:
+                "Grundsätzlich muss immer die technisch leistungsfähigste Lösung gewählt werden.",
+            richtig: false
+        },
+        {
+            text:
+                "Wirtschaftlichkeit spielt bei technischen Projekten keine Rolle.",
+            richtig: false
+        },
+        {
+            text:
+                "Nur der Anschaffungspreis ist relevant; Betriebs- und Wartungskosten dürfen nicht berücksichtigt werden.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: [
+        "wirtschaftlichkeit-projekt",
+        "loesungskonzept",
+        "anforderungsanalyse"
+    ],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+
+{
+    id: "lf12bq035",
+    frage:
+        "Nach der Installation eines neuen Servers kann sich ein Administrator erfolgreich anmelden. Warum sollten trotzdem weitere Tests durchgeführt werden?",
+
+    antworten: [
+        {
+            text:
+                "Weil geprüft werden muss, ob die gesamte Lösung die definierten Anforderungen und Funktionen erfüllt.",
+            richtig: true
+        },
+        {
+            text:
+                "Weil eine erfolgreiche Anmeldung grundsätzlich beweist, dass der Server falsch eingerichtet wurde.",
+            richtig: false
+        },
+        {
+            text:
+                "Weil Tests ausschließlich dazu dienen, die Installationsdauer zu verlängern.",
+            richtig: false
+        },
+        {
+            text:
+                "Weil jedes System nach der Installation vollständig neu eingerichtet werden muss.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: [
+        "projektdurchfuehrung",
+        "tests"
+    ],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf12bq036",
+    frage:
+        "Welche Punkte sind vor einer ordnungsgemäßen Übergabe einer neuen IT-Lösung an den Kunden sinnvoll?",
+
+    antworten: [
+        {
+            text:
+                "Die vereinbarten Funktionen testen.",
+            richtig: true
+        },
+        {
+            text:
+                "Notwendige Dokumentationen und Zugangsinformationen bereitstellen.",
+            richtig: true
+        },
+        {
+            text:
+                "Bei Bedarf eine Einweisung der späteren Benutzer oder Administratoren durchführen.",
+            richtig: true
+        },
+        {
+            text:
+                "Alle Projektunterlagen löschen, sobald die Installation abgeschlossen ist.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: [
+        "tests",
+        "abnahme",
+        "projektdokumentation",
+        "kundenuebergabe"
+    ],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+
+{
+    id: "lf12bq037",
+    frage:
+        "Nach Abschluss eines Projekts stellt das Team fest, dass mehrere Aufgaben deutlich länger dauerten als geplant. Wie sollte diese Erkenntnis sinnvoll genutzt werden?",
+
+    antworten: [
+        {
+            text:
+                "Die Abweichungen analysieren und die gewonnenen Erfahrungen für zukünftige Projekte dokumentieren.",
+            richtig: true
+        },
+        {
+            text:
+                "Die tatsächlichen Zeiten aus der Projektdokumentation entfernen.",
+            richtig: false
+        },
+        {
+            text:
+                "Die ursprüngliche Planung nachträglich so ändern, dass keine Abweichungen mehr erkennbar sind.",
+            richtig: false
+        },
+        {
+            text:
+                "Die Erkenntnisse ignorieren, weil das Projekt bereits abgeschlossen ist.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf12b"],
+    themen: [
+        "projektabschluss",
+        "projektdokumentation",
+        "zeitplanung"
+    ],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
 }
 ];

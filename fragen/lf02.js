@@ -838,5 +838,304 @@ const lf02Fragen = [
     themen: ["energieeffizienz", "installation-konfiguration"],
     schwierigkeit: "schwer",
     typ: "multiple-choice"
+},
+{
+    id: "lf02q031",
+    frage:
+        "Ein Mitarbeiter benötigt einen neuen Arbeitsplatz für Office, Videokonferenzen und zwei QHD-Monitore. Was sollte vor der Hardwareauswahl zuerst geklärt werden?",
+
+    antworten: [
+        {
+            text:
+                "Einsatzbereich, benötigte Software, Anschlüsse, Leistungsbedarf und Budget",
+            richtig: true
+        },
+        {
+            text:
+                "Ausschließlich die maximale Taktfrequenz des Prozessors",
+            richtig: false
+        },
+        {
+            text:
+                "Nur die Größe des PC-Gehäuses",
+            richtig: false
+        },
+        {
+            text:
+                "Grundsätzlich zuerst die teuerste verfügbare Hardware auswählen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: [
+        "kundenanforderungen",
+        "hardwarekomponenten"
+    ],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf02q032",
+    frage:
+        "Ein Arbeitsplatz-PC besitzt 8 GB RAM. Bei mehreren gleichzeitig geöffneten Anwendungen liegt die RAM-Auslastung dauerhaft bei etwa 95 %, während CPU und SSD kaum ausgelastet sind. Welche Maßnahme ist am naheliegendsten?",
+
+    antworten: [
+        {
+            text:
+                "Den Arbeitsspeicher erweitern.",
+            richtig: true
+        },
+        {
+            text:
+                "Den Monitor durch ein Modell mit höherer Auflösung ersetzen.",
+            richtig: false
+        },
+        {
+            text:
+                "Eine leistungsstärkere Netzwerkkarte einbauen.",
+            richtig: false
+        },
+        {
+            text:
+                "Die SSD durch eine größere SSD ersetzen, obwohl genügend Speicherplatz frei ist.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: [
+        "arbeitsspeicher",
+        "hardwarekomponenten"
+    ],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf02q033",
+    frage:
+        "Welche Aussagen über RAM und Massenspeicher sind richtig?",
+
+    antworten: [
+        {
+            text:
+                "RAM stellt aktuell benötigte Daten besonders schnell bereit.",
+            richtig: true
+        },
+        {
+            text:
+                "Der Inhalt des normalen Arbeitsspeichers geht beim Ausschalten typischerweise verloren.",
+            richtig: true
+        },
+        {
+            text:
+                "SSD und HDD dienen zur dauerhaften Speicherung von Daten.",
+            richtig: true
+        },
+        {
+            text:
+                "Eine SSD ist ausschließlich für die kurzfristige Speicherung laufender Programme vorgesehen.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: [
+        "arbeitsspeicher",
+        "massenspeicher"
+    ],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+
+{
+    id: "lf02q034",
+    frage:
+        "Ein Notebook soll über eine Dockingstation zwei externe Monitore ansteuern. Welche Punkte müssen bei der Auswahl der Schnittstelle berücksichtigt werden?",
+
+    antworten: [
+        {
+            text:
+                "Ob die Schnittstelle eine Bildausgabe unterstützt.",
+            richtig: true
+        },
+        {
+            text:
+                "Welche Auflösungen und Bildwiederholraten unterstützt werden.",
+            richtig: true
+        },
+        {
+            text:
+                "Ob Dockingstation und Notebook technisch kompatibel sind.",
+            richtig: true
+        },
+        {
+            text:
+                "Nur die äußere Form des Steckers ist entscheidend; die unterstützten Funktionen spielen keine Rolle.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: [
+        "schnittstellen",
+        "peripherie",
+        "kundenanforderungen"
+    ],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
+},
+
+{
+    id: "lf02q035",
+    frage:
+        "Zwei PCs erfüllen die technischen Anforderungen eines Büroarbeitsplatzes. System A kostet 650 Euro und benötigt durchschnittlich mehr Energie. System B kostet 720 Euro, ist energieeffizienter und besitzt fünf Jahre Herstellersupport. Was sollte bei der Auswahl berücksichtigt werden?",
+
+    antworten: [
+        {
+            text:
+                "Neben dem Kaufpreis sollten auch Energieverbrauch, Support, Nutzungsdauer und weitere Betriebskosten betrachtet werden.",
+            richtig: true
+        },
+        {
+            text:
+                "Grundsätzlich muss System A gewählt werden, weil ausschließlich der Anschaffungspreis zählt.",
+            richtig: false
+        },
+        {
+            text:
+                "System B muss immer gewählt werden, weil ein höherer Preis automatisch eine bessere Wirtschaftlichkeit bedeutet.",
+            richtig: false
+        },
+        {
+            text:
+                "Energieverbrauch und Support sind bei Arbeitsplatz-PCs wirtschaftlich grundsätzlich irrelevant.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: [
+        "wirtschaftlichkeit",
+        "energieeffizienz",
+        "kundenanforderungen"
+    ],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+
+{
+    id: "lf02q036",
+    frage:
+        "Ein Unternehmen besitzt 40 Arbeitsplatz-PCs. Eine Softwarelizenz erlaubt laut Lizenzbedingungen nur die Installation auf einem einzigen Gerät. Wie sollte bei einer unternehmensweiten Installation vorgegangen werden?",
+
+    antworten: [
+        {
+            text:
+                "Vor der Installation muss geprüft werden, welches Lizenzmodell und wie viele Lizenzen benötigt werden.",
+            richtig: true
+        },
+        {
+            text:
+                "Eine einzelne Lizenz darf grundsätzlich beliebig oft innerhalb desselben Unternehmens verwendet werden.",
+            richtig: false
+        },
+        {
+            text:
+                "Lizenzbedingungen gelten nur für Privatnutzer.",
+            richtig: false
+        },
+        {
+            text:
+                "Die Software darf auf allen Rechnern installiert werden, wenn kein Internetzugang vorhanden ist.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: [
+        "softwarelizenzen",
+        "softwareauswahl"
+    ],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf02q037",
+    frage:
+        "Welche Maßnahmen verbessern die Ergonomie eines Bildschirmarbeitsplatzes?",
+
+    antworten: [
+        {
+            text:
+                "Den Monitor so positionieren, dass eine natürliche Kopfhaltung möglich ist.",
+            richtig: true
+        },
+        {
+            text:
+                "Tastatur und Maus so anordnen, dass Arme und Handgelenke möglichst entspannt genutzt werden können.",
+            richtig: true
+        },
+        {
+            text:
+                "Blendungen und ungünstige Lichtreflexionen möglichst vermeiden.",
+            richtig: true
+        },
+        {
+            text:
+                "Den Monitor grundsätzlich deutlich oberhalb der Augenhöhe aufstellen.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: [
+        "ergonomie",
+        "peripherie"
+    ],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+
+{
+    id: "lf02q038",
+    frage:
+        "Ein neuer Arbeitsplatz wurde eingerichtet. Welche Schritte sind vor der endgültigen Übergabe an den Benutzer sinnvoll?",
+
+    antworten: [
+        {
+            text:
+                "Betriebssystem, Treiber und benötigte Anwendungen installieren und konfigurieren.",
+            richtig: true
+        },
+        {
+            text:
+                "Die benötigten Funktionen und angeschlossenen Geräte testen.",
+            richtig: true
+        },
+        {
+            text:
+                "Relevante Hardware, Software und besondere Einstellungen dokumentieren.",
+            richtig: true
+        },
+        {
+            text:
+                "Die Dokumentation vermeiden, damit spätere Änderungen nicht nachvollzogen werden können.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf02"],
+    themen: [
+        "installation-konfiguration",
+        "dokumentation-uebergabe",
+        "betriebssysteme",
+        "peripherie"
+    ],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
 }
 ];

@@ -782,5 +782,304 @@ const lf10bFragen = [
     themen: ["skripting"],
     schwierigkeit: "schwer",
     typ: "multiple-choice"
+},
+{
+    id: "lf10bq029",
+    frage:
+        "Ein Unternehmen möchte auf einem leistungsfähigen physischen Server mehrere voneinander getrennte Serversysteme betreiben. Welche Technik eignet sich dafür besonders?",
+
+    antworten: [
+        {
+            text:
+                "Virtualisierung mit einem Hypervisor",
+            richtig: true
+        },
+        {
+            text:
+                "Ausschließlich eine größere Festplattenpartition",
+            richtig: false
+        },
+        {
+            text:
+                "Die gemeinsame Nutzung eines einzigen Benutzerkontos",
+            richtig: false
+        },
+        {
+            text:
+                "Das Deaktivieren aller Netzwerkdienste",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: [
+        "virtualisierung",
+        "hypervisor",
+        "server-grundlagen"
+    ],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf10bq030",
+    frage:
+        "Welche Aufgaben übernimmt ein Hypervisor typischerweise?",
+
+    antworten: [
+        {
+            text:
+                "Virtuelle Maschinen bereitstellen und verwalten.",
+            richtig: true
+        },
+        {
+            text:
+                "CPU- und Arbeitsspeicherressourcen den virtuellen Maschinen zuweisen.",
+            richtig: true
+        },
+        {
+            text:
+                "Virtuelle Netzwerk- und Speicherressourcen bereitstellen.",
+            richtig: true
+        },
+        {
+            text:
+                "Ausschließlich Benutzerpasswörter einer Windows-Domäne verwalten.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: [
+        "hypervisor",
+        "virtualisierung"
+    ],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+
+{
+    id: "lf10bq031",
+    frage:
+        "In einer Windows-Domäne sollen 60 Mitarbeiter derselben Abteilung auf einen gemeinsamen Dateiordner zugreifen können. Welche Vorgehensweise ist administrativ besonders sinnvoll?",
+
+    antworten: [
+        {
+            text:
+                "Eine passende Benutzergruppe erstellen und die benötigten Berechtigungen möglichst dieser Gruppe zuweisen.",
+            richtig: true
+        },
+        {
+            text:
+                "Für jeden Benutzer unabhängig voneinander dieselben Berechtigungen einzeln konfigurieren.",
+            richtig: false
+        },
+        {
+            text:
+                "Allen Domänenbenutzern vollständige Administratorrechte auf dem Dateiserver geben.",
+            richtig: false
+        },
+        {
+            text:
+                "Ein gemeinsames Benutzerkonto für alle Mitarbeiter der Abteilung verwenden.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: [
+        "active-directory",
+        "benutzer-gruppen",
+        "berechtigungen-server",
+        "dateidienste"
+    ],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf10bq032",
+    frage:
+        "Ein Administrator möchte auf allen Computern einer Windows-Domäne automatisch bestimmte Sicherheitseinstellungen und Desktop-Konfigurationen verteilen. Welches Werkzeug eignet sich besonders?",
+
+    antworten: [
+        {
+            text:
+                "Gruppenrichtlinien",
+            richtig: true
+        },
+        {
+            text:
+                "Eine lokale Textdatei auf jedem Arbeitsplatz",
+            richtig: false
+        },
+        {
+            text:
+                "Ein Hypervisor-Snapshot",
+            richtig: false
+        },
+        {
+            text:
+                "Eine manuelle Änderung auf jedem einzelnen Computer ohne zentrale Verwaltung",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: [
+        "gruppenrichtlinien",
+        "active-directory",
+        "verzeichnisdienste"
+    ],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf10bq033",
+    frage:
+        "Ein Administrator muss auf 100 Servern regelmäßig denselben Status prüfen und bestimmte Verwaltungsbefehle ausführen. Warum bietet sich dafür PowerShell beziehungsweise ein Skript an?",
+
+    antworten: [
+        {
+            text:
+                "Wiederkehrende Abläufe können automatisiert und reproduzierbar ausgeführt werden.",
+            richtig: true
+        },
+        {
+            text:
+                "Manuelle Eingabefehler können bei standardisierten Abläufen reduziert werden.",
+            richtig: true
+        },
+        {
+            text:
+                "Ein Skript kann dieselben definierten Schritte auf vielen Systemen ausführen.",
+            richtig: true
+        },
+        {
+            text:
+                "Durch ein Skript sind Prüfungen, Fehlerbehandlung und Berechtigungen grundsätzlich nicht mehr notwendig.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: [
+        "powershell",
+        "skripting"
+    ],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+
+{
+    id: "lf10bq034",
+    frage:
+        "Ein Server wird täglich gesichert. Nach einem Ausfall stellt sich jedoch heraus, dass sich die Sicherungen nicht wiederherstellen lassen. Welche wichtige Maßnahme wurde offenbar vernachlässigt?",
+
+    antworten: [
+        {
+            text:
+                "Die Wiederherstellung der Backups regelmäßig zu testen.",
+            richtig: true
+        },
+        {
+            text:
+                "Die CPU-Auslastung des Servers dauerhaft auf 100 Prozent zu erhöhen.",
+            richtig: false
+        },
+        {
+            text:
+                "Alle Sicherungen nach ihrer Erstellung sofort zu löschen.",
+            richtig: false
+        },
+        {
+            text:
+                "Benutzern vollständige Schreibrechte auf die Sicherungsmedien zu geben.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: [
+        "backup-server"
+    ],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf10bq035",
+    frage:
+        "Das Monitoring eines Servers zeigt über mehrere Stunden eine RAM-Auslastung von 96 %, während CPU-, Netzwerk- und Datenträgerauslastung normal sind. Welche Vorgehensweise ist am sinnvollsten?",
+
+    antworten: [
+        {
+            text:
+                "Den erhöhten Arbeitsspeicherverbrauch untersuchen und betroffene Prozesse beziehungsweise Dienste analysieren.",
+            richtig: true
+        },
+        {
+            text:
+                "Ohne weitere Analyse sofort alle Serverdaten löschen.",
+            richtig: false
+        },
+        {
+            text:
+                "Das Monitoring deaktivieren, damit die hohe Auslastung nicht mehr angezeigt wird.",
+            richtig: false
+        },
+        {
+            text:
+                "Grundsätzlich die Netzwerkkarte austauschen, weil RAM-Probleme meist durch das Netzwerk verursacht werden.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: [
+        "server-monitoring",
+        "server-grundlagen"
+    ],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
+},
+
+{
+    id: "lf10bq036",
+    frage:
+        "Ein Administrator verlässt das Unternehmen. Welche Informationen sollten für einen weiterhin nachvollziehbaren Serverbetrieb sinnvoll dokumentiert sein?",
+
+    antworten: [
+        {
+            text:
+                "Serverrollen, wichtige Dienste und deren Abhängigkeiten",
+            richtig: true
+        },
+        {
+            text:
+                "IP-Adressen, Netzwerkzuordnungen und relevante Konfigurationen",
+            richtig: true
+        },
+        {
+            text:
+                "Berechtigungskonzepte sowie wichtige administrative Besonderheiten",
+            richtig: true
+        },
+        {
+            text:
+                "Persönliche Passwörter des bisherigen Administrators im Klartext",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf10b"],
+    themen: [
+        "server-dokumentation",
+        "server-grundlagen",
+        "berechtigungen-server"
+    ],
+    schwierigkeit: "schwer",
+    typ: "multiple-choice"
 }
 ];

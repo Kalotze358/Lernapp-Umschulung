@@ -782,5 +782,166 @@ const lf08Fragen = [
     themen: ["datenvalidierung", "sicherheit-datenaustausch", "import-export"],
     schwierigkeit: "schwer",
     typ: "multiple-choice"
+},
+{
+    id: "lf08q029",
+    frage:
+        "Eine Anwendung möchte die Daten eines bestimmten Kunden über eine REST-API abrufen. Welche HTTP-Methode ist dafür typischerweise geeignet?",
+
+    antworten: [
+        {
+            text: "GET",
+            richtig: true
+        },
+        {
+            text: "POST",
+            richtig: false
+        },
+        {
+            text: "DELETE",
+            richtig: false
+        },
+        {
+            text: "PUT",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf08"],
+    themen: ["rest-api", "http-methoden", "api"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf08q030",
+    frage:
+        "Eine Anwendung erhält über eine API folgende Daten: { \"name\": \"Meyer\", \"alter\": 34 }. Welches Datenformat wird verwendet?",
+
+    antworten: [
+        {
+            text: "JSON",
+            richtig: true
+        },
+        {
+            text: "XML",
+            richtig: false
+        },
+        {
+            text: "CSV",
+            richtig: false
+        },
+        {
+            text: "SQL",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf08"],
+    themen: ["json", "datenformate-vergleich", "datenaustausch"],
+    schwierigkeit: "leicht",
+    typ: "single-choice"
+},
+
+{
+    id: "lf08q031",
+    frage:
+        "Beim Import einer CSV-Datei werden Umlaute wie ä, ö und ü als falsche Zeichen dargestellt. Welche Ursache ist besonders wahrscheinlich?",
+
+    antworten: [
+        {
+            text:
+                "Quell- und Zielsystem verwenden unterschiedliche Zeichencodierungen.",
+            richtig: true
+        },
+        {
+            text:
+                "Die Datei enthält zu wenige Datensätze.",
+            richtig: false
+        },
+        {
+            text:
+                "Die Datenbank besitzt einen Primärschlüssel.",
+            richtig: false
+        },
+        {
+            text:
+                "Die Datei wurde mit einer GET-Anfrage übertragen.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf08"],
+    themen: ["zeichencodierung", "import-export", "fehlerbehandlung-daten"],
+    schwierigkeit: "mittel",
+    typ: "single-choice"
+},
+
+{
+    id: "lf08q032",
+    frage:
+        "Ein Fremdsystem übermittelt Kundendaten an eine Anwendung. Welche Prüfungen sind vor der Speicherung sinnvoll?",
+
+    antworten: [
+        {
+            text:
+                "Prüfen, ob Pflichtfelder vorhanden sind.",
+            richtig: true
+        },
+        {
+            text:
+                "Prüfen, ob Werte dem erwarteten Datenformat entsprechen.",
+            richtig: true
+        },
+        {
+            text:
+                "Prüfen, ob Werte innerhalb zulässiger Wertebereiche liegen.",
+            richtig: true
+        },
+        {
+            text:
+                "Alle eingehenden Werte ungeprüft speichern und erst bei einem Fehler kontrollieren.",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf08"],
+    themen: ["datenvalidierung", "datenaustausch"],
+    schwierigkeit: "mittel",
+    typ: "multiple-choice"
+},
+
+{
+    id: "lf08q033",
+    frage:
+        "Ein Unternehmen überträgt vertrauliche Kundendaten zwischen zwei Systemen über ein Netzwerk. Welche Kombination ist für einen sicheren Datenaustausch am sinnvollsten?",
+
+    antworten: [
+        {
+            text:
+                "Verschlüsselte Übertragung, Authentifizierung und passende Zugriffsberechtigungen",
+            richtig: true
+        },
+        {
+            text:
+                "Unverschlüsselte Übertragung, wenn sich beide Systeme im selben Gebäude befinden",
+            richtig: false
+        },
+        {
+            text:
+                "Ein gemeinsames Benutzerkonto für alle Anwendungen, damit keine Zugangsdaten verloren gehen",
+            richtig: false
+        },
+        {
+            text:
+                "Verzicht auf Protokollierung, damit möglichst wenige zusätzliche Daten entstehen",
+            richtig: false
+        }
+    ],
+
+    lernfelder: ["lf08"],
+    themen: ["sicherheit-datenaustausch", "schnittstellen", "datenaustausch"],
+    schwierigkeit: "schwer",
+    typ: "single-choice"
 }
 ];
