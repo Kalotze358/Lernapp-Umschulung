@@ -39,12 +39,17 @@
                 ☰ Menü
             </button>
 
-            <nav id="hauptnavigation">
-             <button class="nav-button" data-bereich="quiz-bereich">
-                  Quiz
-                </button>
+           <nav id="hauptnavigation">
 
-                <div class="untermenue aktiv" id="quiz-untermenue">
+    <button class="nav-button" data-bereich="start-bereich">
+        🏠 Startseite
+    </button>
+
+    <button class="nav-button" data-bereich="quiz-auswahl-bereich">
+        Quiz
+    </button>
+
+    <div class="untermenue" id="quiz-untermenue">
                     <button class="kategorie-button aktiv" data-kategorie="netzwerk">
                         Netzwerktechnik
                     </button>
@@ -111,7 +116,198 @@
             </section>
            
             
+<section id="quiz-auswahl-bereich" class="bereich">
 
+    <h1>Quiz</h1>
+
+    <p>
+        Wähle, wie du trainieren möchtest.
+    </p>
+
+    <div class="quiz-start-auswahl">
+
+        <button id="schnellquiz-button" class="quiz-start-karte">
+            <strong>⚡ Schnellquiz</strong>
+
+            <span>
+                Starte sofort mit 10 zufälligen Fragen
+                aus allen Bereichen.
+            </span>
+        </button>
+
+        <button id="individueller-quiz-button" class="quiz-start-karte">
+            <strong>🎯 Individueller Quiz</strong>
+
+            <span>
+                Wähle Lernfelder, Themen,
+                Schwierigkeit und Anzahl selbst aus.
+            </span>
+        </button>
+
+    </div>
+
+</section>
+<section id="individueller-quiz-bereich" class="bereich">
+
+    <button
+        id="individueller-quiz-zurueck"
+        class="zurueck-button"
+    >
+        ← Zurück zur Quiz-Auswahl
+    </button>
+
+    <h1>🎯 Individueller Quiz</h1>
+
+    <p>
+        Stelle dir deinen eigenen Quiz zusammen.
+    </p>
+
+
+    <div class="quiz-konfigurator">
+
+        <div class="quiz-filter-gruppe">
+
+            <h3>Schwierigkeit</h3>
+
+            <div class="quiz-filter-optionen">
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="quiz-schwierigkeit"
+                        value="leicht"
+                        checked
+                    >
+                    Leicht
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="quiz-schwierigkeit"
+                        value="mittel"
+                        checked
+                    >
+                    Mittel
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="quiz-schwierigkeit"
+                        value="schwer"
+                        checked
+                    >
+                    Schwer
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <div class="quiz-filter-gruppe">
+
+            <h3>Fragentyp</h3>
+
+            <div class="quiz-filter-optionen">
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="quiz-typ"
+                        value="single-choice"
+                        checked
+                    >
+                    Single Choice
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="quiz-typ"
+                        value="multiple-choice"
+                        checked
+                    >
+                    Multiple Choice
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <div class="quiz-filter-gruppe">
+
+            <h3>Lernfelder</h3>
+
+            <div id="individuell-lernfelder">
+                <!-- Wird später per JavaScript erzeugt -->
+            </div>
+
+        </div>
+
+
+        <div
+            id="individuell-themen-gruppe"
+            class="quiz-filter-gruppe"
+        >
+
+            <h3>Themen</h3>
+
+            <p class="quiz-filter-hinweis">
+                Wähle zuerst mindestens ein Lernfeld aus.
+            </p>
+
+            <div id="individuell-themen"></div>
+
+        </div>
+
+
+        <div class="quiz-filter-gruppe">
+
+            <label for="individuell-anzahl">
+                <strong>Anzahl der Fragen</strong>
+            </label>
+
+            <select id="individuell-anzahl">
+
+                <option value="5">
+                    5 Fragen
+                </option>
+
+                <option value="10" selected>
+                    10 Fragen
+                </option>
+
+                <option value="15">
+                    15 Fragen
+                </option>
+
+                <option value="20">
+                    20 Fragen
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <p id="individuell-treffer">
+            Passende Fragen werden nach deiner Auswahl angezeigt.
+        </p>
+
+
+        <button
+            id="individueller-quiz-starten"
+            class="themen-quiz-button"
+        >
+            Quiz starten
+        </button>
+
+    </div>
+
+</section>
     <section id="quiz-bereich" class="bereich">
 
     <h1>Quiz</h1>

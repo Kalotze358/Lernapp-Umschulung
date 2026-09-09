@@ -314,7 +314,7 @@ navButtons.forEach((button) => {
 
 const quizButton =
     document.querySelector(
-        '.nav-button[data-bereich="quiz-bereich"]'
+        '.nav-button[data-bereich="quiz-auswahl-bereich"]'
     );
 
 quizButton.classList.add("aktiv");
@@ -325,8 +325,407 @@ frageAnzeigen();
 
 }
 
+// =========================================
+// Individueller Quiz – Navigation
+// =========================================
+
+const individuellerQuizButton =
+    document.getElementById("individueller-quiz-button");
+
+const individuellerQuizZurueck =
+    document.getElementById("individueller-quiz-zurueck");
+const individuellLernfelder =
+    document.getElementById("individuell-lernfelder");
+const individuellThemen =
+    document.getElementById("individuell-themen");
+const individuellerQuizStarten =
+    document.getElementById("individueller-quiz-starten");
+
+const individuellAnzahl =
+    document.getElementById("individuell-anzahl");
+const individuellThemenHinweis =
+    document.querySelector(
+        "#individuell-themen-gruppe .quiz-filter-hinweis"
+    );
+function individuelleThemenAnzeigen() {
+
+    individuellThemen.innerHTML = "";
+
+    const ausgewaehlteLernfelder =
+        Array.from(
+            document.querySelectorAll(
+                'input[name="individuell-lernfeld"]:checked'
+            )
+        ).map((checkbox) => {
+            return checkbox.value;
+        });
 
 
+    if (ausgewaehlteLernfelder.length === 0) {
+
+        individuellThemenHinweis.style.display =
+            "block";
+
+        individuellThemenHinweis.textContent =
+            "Wähle zuerst mindestens ein Lernfeld aus.";
+
+        return;
+    }
+
+
+    individuellThemenHinweis.style.display =
+        "none";
+
+
+    lernfelder
+        .filter((lernfeld) => {
+            return ausgewaehlteLernfelder.includes(
+                lernfeld.id
+            );
+        })
+        .forEach((lernfeld) => {
+
+            const details =
+                document.createElement("details");
+
+            details.classList.add(
+                "individuell-themen-lernfeld"
+            );
+
+
+            // Bei nur einem oder zwei Lernfeldern
+            // direkt aufgeklappt anzeigen
+            details.open =
+                ausgewaehlteLernfelder.length <= 2;
+
+
+            const summary =
+                document.createElement("summary");
+
+            summary.textContent =
+                lernfeld.nummer +
+                " – " +
+                lernfeld.kurzTitel;
+
+            details.appendChild(summary);
+
+
+            const optionen =
+                document.createElement("div");
+
+            optionen.classList.add(
+                "individuell-themen-optionen"
+            );
+
+
+            const themenMitId =
+                (lernfeld.themen || []).filter((thema) => {
+
+                    return (
+                        typeof thema === "object" &&
+                        thema.id
+                    );
+                });
+
+
+            themenMitId.forEach((thema) => {
+
+                const label =
+                    document.createElement("label");
+
+                label.classList.add(
+                    "quiz-filter-checkbox"
+                );
+
+
+                const checkbox =
+                    document.createElement("input");
+
+                checkbox.type = "checkbox";
+                checkbox.name =
+                    "individuell-thema";
+
+                checkbox.value =
+                    thema.id;
+
+                checkbox.checked = true;
+                checkbox.addEventListener("change", () => {
+    individuelleTrefferAktualisieren();
+});
+
+
+                const text =
+                    document.createElement("span");
+
+                text.textContent =
+                    thema.titel;
+
+
+                label.appendChild(checkbox);
+                label.appendChild(text);
+
+                optionen.appendChild(label);
+            });
+
+
+            details.appendChild(optionen);
+
+            individuellThemen.appendChild(details);
+        });
+}
+function individuelleFragenFiltern() {
+
+    const lernfelderAuswahl =
+        Array.from(
+            document.querySelectorAll(
+                'input[name="individuell-lernfeld"]:checked'
+            )
+        ).map((checkbox) => checkbox.value);
+
+
+    const themenAuswahl =
+        Array.from(
+            document.querySelectorAll(
+                'input[name="individuell-thema"]:checked'
+            )
+        ).map((checkbox) => checkbox.value);
+
+
+    const schwierigkeitsAuswahl =
+        Array.from(
+            document.querySelectorAll(
+                'input[name="quiz-schwierigkeit"]:checked'
+            )
+        ).map((checkbox) => checkbox.value);
+
+
+    const typAuswahl =
+        Array.from(
+            document.querySelectorAll(
+                'input[name="quiz-typ"]:checked'
+            )
+        ).map((checkbox) => checkbox.value);
+
+
+    return alleFragen.filter((frage) => {
+
+        const lernfeldPasst =
+            frage.lernfelder &&
+            frage.lernfelder.some((lernfeld) => {
+                return lernfelderAuswahl.includes(
+                    lernfeld
+                );
+            });
+
+
+        const themaPasst =
+            frage.themen &&
+            frage.themen.some((thema) => {
+                return themenAuswahl.includes(
+                    thema
+                );
+            });
+
+
+        const schwierigkeitPasst =
+            schwierigkeitsAuswahl.includes(
+                frage.schwierigkeit
+            );
+
+
+        const typPasst =
+            typAuswahl.includes(
+                frage.typ
+            );
+
+
+        return (
+            lernfeldPasst &&
+            themaPasst &&
+            schwierigkeitPasst &&
+            typPasst
+        );
+    });
+}
+
+
+function individuelleTrefferAktualisieren() {
+
+    const passendeFragen =
+        individuelleFragenFiltern();
+
+    const trefferAnzeige =
+        document.getElementById(
+            "individuell-treffer"
+        );
+
+    trefferAnzeige.textContent =
+        passendeFragen.length +
+        " passende Fragen gefunden";
+}
+document
+    .querySelectorAll(
+        'input[name="quiz-schwierigkeit"], input[name="quiz-typ"]'
+    )
+    .forEach((checkbox) => {
+
+        checkbox.addEventListener("change", () => {
+            individuelleTrefferAktualisieren();
+        });
+
+    });
+function individuelleLernfelderAnzeigen() {
+
+    individuellLernfelder.innerHTML = "";
+
+    lernfelder.forEach((lernfeld) => {
+
+        const label =
+            document.createElement("label");
+
+        label.classList.add(
+            "quiz-filter-checkbox"
+        );
+
+
+        const checkbox =
+            document.createElement("input");
+
+        checkbox.type = "checkbox";
+        checkbox.name = "individuell-lernfeld";
+        checkbox.value = lernfeld.id;
+
+        // Standardmäßig alle Lernfelder aktiv
+        checkbox.checked = true;
+checkbox.addEventListener("change", () => {
+
+    individuelleThemenAnzeigen();
+    individuelleTrefferAktualisieren();
+
+});
+
+        const text =
+            document.createElement("span");
+
+        text.textContent =
+            lernfeld.nummer +
+            " – " +
+            lernfeld.kurzTitel;
+
+
+        label.appendChild(checkbox);
+        label.appendChild(text);
+
+        individuellLernfelder.appendChild(label);
+    });
+}
+
+individuellerQuizButton.addEventListener("click", () => {
+
+    bereiche.forEach((bereich) => {
+        bereich.classList.remove("aktiv");
+        
+    });
+
+    document
+        .getElementById("individueller-quiz-bereich")
+        .classList.add("aktiv");
+    individuelleLernfelderAnzeigen();
+    individuelleThemenAnzeigen();
+    individuelleTrefferAktualisieren();
+});
+
+
+individuellerQuizZurueck.addEventListener("click", () => {
+
+    bereiche.forEach((bereich) => {
+        bereich.classList.remove("aktiv");
+    });
+
+    document
+        .getElementById("quiz-auswahl-bereich")
+        .classList.add("aktiv");
+});
+// =========================================
+// Individueller Quiz – starten
+// =========================================
+
+individuellerQuizStarten.addEventListener("click", () => {
+
+    const passendeFragen =
+        individuelleFragenFiltern();
+
+    const gewuenschteAnzahl =
+        Number(individuellAnzahl.value);
+
+
+    if (passendeFragen.length === 0) {
+
+        alert(
+            "Für diese Auswahl wurden keine passenden Fragen gefunden."
+        );
+
+        return;
+    }
+
+
+    // Passende Fragen mischen und gewünschte Anzahl nehmen
+    aktiveFragen =
+        fragenMischen(passendeFragen)
+            .slice(
+                0,
+                Math.min(
+                    gewuenschteAnzahl,
+                    passendeFragen.length
+                )
+            );
+
+
+    // Quiz zurücksetzen
+    aktuelleFrage = 0;
+    punkte = 0;
+    aktuellesLernfeld = null;
+
+    punkteAnzeige.textContent = punkte;
+
+
+    kategorieTitel.textContent =
+        "🎯 Individueller Quiz – " +
+        aktiveFragen.length +
+        " Fragen";
+
+
+    // Konfigurator ausblenden
+    bereiche.forEach((bereich) => {
+        bereich.classList.remove("aktiv");
+    });
+
+
+    // Quiz anzeigen
+    document
+        .getElementById("quiz-bereich")
+        .classList.add("aktiv");
+
+
+    // Navigation aktualisieren
+    navButtons.forEach((button) => {
+        button.classList.remove("aktiv");
+    });
+
+
+    const quizButton =
+        document.querySelector(
+            '.nav-button[data-bereich="quiz-auswahl-bereich"]'
+        );
+
+    quizButton.classList.add("aktiv");
+
+    quizUntermenue.classList.remove("aktiv");
+
+
+    // Erste Frage starten
+    frageAnzeigen();
+});
 startLernfelderButton.addEventListener("click", () => {
 
     bereiche.forEach((bereich) => {
@@ -439,7 +838,7 @@ function themenQuizStarten(lernfeld, thema) {
 
     const quizButton =
         document.querySelector(
-            '.nav-button[data-bereich="quiz-bereich"]'
+            '.nav-button[data-bereich="quiz-auswahl-bereich"]'
         );
 
     quizButton.classList.add("aktiv");
@@ -534,25 +933,28 @@ function themaDetailsAnzeigen(lernfeld, thema) {
     // Kapitel erzeugen
     vertiefung.abschnitte.forEach(abschnitt => {
 
-        const kapitel = document.createElement("div");
+       const kapitel =
+            document.createElement("details");
 
-        kapitel.classList.add(
-            "vertiefungs-kapitel"
-        );
-        kapitel.id =
-            "vertiefung-" + abschnitt.id;
+            kapitel.classList.add(
+                "vertiefungs-kapitel"
+            );
 
-
-        const kapitelUeberschrift =
-            document.createElement("h3");
-
-        kapitelUeberschrift.textContent =
-            abschnitt.titel;
+            kapitel.id =
+                "vertiefung-" + abschnitt.id;
 
 
-        kapitel.appendChild(
-            kapitelUeberschrift
-        );
+            const kapitelUeberschrift =
+                document.createElement("summary");
+
+            kapitelUeberschrift.textContent =
+                abschnitt.titel;
+
+
+            kapitel.appendChild(
+                kapitelUeberschrift
+);
+
         // Erklärungstexte
 if (abschnitt.texte) {
 
@@ -701,7 +1103,11 @@ if (abschnitt.uebungen) {
     abschnitt.uebungen.forEach(uebung => {
 
         const uebungsBox =
-            document.createElement("div");
+            document.createElement(
+                abschnitt.einklappbareUebungen
+                    ? "details"
+                    : "div"
+            );
 
         uebungsBox.classList.add(
             "vertiefungs-uebung"
@@ -709,7 +1115,11 @@ if (abschnitt.uebungen) {
 
 
         const titel =
-            document.createElement("h4");
+            document.createElement(
+                abschnitt.einklappbareUebungen
+                    ? "summary"
+                    : "h4"
+            );
 
         titel.textContent =
             uebung.titel;
@@ -2006,7 +2416,83 @@ wiederholenButton.addEventListener(
 
 
 buttonBereich.appendChild(wiederholenButton);
+// Beim Schnellquiz zusätzlich 10 neue Fragen anbieten
+if (kategorieTitel.textContent.startsWith("⚡ Schnellquiz")) {
 
+    const neueFragenButton =
+        document.createElement("button");
+
+    neueFragenButton.textContent =
+        "⚡ 10 neue Fragen";
+
+    neueFragenButton.classList.add(
+        "ergebnis-button"
+    );
+
+    neueFragenButton.addEventListener(
+        "click",
+        () => {
+
+            aktiveFragen =
+                fragenMischen(alleFragen)
+                    .slice(0, 10);
+
+            aktuelleFrage = 0;
+            punkte = 0;
+
+            punkteAnzeige.textContent = punkte;
+
+            quizAuswertung.innerHTML = "";
+
+            frageAnzeigen();
+        }
+    );
+
+    buttonBereich.appendChild(
+        neueFragenButton
+    );
+}
+// Individueller Quiz:
+// zurück zum Konfigurator
+
+if (
+    kategorieTitel.textContent.startsWith(
+        "🎯 Individueller Quiz"
+    )
+) {
+
+    const neuesQuizButton =
+        document.createElement("button");
+
+    neuesQuizButton.textContent =
+        "🎯 Neues Quiz";
+
+    neuesQuizButton.classList.add(
+        "ergebnis-button"
+    );
+
+    neuesQuizButton.addEventListener(
+        "click",
+        () => {
+
+            bereiche.forEach((bereich) => {
+                bereich.classList.remove("aktiv");
+            });
+
+            document
+                .getElementById(
+                    "individueller-quiz-bereich"
+                )
+                .classList.add("aktiv");
+
+            individuelleTrefferAktualisieren();
+        }
+    );
+
+    buttonBereich.appendChild(
+        neuesQuizButton
+    );
+}
 if (aktuellesLernfeld) {
 
     const zurueckButton =
@@ -2315,7 +2801,59 @@ startQuizButton.addEventListener("click", () => {
         .getElementById("quiz-auswahl-bereich")
         .classList.add("aktiv");
 });
+// =========================================
+// Schnellquiz
+// =========================================
 
+document
+    .getElementById("schnellquiz-button")
+    .addEventListener("click", () => {
+
+        // Kein bestimmtes Lernfeld aktiv
+        aktuellesLernfeld = null;
+
+        // Alle Fragen mischen und 10 auswählen
+        aktiveFragen =
+            fragenMischen(alleFragen)
+                .slice(0, 10);
+
+        // Quiz zurücksetzen
+        aktuelleFrage = 0;
+        punkte = 0;
+
+        punkteAnzeige.textContent = punkte;
+
+        kategorieTitel.textContent =
+            "⚡ Schnellquiz – 10 zufällige Fragen";
+
+        // Alle Bereiche ausblenden
+        bereiche.forEach((bereich) => {
+            bereich.classList.remove("aktiv");
+        });
+
+        // Quiz anzeigen
+        document
+            .getElementById("quiz-bereich")
+            .classList.add("aktiv");
+
+        // Navigation aktualisieren
+        navButtons.forEach((button) => {
+            button.classList.remove("aktiv");
+        });
+
+        const quizButton =
+            document.querySelector(
+                '.nav-button[data-bereich="quiz-auswahl-bereich"]'
+            );
+
+        quizButton.classList.add("aktiv");
+
+        // Altes Netzwerk/Programmierung-Untermenü ausblenden
+        quizUntermenue.classList.remove("aktiv");
+
+        // Erste Frage anzeigen
+        frageAnzeigen();
+    });
 
 startLernfelderButton.addEventListener("click", () => {
 
@@ -2348,7 +2886,7 @@ navButtons.forEach((button) => {
         document
             .getElementById(bereichId)
             .classList.add("aktiv");
-        if (bereichId === "quiz-bereich") {
+        if (bereichId === "quiz-auswahl-bereich") {
 
             quizUntermenue.classList.add("aktiv");
 
@@ -2676,7 +3214,7 @@ function suchTrefferOeffnen(treffer) {
 
 
                 if (ziel) {
-
+                    ziel.open = true;
                     ziel.scrollIntoView({
                         behavior: "smooth",
                         block: "start"

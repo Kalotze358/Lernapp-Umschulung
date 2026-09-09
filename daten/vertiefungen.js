@@ -468,5 +468,495 @@ const vertiefungen = {
                     "Den Rechner am besten zum Kontrollieren verwenden – zuerst selbst rechnen."
             },
         ]
-    }
+    },
+    "osi-modell": {
+
+    titel:
+        "OSI-Modell – die 7 Schichten verstehen",
+
+    untertitel:
+        "Vom Netzwerkkabel bis zur Anwendung: Das OSI-Modell zerlegt die Netzwerkkommunikation in sieben klar definierte Schichten.",
+
+    abschnitte: [
+
+        {
+            id: "osi-grundlagen",
+
+            titel:
+                "1. Was ist das OSI-Modell?",
+
+            texte: [
+                "Das OSI-Modell ist ein Referenzmodell für die Kommunikation in Netzwerken.",
+                "Es unterteilt den gesamten Kommunikationsvorgang in sieben Schichten. Jede Schicht übernimmt bestimmte Aufgaben und stellt ihre Dienste der darüberliegenden Schicht zur Verfügung.",
+                "Das Modell hilft vor allem dabei, Netzwerkfunktionen zu verstehen und Fehler systematisch einzugrenzen."
+            ],
+
+            liste: [
+                "Layer 7 – Anwendung",
+                "Layer 6 – Darstellung",
+                "Layer 5 – Sitzung",
+                "Layer 4 – Transport",
+                "Layer 3 – Vermittlung",
+                "Layer 2 – Sicherung",
+                "Layer 1 – Bitübertragung"
+            ],
+
+            merksatz:
+                "Alle Deutschen Studenten Trinken Verschiedene Sorten Bier."
+        },
+
+
+        {
+            id: "osi-layer7",
+
+            titel:
+                "2. Layer 7 – Anwendungsschicht",
+
+            texte: [
+                "Die Anwendungsschicht ist die oberste Schicht des OSI-Modells.",
+                "Sie stellt Netzwerkdienste für Anwendungen des Benutzers bereit."
+            ],
+
+            liste: [
+                "Zugriff von Anwendungen auf Netzwerkdienste",
+                "Webzugriffe",
+                "E-Mail-Kommunikation",
+                "Namensauflösung",
+                "Dateiübertragung",
+                "Beispiele: HTTP, HTTPS, DNS, SMTP, FTP"
+            ],
+
+            beispiel: {
+                titel:
+                    "Beispiel",
+
+                text:
+                    "Du öffnest eine Webseite im Browser. Der Browser verwendet auf Anwendungsebene beispielsweise HTTP oder HTTPS."
+            },
+
+            merksatz:
+                "Layer 7 ist dort, wo Anwendungen Netzwerkdienste nutzen."
+        },
+
+
+        {
+            id: "osi-layer6",
+
+            titel:
+                "3. Layer 6 – Darstellungsschicht",
+
+            texte: [
+                "Die Darstellungsschicht sorgt dafür, dass Daten in einer Form vorliegen, die Sender und Empfänger verstehen können.",
+                "Sie beschäftigt sich mit der Darstellung und Umwandlung von Daten."
+            ],
+
+            liste: [
+                "Zeichen- und Datenformate",
+                "Kodierung",
+                "Datenumwandlung",
+                "Kompression",
+                "Verschlüsselung und Entschlüsselung"
+            ],
+
+            merksatz:
+                "Layer 6 kümmert sich um das Format der Daten."
+        },
+
+
+        {
+            id: "osi-layer5",
+
+            titel:
+                "4. Layer 5 – Sitzungsschicht",
+
+            texte: [
+                "Die Sitzungsschicht organisiert die Kommunikation zwischen zwei Anwendungen.",
+                "Sie kann Sitzungen aufbauen, verwalten und wieder beenden."
+            ],
+
+            liste: [
+                "Sitzungen aufbauen",
+                "Sitzungen steuern",
+                "Kommunikation synchronisieren",
+                "Sitzungen beenden"
+            ],
+
+            merksatz:
+                "Layer 5 organisiert das Gespräch zwischen Anwendungen."
+        },
+
+
+        {
+            id: "osi-layer4",
+
+            titel:
+                "5. Layer 4 – Transportschicht",
+
+            texte: [
+                "Die Transportschicht sorgt für die Ende-zu-Ende-Kommunikation zwischen Anwendungen.",
+                "Hier spielen insbesondere TCP und UDP sowie Portnummern eine wichtige Rolle."
+            ],
+
+            liste: [
+                "Ende-zu-Ende-Kommunikation",
+                "Aufteilung von Daten",
+                "Portnummern",
+                "Fluss- und Fehlerkontrolle bei TCP",
+                "TCP – verbindungsorientiert",
+                "UDP – verbindungslos"
+            ],
+
+            beispiel: {
+                titel:
+                    "Beispiel",
+
+                text:
+                    "HTTPS verwendet normalerweise TCP-Port 443. Die Portnummer sorgt dafür, dass die Daten der richtigen Anwendung zugeordnet werden können."
+            },
+
+            merksatz:
+                "Layer 4 = TCP, UDP und Ports."
+        },
+
+
+        {
+            id: "osi-layer3",
+
+            titel:
+                "6. Layer 3 – Vermittlungsschicht",
+
+            texte: [
+                "Die Vermittlungsschicht verbindet unterschiedliche Netzwerke miteinander.",
+                "Auf dieser Schicht werden logische Adressen und Routing verwendet."
+            ],
+
+            liste: [
+                "IP-Adressen",
+                "Routing",
+                "Auswahl eines Weges durch verschiedene Netzwerke",
+                "Weiterleitung von Paketen",
+                "Typisches Gerät: Router",
+                "Wichtiges Protokoll: IP"
+            ],
+
+            beispiel: {
+                titel:
+                    "Beispiel",
+
+                text:
+                    "Ein Paket soll von deinem Heimnetz zu einem Server im Internet. Der Router entscheidet, wohin das IP-Paket als Nächstes weitergeleitet wird."
+            },
+
+            merksatz:
+                "Layer 3 = IP-Adresse und Routing."
+        },
+
+
+        {
+            id: "osi-layer2",
+
+            titel:
+                "7. Layer 2 – Sicherungsschicht",
+
+            texte: [
+                "Die Sicherungsschicht organisiert die Übertragung innerhalb eines lokalen Netzwerkabschnitts.",
+                "Hier spielen MAC-Adressen und Ethernet-Frames eine wichtige Rolle."
+            ],
+
+            liste: [
+                "MAC-Adressen",
+                "Ethernet-Frames",
+                "Zugriff auf das Übertragungsmedium",
+                "Erkennung von Übertragungsfehlern",
+                "Typisches Gerät: Switch"
+            ],
+
+            beispiel: {
+                titel:
+                    "Beispiel",
+
+                text:
+                    "Ein Switch betrachtet die Ziel-MAC-Adresse eines Ethernet-Frames und entscheidet, über welchen Port er den Frame weiterleitet."
+            },
+
+            merksatz:
+                "Layer 2 = MAC-Adresse, Frame und Switch."
+        },
+
+
+        {
+            id: "osi-layer1",
+
+            titel:
+                "8. Layer 1 – Bitübertragungsschicht",
+
+            texte: [
+                "Die Bitübertragungsschicht ist die unterste Ebene des OSI-Modells.",
+                "Sie beschreibt die physische Übertragung einzelner Bits über ein Übertragungsmedium."
+            ],
+
+            liste: [
+                "Elektrische oder optische Signale",
+                "Funkübertragung",
+                "Kupferkabel",
+                "Glasfaser",
+                "Stecker und physische Schnittstellen",
+                "Bitübertragung",
+                "Typische Geräte: Repeater und Hub"
+            ],
+
+            beispiel: {
+                titel:
+                    "Beispiel",
+
+                text:
+                    "Ein Netzwerkkabel transportiert elektrische Signale. Die Bedeutung einer IP- oder MAC-Adresse interessiert Layer 1 dabei noch nicht."
+            },
+
+            merksatz:
+                "Layer 1 überträgt Bits – nicht IP-Adressen oder Anwendungen."
+        },
+        {
+            id: "osi-kapselung",
+
+            titel:
+                "9. Kapselung und Entkapselung",
+
+            texte: [
+                "Beim Senden durchlaufen die Daten das OSI-Modell von oben nach unten.",
+                "Dabei fügt jede beteiligte Schicht zusätzliche Steuerinformationen hinzu. Dieser Vorgang wird Kapselung genannt.",
+                "Beim Empfänger läuft der Vorgang in umgekehrter Richtung. Die zusätzlichen Informationen werden Schicht für Schicht ausgewertet und entfernt. Das nennt man Entkapselung."
+            ],
+
+            liste: [
+                "Layer 7–5: Daten",
+                "Layer 4: Segment bei TCP bzw. Datagramm bei UDP",
+                "Layer 3: Paket",
+                "Layer 2: Frame",
+                "Layer 1: Bits",
+                "Empfänger: Bits → Frame → Paket → Segment/Datagramm → Daten"
+            ],
+
+            beispiel: {
+                titel:
+                    "Beispiel: Webseite aufrufen",
+
+                text:
+                    "Der Browser erzeugt Daten. TCP ergänzt unter anderem Portinformationen. IP ergänzt Quell- und Ziel-IP-Adresse. Ethernet ergänzt unter anderem MAC-Adressen. Anschließend wird der Frame als Folge von Bits über das Netzwerk übertragen."
+            },
+
+            hinweis:
+                "Die Begriffe Daten, Segment, Paket und Frame helfen dir in Prüfungsaufgaben dabei zu erkennen, auf welcher OSI-Schicht du dich gerade befindest.",
+
+            merksatz:
+                "Daten → Segment → Paket → Frame → Bits. Beim Empfänger läuft es rückwärts."
+        },
+        {
+    id: "osi-lueckentest",
+
+    titel:
+        "10. Interaktiver OSI-Lückentest",
+    einklappbareUebungen: true,
+
+    texte: [
+        "Jetzt kannst du testen, ob du die sieben Schichten des OSI-Modells auswendig zuordnen kannst.",
+        "Trage jeweils nur den Namen der Schicht ein – zum Beispiel Anwendung, Transport oder Sicherung."
+    ],
+
+    hinweis:
+    "Versuche die Aufgaben zunächst ohne Hilfe zu lösen. Falls du nicht weiterkommst, kannst du die vorherigen Kapitel noch einmal ansehen.",
+
+    uebungen: [
+
+        {
+            titel:
+                "Die 7 OSI-Schichten",
+
+            aufgabe:
+                "Ergänze die fehlenden Namen der OSI-Schichten.",
+
+            felder: [
+
+                {
+                    label:
+                        "Layer 7",
+                    antwort:
+                        "Anwendung"
+                },
+
+                {
+                    label:
+                        "Layer 6",
+                    antwort:
+                        "Darstellung"
+                },
+
+                {
+                    label:
+                        "Layer 5",
+                    antwort:
+                        "Sitzung"
+                },
+
+                {
+                    label:
+                        "Layer 4",
+                    antwort:
+                        "Transport"
+                },
+
+                {
+                    label:
+                        "Layer 3",
+                    antwort:
+                        "Vermittlung"
+                },
+
+                {
+                    label:
+                        "Layer 2",
+                    antwort:
+                        "Sicherung"
+                },
+
+                {
+                    label:
+                        "Layer 1",
+                    antwort:
+                        "Bitübertragung"
+                }
+
+            ]
+        },
+        {
+    titel:
+        "Stufe 2 – Aufgaben richtig zuordnen",
+
+    aufgabe:
+        "Welche OSI-Schicht passt zu der jeweiligen Aufgabe oder dem genannten Begriff? Trage nur den Namen der Schicht ein.",
+
+    felder: [
+
+        {
+            label:
+                "HTTP, HTTPS, DNS",
+            antwort:
+                "Anwendung"
+        },
+
+        {
+            label:
+                "Kodierung, Kompression, Verschlüsselung",
+            antwort:
+                "Darstellung"
+        },
+
+        {
+            label:
+                "Sitzungen aufbauen und verwalten",
+            antwort:
+                "Sitzung"
+        },
+
+        {
+            label:
+                "TCP, UDP und Portnummern",
+            antwort:
+                "Transport"
+        },
+
+        {
+            label:
+                "IP-Adressen und Routing",
+            antwort:
+                "Vermittlung"
+        },
+
+        {
+            label:
+                "MAC-Adressen, Frames und Switches",
+            antwort:
+                "Sicherung"
+        },
+
+        {
+            label:
+                "Kabel, Signale und Bits",
+            antwort:
+                "Bitübertragung"
+        }
+
+    ]
+},
+{
+    titel:
+        "Stufe 3 – Prüfungssituationen erkennen",
+
+    aufgabe:
+        "Lies die Situation und bestimme die passende OSI-Schicht. Trage nur den Namen der Schicht ein.",
+
+    felder: [
+
+        {
+            label:
+                "Ein Browser fordert eine Webseite per HTTPS an.",
+            antwort:
+                "Anwendung"
+        },
+
+        {
+            label:
+                "Daten werden komprimiert oder verschlüsselt.",
+            antwort:
+                "Darstellung"
+        },
+
+        {
+            label:
+                "Eine Kommunikationssitzung zwischen zwei Anwendungen wird aufgebaut und verwaltet.",
+            antwort:
+                "Sitzung"
+        },
+
+        {
+            label:
+                "TCP sorgt für eine zuverlässige Ende-zu-Ende-Übertragung.",
+            antwort:
+                "Transport"
+        },
+
+        {
+            label:
+                "Ein Router entscheidet, wohin ein IP-Paket als Nächstes weitergeleitet wird.",
+            antwort:
+                "Vermittlung"
+        },
+
+        {
+            label:
+                "Ein Switch wertet die Ziel-MAC-Adresse eines Frames aus.",
+            antwort:
+                "Sicherung"
+        },
+
+        {
+            label:
+                "Bits werden als elektrische, optische oder Funksignale übertragen.",
+            antwort:
+                "Bitübertragung"
+        }
+
+    ]
+}
+
+    ]
+
+    
+}
+
+
+    ]
+}
+
+
 };

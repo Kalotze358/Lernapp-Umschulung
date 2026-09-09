@@ -291,6 +291,7 @@ const lernfelder = [
     {
         id: "osi-modell",
         titel: "OSI-Modell",
+        vertiefung: "osi-modell",
 
         erklaerung:
             "Das OSI-Modell beschreibt die Netzwerkkommunikation in sieben aufeinander aufbauenden Schichten. Jede Schicht übernimmt bestimmte Aufgaben.",
