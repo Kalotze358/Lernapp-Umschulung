@@ -848,59 +848,99 @@ function themenQuizStarten(lernfeld, thema) {
     frageAnzeigen();
 
 }
-function themaDetailsAnzeigen(lernfeld, thema) {
-    
-    lernfelderListe.innerHTML = "";
-
-    const zurueckButton = document.createElement("button");
-
-    zurueckButton.textContent =
-        "← Zurück zu " + lernfeld.nummer;
-
-    zurueckButton.classList.add("zurueck-button");
-
-    zurueckButton.addEventListener("click", () => {
-
-        lernfeldDetailsAnzeigen(lernfeld);
-
-    });
-    function vertiefungAnzeigen(lernfeld, thema, vertiefung) {
+function vertiefungAnzeigen(lernfeld, thema, vertiefung) {
 
     lernfelderListe.innerHTML = "";
+
+    const eigenstaendigeVertiefung =
+        !lernfeld || !thema;
+
 
     // Zurück-Button
-    const zurueckButton = document.createElement("button");
+    const zurueckButton =
+        document.createElement("button");
 
-    zurueckButton.textContent =
-        "← Zurück zu " + thema.titel;
-
-    zurueckButton.classList.add("zurueck-button");
-
-    zurueckButton.addEventListener("click", () => {
-
-        themaDetailsAnzeigen(
-            lernfeld,
-            thema
-        );
-
-    });
-
-    lernfelderListe.appendChild(zurueckButton);
-
-
-    // Lernfeld anzeigen
-    const lernfeldNummer = document.createElement("p");
-
-    lernfeldNummer.classList.add(
-        "lernfeld-detail-nummer"
+    zurueckButton.classList.add(
+        "zurueck-button"
     );
 
-    lernfeldNummer.textContent =
-        lernfeld.nummer +
-        " – " +
-        lernfeld.kurzTitel;
 
-    lernfelderListe.appendChild(lernfeldNummer);
+    if (eigenstaendigeVertiefung) {
+
+        zurueckButton.textContent =
+            "← Zurück zu Vertiefungen";
+
+        zurueckButton.addEventListener(
+            "click",
+            () => {
+
+                bereiche.forEach((bereich) => {
+                    bereich.classList.remove("aktiv");
+                });
+
+                document
+                    .getElementById("vertiefungen-bereich")
+                    .classList.add("aktiv");
+
+
+                navButtons.forEach((button) => {
+                    button.classList.remove("aktiv");
+                });
+
+                const vertiefungenButton =
+                    document.querySelector(
+                        '.nav-button[data-bereich="vertiefungen-bereich"]'
+                    );
+
+                if (vertiefungenButton) {
+                    vertiefungenButton.classList.add("aktiv");
+                }
+            }
+        );
+
+    } else {
+
+        zurueckButton.textContent =
+            "← Zurück zu " + thema.titel;
+
+        zurueckButton.addEventListener(
+            "click",
+            () => {
+
+                themaDetailsAnzeigen(
+                    lernfeld,
+                    thema
+                );
+            }
+        );
+    }
+
+
+    lernfelderListe.appendChild(
+        zurueckButton
+    );
+
+
+    // Lernfeld nur anzeigen, wenn die Vertiefung
+    // tatsächlich zu einem Lernfeld gehört
+    if (!eigenstaendigeVertiefung) {
+
+        const lernfeldNummer =
+            document.createElement("p");
+
+        lernfeldNummer.classList.add(
+            "lernfeld-detail-nummer"
+        );
+
+        lernfeldNummer.textContent =
+            lernfeld.nummer +
+            " 📘 " +
+            lernfeld.kurzTitel;
+
+        lernfelderListe.appendChild(
+            lernfeldNummer
+        );
+    }
 
 
     // Titel
@@ -1997,6 +2037,23 @@ if (abschnitt.merksatz) {
     });
 
 }
+function themaDetailsAnzeigen(lernfeld, thema) {
+    
+    lernfelderListe.innerHTML = "";
+
+    const zurueckButton = document.createElement("button");
+
+    zurueckButton.textContent =
+        "← Zurück zu " + lernfeld.nummer;
+
+    zurueckButton.classList.add("zurueck-button");
+
+    zurueckButton.addEventListener("click", () => {
+
+        lernfeldDetailsAnzeigen(lernfeld);
+
+    });
+    
 function ipZuZahl(ip) {
 
     const teile =
@@ -2530,40 +2587,39 @@ function frageAnzeigen() {
 
     frageAnzeige.textContent = frage.frage;
 
+    // Hinweis zum Fragentyp anzeigen
+    const antwortHinweis = document.getElementById("antwort-hinweis");
+
+    if (frage.typ === "multiple-choice") {
+        antwortHinweis.textContent = "☑ Mehrere Antworten können richtig sein.";
+        antwortPruefenButton.style.display = "block";
+        antwortPruefenButton.disabled = true;
+    } else {
+        antwortHinweis.textContent = "○ Eine Antwort auswählen.";
+        antwortPruefenButton.style.display = "none";
+    }
+
     antwortButtons.forEach((button, index) => {
 
-    const antwort = aktuelleAntworten[index];
+        const antwort = aktuelleAntworten[index];
 
-    button.classList.remove("ausgewaehlt");
+        button.classList.remove("ausgewaehlt");
 
-    if (antwort) {
-
-        button.style.display = "block";
-        button.textContent = antwort.text;
-        button.disabled = false;
-
-    } else {
-
-        button.style.display = "none";
-        button.textContent = "";
-        button.disabled = true;
-    }
-    if (frage.typ === "multiple-choice") {
-
-    antwortPruefenButton.style.display = "block";
-    antwortPruefenButton.disabled = true;
-
-} else {
-
-    antwortPruefenButton.style.display = "none";
-}
-
-});
+        if (antwort) {
+            button.style.display = "block";
+            button.textContent = antwort.text;
+            button.disabled = false;
+        } else {
+            button.style.display = "none";
+            button.textContent = "";
+            button.disabled = true;
+        }
+    });
 
     ergebnis.textContent = "";
 
     quizAuswertung.innerHTML = "";
-    
+
     naechsteFrageButton.style.display = "block";
     naechsteFrageButton.disabled = true;
 }
@@ -2900,6 +2956,281 @@ navButtons.forEach((button) => {
     });
 
 });
+const vertiefungsKarten =
+    document.querySelectorAll(".vertiefung-karte");
+
+vertiefungsKarten.forEach((karte) => {
+
+    karte.addEventListener("click", () => {
+
+        const vertiefungId =
+            karte.dataset.vertiefung;
+
+        const vertiefung =
+            vertiefungen[vertiefungId];
+
+
+        if (!vertiefung) {
+
+            console.warn(
+                "Vertiefung konnte nicht gefunden werden:",
+                vertiefungId
+            );
+
+            return;
+        }
+
+
+        let gefundenesLernfeld = null;
+        let gefundenesThema = null;
+
+
+        // Prüfen, ob die Vertiefung zu einem Thema gehört
+        for (const lernfeld of lernfelder) {
+
+            const thema =
+                lernfeld.themen.find(
+                    (thema) =>
+                        thema.vertiefung === vertiefungId
+                );
+
+            if (thema) {
+
+                gefundenesLernfeld =
+                    lernfeld;
+
+                gefundenesThema =
+                    thema;
+
+                break;
+            }
+        }
+
+
+        // Alle Hauptbereiche ausblenden
+        bereiche.forEach((bereich) => {
+            bereich.classList.remove("aktiv");
+        });
+
+
+        // Renderer der Vertiefungen befindet sich
+        // weiterhin im Lernfelder-Bereich
+        document
+            .getElementById("lernfelder-bereich")
+            .classList.add("aktiv");
+
+
+        // Menüpunkt Vertiefungen aktiv markieren
+        navButtons.forEach((button) => {
+            button.classList.remove("aktiv");
+        });
+
+
+        const vertiefungenButton =
+            document.querySelector(
+                '.nav-button[data-bereich="vertiefungen-bereich"]'
+            );
+
+        if (vertiefungenButton) {
+            vertiefungenButton.classList.add("aktiv");
+        }
+
+
+        // Funktioniert sowohl mit Lernfeld
+        // als auch als eigenständige Vertiefung
+        vertiefungAnzeigen(
+            gefundenesLernfeld,
+            gefundenesThema,
+            vertiefung
+        );
+
+
+        mobilesMenueSchliessen();
+    });
+});
+ // =========================================
+// IT-Referenz
+// =========================================
+
+const referenzKarten =
+    document.querySelectorAll(".referenz-karte");
+
+const referenzAuswahl =
+    document.querySelector(".referenz-auswahl");
+
+const referenzDetail =
+    document.getElementById("referenz-detail");
+
+const referenzTitel =
+    document.getElementById("referenz-titel");
+
+const referenzSuche =
+    document.getElementById("referenz-suche");
+
+const referenzTreffer =
+    document.getElementById("referenz-treffer");
+
+const referenzListe =
+    document.getElementById("referenz-liste");
+
+const referenzZurueck =
+    document.getElementById("referenz-zurueck");
+
+let aktuelleReferenzKategorie = null;
+
+
+function referenzEintraegeAnzeigen(eintraege) {
+
+    referenzListe.innerHTML = "";
+
+    referenzTreffer.textContent =
+        eintraege.length +
+        (eintraege.length === 1
+            ? " Eintrag"
+            : " Einträge");
+
+    eintraege.forEach((eintrag) => {
+
+        const karte =
+            document.createElement("div");
+
+        karte.classList.add("referenz-eintrag");
+
+        const begriff =
+            document.createElement("h3");
+
+        begriff.textContent = eintrag.begriff;
+
+        karte.appendChild(begriff);
+
+
+        if (eintrag.bedeutung) {
+
+            const bedeutung =
+                document.createElement("p");
+
+            bedeutung.classList.add(
+                "referenz-bedeutung"
+            );
+
+            bedeutung.textContent =
+                eintrag.bedeutung;
+
+            karte.appendChild(bedeutung);
+        }
+
+
+        const erklaerung =
+            document.createElement("p");
+
+        erklaerung.textContent =
+            eintrag.erklaerung;
+
+        karte.appendChild(erklaerung);
+
+        referenzListe.appendChild(karte);
+    });
+}
+
+
+referenzKarten.forEach((karte) => {
+
+    karte.addEventListener("click", () => {
+
+        const kategorie =
+            karte.dataset.referenz;
+
+        const daten =
+            referenzDaten[kategorie];
+
+        if (!daten) {
+            console.warn(
+                "Referenz-Kategorie nicht gefunden:",
+                kategorie
+            );
+            return;
+        }
+
+        aktuelleReferenzKategorie =
+            kategorie;
+
+        referenzAuswahl.style.display =
+            "none";
+
+        referenzDetail.style.display =
+            "block";
+
+        referenzTitel.textContent =
+            daten.titel;
+
+        referenzSuche.value = "";
+
+        referenzEintraegeAnzeigen(
+            daten.eintraege
+        );
+    });
+});
+
+
+referenzSuche.addEventListener(
+    "input",
+    () => {
+
+        if (!aktuelleReferenzKategorie) {
+            return;
+        }
+
+        const suchtext =
+            referenzSuche.value
+                .toLowerCase()
+                .trim();
+
+        const daten =
+            referenzDaten[
+                aktuelleReferenzKategorie
+            ];
+
+        const gefilterteEintraege =
+            daten.eintraege.filter(
+                (eintrag) => {
+
+                    const text = [
+                        eintrag.begriff,
+                        eintrag.bedeutung || "",
+                        eintrag.erklaerung
+                    ]
+                        .join(" ")
+                        .toLowerCase();
+
+                    return text.includes(
+                        suchtext
+                    );
+                }
+            );
+
+        referenzEintraegeAnzeigen(
+            gefilterteEintraege
+        );
+    }
+);
+
+
+referenzZurueck.addEventListener(
+    "click",
+    () => {
+
+        aktuelleReferenzKategorie = null;
+
+        referenzDetail.style.display =
+            "none";
+
+        referenzAuswahl.style.display =
+            "grid";
+
+        referenzSuche.value = "";
+    }
+);
+
 function darkModeAktualisieren() {
 
     const darkModeAktiv =

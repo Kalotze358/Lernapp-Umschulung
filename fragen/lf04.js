@@ -1386,9 +1386,9 @@ const lf04Fragen = [
     frage: "Ein Mitarbeiter öffnet einen manipulierten E-Mail-Anhang, der Schadsoftware enthält. Welche Kombination beschreibt die Situation am besten?",
     antworten: [
         {
-            text: "Bedrohung durch Schadsoftware und Verringerung des Risikos durch vorsichtiges Nutzerverhalten",
+            text: "Bedrohung durch Schadsoftware und Erhöhung des Risikos durch unvorsichtiges Nutzerverhalten",
             richtig: true
-        },
+},
         {
             text: "Bedrohung durch Datensicherung und Schutzmaßnahme durch Passwortwechsel",
             richtig: false

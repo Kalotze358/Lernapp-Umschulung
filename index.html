@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
 <script src="daten/lernfelder.js" defer></script>
 <script src="daten/vertiefungen.js" defer></script>
+<script src="daten/referenz.js" defer></script>
 <script src="fragen/netzwerke.js" defer></script>
 <script src="fragen/programmierung.js" defer></script>
 <script src="fragen/lf01.js" defer></script>
@@ -58,12 +59,19 @@
                         Programmierung
                     </button>
                 </div>
-                <button class="nav-button" data-bereich="lernfelder-bereich">
-                        Lernfelder
-                </button>
-                <button class="nav-button" data-bereich="pruefung-bereich">
-                    Prüfungsvorbereitung
-                </button>
+               <button class="nav-button" data-bereich="lernfelder-bereich">
+                Lernfelder
+            </button>
+
+            <button class="nav-button" data-bereich="vertiefungen-bereich">
+                🔎 Vertiefungen
+            </button>
+            <button class="nav-button" data-bereich="referenz-bereich">
+    📚          IT-Referenz
+            </button>
+            <button class="nav-button" data-bereich="pruefung-bereich">
+                Prüfungsvorbereitung
+            </button>
                 <button class="nav-button" data-bereich="wissen-bereich">
                   Wissenswertes
              </button>
@@ -323,7 +331,7 @@
     <h2 id="frage">
         Frage wird geladen...
     </h2>
-
+    <p id="antwort-hinweis" class="antwort-hinweis"></p>
     <div id="antworten">
         <button></button>
         <button></button>
@@ -360,6 +368,110 @@
                 <div id="lernfelder-liste"></div>
 
             </section>
+            <section id="vertiefungen-bereich" class="bereich">
+
+                <h1>🔎 Vertiefungen</h1>
+
+                <p>
+                    Hier findest du ausführlichere Lernbereiche zu wichtigen IT-Themen.
+                </p>
+
+                <div class="vertiefungen-auswahl">
+
+                    <button
+                        class="vertiefung-karte"
+                        data-vertiefung="subnetting"
+                    >
+                        <strong>🧮 Subnetting</strong>
+                        <span>
+                            IPv4, CIDR, Netzadresse, Broadcast, Hostbereiche und Übungen
+                        </span>
+                    </button>
+
+                    <button
+                        class="vertiefung-karte"
+                        data-vertiefung="osi-modell"
+                    >
+                        <strong>🌐 OSI-Modell</strong>
+                        <span>
+                            Die 7 Schichten, Protokolle, Kapselung und interaktive Übungen
+                        </span>
+                    </button>
+                    <button
+                        class="vertiefung-karte"
+                        data-vertiefung="wiso"
+                    >
+                        <strong>💼 WiSo</strong>
+                        <span>
+                            Wirtschafts- und Sozialkunde, Arbeitsrecht,
+                            Sozialversicherung, Wirtschaft und Prüfungstraining
+                        </span>
+                    </button>
+
+                </div>
+
+            </section>
+            <section id="referenz-bereich" class="bereich">
+
+    <h1>📚 IT-Referenz</h1>
+
+    <p>
+        Schnelles Nachschlagewerk für wichtige Abkürzungen, Fachbegriffe,
+        Programmierbefehle und Datenbankthemen.
+    </p>
+
+    <div class="referenz-auswahl">
+
+        <button class="referenz-karte" data-referenz="abkuerzungen">
+            <strong>🔤 Abkürzungen</strong>
+            <span>
+                DNS, DHCP, VLAN, RAID, API und viele weitere IT-Abkürzungen
+            </span>
+        </button>
+
+        <button class="referenz-karte" data-referenz="fachbegriffe">
+            <strong>📖 Fachbegriffe</strong>
+            <span>
+                Wichtige Begriffe aus Netzwerk, Server, Sicherheit und IT
+            </span>
+        </button>
+
+        <button class="referenz-karte" data-referenz="programmierung">
+            <strong>💻 Programmierung</strong>
+            <span>
+                Befehle, Strukturen und kurze Beispiele aus der Programmierung
+            </span>
+        </button>
+
+        <button class="referenz-karte" data-referenz="datenbanken">
+            <strong>🗄️ SQL & Datenbanken</strong>
+            <span>
+                SELECT, JOIN, GROUP BY, Schlüssel, Normalisierung und mehr
+            </span>
+        </button>
+
+    </div>
+            <div id="referenz-detail" style="display: none;">
+
+                <button id="referenz-zurueck" class="zurueck-button">
+                    ← Zurück zur Übersicht
+                </button>
+
+                <h2 id="referenz-titel"></h2>
+
+                <input
+                    type="text"
+                    id="referenz-suche"
+                    placeholder="🔎 Begriff suchen ..."
+                    autocomplete="off"
+                >
+
+                <p id="referenz-treffer"></p>
+
+                <div id="referenz-liste"></div>
+
+            </div>
+</section>
            <section id="pruefung-bereich" class="bereich">
 
                 <h1>Prüfungsvorbereitung</h1>

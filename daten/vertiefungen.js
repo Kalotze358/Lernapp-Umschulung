@@ -956,7 +956,660 @@ const vertiefungen = {
 
 
     ]
-}
+},
+"wiso": {
 
+    titel:
+        "Wirtschafts- und Sozialkunde – prüfungsrelevantes Wissen",
+
+    untertitel:
+        "Die wichtigsten WiSo-Themen für Ausbildung, Beruf und Abschlussprüfung – mit Praxisbeispielen und Prüfungstraining.",
+
+    abschnitte: [
+
+        {
+            id: "wiso-pruefung",
+
+            titel:
+                "1. Was erwartet dich in WiSo?",
+
+            texte: [
+                "Wirtschafts- und Sozialkunde ist ein eigener Prüfungsbereich in Teil 2 der Abschlussprüfung.",
+                "Im Mittelpunkt stehen wirtschaftliche und gesellschaftliche Zusammenhänge der Berufs- und Arbeitswelt.",
+                "Die Aufgaben sind praxisbezogen. Es geht deshalb nicht nur darum, Begriffe auswendig zu kennen, sondern Situationen richtig beurteilen zu können."
+            ],
+
+            liste: [
+                "Prüfungszeit: 60 Minuten",
+                "Gewichtung beim FISI: 10 % der Abschlussprüfung",
+                "Berufs- und Arbeitswelt",
+                "Ausbildung und Arbeitsrecht",
+                "Soziale Sicherung",
+                "Unternehmen und Wirtschaft",
+                "Verträge und Verbraucherschutz",
+                "Digitalisierung, Nachhaltigkeit und Europa"
+            ],
+
+            hinweis:
+                "🎯 Prüfungsfokus: Achte besonders auf Fallbeispiele. Häufig musst du erkennen, welche Regel oder welcher Begriff zu einer konkreten Situation passt.",
+
+            merksatz:
+                "WiSo bedeutet nicht nur Wissen – sondern wirtschaftliche und berufliche Situationen richtig beurteilen."
+        },
+
+
+        {
+            id: "wiso-ausbildung",
+
+            titel:
+                "2. Ausbildung und duales System",
+
+            texte: [
+                "Die Berufsausbildung findet im dualen System an mindestens zwei Lernorten statt: Ausbildungsbetrieb und Berufsschule.",
+                "Der Betrieb vermittelt vor allem praktische berufliche Handlungskompetenz. Die Berufsschule ergänzt dies durch fachliche und allgemeine Lerninhalte.",
+                "Grundlage der betrieblichen Ausbildung ist unter anderem das Berufsbildungsgesetz."
+            ],
+
+            liste: [
+                "Ausbildungsbetrieb: praktische Ausbildung",
+                "Berufsschule: schulische und fachtheoretische Ausbildung",
+                "Zuständige Stelle, zum Beispiel IHK: überwacht und organisiert Teile der Berufsausbildung",
+                "Ausbildungsordnung: bundesweite Grundlage des Ausbildungsberufs",
+                "Ausbildungsrahmenplan: beschreibt die betrieblich zu vermittelnden Inhalte",
+                "Rahmenlehrplan: Grundlage für den Berufsschulunterricht"
+            ],
+
+            beispiel: {
+                titel:
+                    "Beispiel",
+
+                text:
+                    "Im Betrieb lernst du beispielsweise reale IT-Systeme zu administrieren. In der Berufsschule beziehungsweise Umschulung werden die zugrunde liegenden Konzepte systematisch vermittelt."
+            },
+
+            hinweis:
+                "🎯 Prüfungsrelevant: Aufgaben der Beteiligten im dualen System sowie Rechte und Pflichten aus dem Ausbildungsverhältnis.",
+
+            merksatz:
+                "Betrieb + Berufsschule + zuständige Stelle bilden wichtige Bestandteile des dualen Ausbildungssystems."
+        },
+
+
+        {
+            id: "wiso-ausbildungsvertrag",
+
+            titel:
+                "3. Ausbildungsvertrag – Rechte und Pflichten",
+
+            texte: [
+                "Ausbildende und Auszubildende haben gegenseitige Rechte und Pflichten.",
+                "Der Ausbildungsbetrieb muss dafür sorgen, dass die berufliche Handlungsfähigkeit vermittelt werden kann.",
+                "Auszubildende müssen sich bemühen, die notwendigen Kenntnisse und Fähigkeiten zu erwerben."
+            ],
+
+            liste: [
+                "Ausbildungspflicht des Ausbildungsbetriebs",
+                "Freistellung für Berufsschule und Prüfungen",
+                "Bereitstellung notwendiger Ausbildungsmittel",
+                "Vergütung",
+                "Fürsorgepflicht",
+                "Lernpflicht des Auszubildenden",
+                "Weisungen im Rahmen der Ausbildung beachten",
+                "Betriebliche Ordnung beachten",
+                "Betriebs- und Geschäftsgeheimnisse wahren",
+                "Ausbildungsnachweise führen, soweit vorgeschrieben"
+            ],
+
+            beispiel: {
+                titel:
+                    "Typische Prüfungsfrage",
+
+                text:
+                    "Ein Auszubildender soll dauerhaft ausschließlich Tätigkeiten erledigen, die nichts mit dem Ausbildungsziel zu tun haben. Das kann der Ausbildungspflicht des Betriebs widersprechen."
+            },
+
+            hinweis:
+                "🎯 Prüfungsrelevant: Besonders häufig werden Rechte und Pflichten anhand konkreter Situationen abgefragt.",
+
+            merksatz:
+                "Der Betrieb muss ausbilden – der Auszubildende muss lernen und mitwirken."
+        },
+
+
+        {
+            id: "wiso-arbeitsrecht",
+
+            titel:
+                "4. Arbeitsverhältnis, Arbeitszeit, Urlaub und Krankheit",
+
+            texte: [
+                "Ein Arbeitsvertrag regelt die wesentlichen Rechte und Pflichten zwischen Arbeitnehmer und Arbeitgeber.",
+                "Arbeitnehmer erbringen die vereinbarte Arbeitsleistung. Arbeitgeber zahlen dafür das vereinbarte Arbeitsentgelt.",
+                "Daneben gelten gesetzliche und gegebenenfalls tarifliche oder betriebliche Regelungen."
+            ],
+
+            liste: [
+                "Arbeitsleistung",
+                "Arbeitsentgelt",
+                "Arbeitszeit",
+                "Urlaub",
+                "Arbeitsort",
+                "Krankheit und Entgeltfortzahlung",
+                "Arbeitsschutz",
+                "Nebenpflichten wie Rücksichtnahme und Verschwiegenheit"
+            ],
+
+            hinweis:
+                "🎯 Prüfungsrelevant sind unter anderem Arbeitszeitgesetz, Bundesurlaubsgesetz, Entgeltfortzahlungsgesetz und Arbeitsschutz.",
+
+            merksatz:
+                "Der Arbeitsvertrag ist nur ein Teil der Regeln – Gesetze, Tarifverträge und Betriebsvereinbarungen können ebenfalls wichtig sein."
+        },
+
+
+        {
+            id: "wiso-kuendigung",
+
+            titel:
+                "5. Kündigung und Beendigung",
+
+            texte: [
+                "Arbeits- und Ausbildungsverhältnisse können auf unterschiedliche Weise enden.",
+                "Dabei muss zwischen einer ordentlichen und einer außerordentlichen Kündigung unterschieden werden.",
+                "Für Berufsausbildungsverhältnisse gelten teilweise besondere Regeln."
+            ],
+
+            liste: [
+                "Ordentliche Kündigung: Kündigung unter Einhaltung einer Kündigungsfrist",
+                "Außerordentliche Kündigung: Kündigung aus wichtigem Grund ohne normale Kündigungsfrist",
+                "Aufhebungsvertrag: beide Seiten vereinbaren gemeinsam die Beendigung",
+                "Befristung: Vertragsverhältnis endet grundsätzlich mit Ablauf der vereinbarten Zeit",
+                "Während der Probezeit eines Ausbildungsverhältnisses gelten besondere Kündigungsregeln",
+                "Nach der Probezeit ist die Kündigung eines Ausbildungsverhältnisses stärker eingeschränkt"
+            ],
+
+            beispiel: {
+                titel:
+                    "Prüfungsdenken",
+
+                text:
+                    "Achte darauf, ob es sich in der Aufgabe um einen normalen Arbeitnehmer oder um einen Auszubildenden handelt. Die Regeln können unterschiedlich sein."
+            },
+
+            merksatz:
+                "Bei Kündigungsfragen zuerst klären: Arbeitsverhältnis oder Ausbildung? Probezeit oder danach?"
+        },
+
+
+        {
+            id: "wiso-mitbestimmung",
+
+            titel:
+                "6. Tarifvertrag, Betriebsrat und Mitbestimmung",
+
+            texte: [
+                "Beschäftigte können ihre Interessen auf unterschiedlichen Ebenen vertreten.",
+                "Tarifverträge werden zwischen Tarifvertragsparteien vereinbart. Innerhalb eines Betriebs übernimmt der Betriebsrat Aufgaben der betrieblichen Interessenvertretung.",
+                "Für Jugendliche und Auszubildende kann zusätzlich eine Jugend- und Auszubildendenvertretung bestehen."
+            ],
+
+            liste: [
+                "Gewerkschaft: Interessenvertretung der Arbeitnehmer",
+                "Arbeitgeberverband: Interessenvertretung von Arbeitgebern",
+                "Tarifvertrag: Vereinbarung zwischen Tarifvertragsparteien",
+                "Betriebsrat: Interessenvertretung der Beschäftigten im Betrieb",
+                "JAV: Jugend- und Auszubildendenvertretung",
+                "Betriebsvereinbarung: Vereinbarung zwischen Arbeitgeber und Betriebsrat",
+                "Tarifautonomie: Tarifparteien handeln Tarifverträge grundsätzlich eigenständig aus"
+            ],
+
+            beispiel: {
+                titel:
+                    "Nicht verwechseln",
+
+                text:
+                    "Ein Betriebsrat handelt keinen branchenweiten Tarifvertrag aus. Tarifverträge werden von den jeweiligen Tarifvertragsparteien geschlossen."
+            },
+
+            hinweis:
+                "🎯 Prüfungsrelevant: Zuständigkeiten von Betriebsrat, Gewerkschaft, Arbeitgeber und JAV unterscheiden können.",
+
+            merksatz:
+                "Tarifvertrag = Tarifparteien. Betriebsvereinbarung = Arbeitgeber und Betriebsrat."
+        },
+
+
+        {
+            id: "wiso-sozialversicherung",
+
+            titel:
+                "7. Sozialversicherung und soziale Sicherung",
+
+            texte: [
+                "Die gesetzliche Sozialversicherung schützt Beschäftigte und ihre Angehörigen vor wichtigen Lebensrisiken.",
+                "Sie besteht aus mehreren Versicherungszweigen mit unterschiedlichen Aufgaben.",
+                "Beitragssätze und Grenzwerte können sich ändern. Für die Prüfung ist deshalb besonders wichtig, das System und die Zuständigkeiten zu verstehen."
+            ],
+
+            liste: [
+                "Krankenversicherung – insbesondere Kosten bei Krankheit und medizinischer Versorgung",
+                "Pflegeversicherung – Absicherung bei Pflegebedürftigkeit",
+                "Rentenversicherung – insbesondere Alter, Erwerbsminderung und Rehabilitation",
+                "Arbeitslosenversicherung – Absicherung bei Arbeitslosigkeit und Förderung der Beschäftigung",
+                "Unfallversicherung – insbesondere Arbeitsunfälle und Berufskrankheiten",
+                "Die gesetzliche Unfallversicherung wird grundsätzlich vom Arbeitgeber finanziert",
+                "Bei mehreren anderen Sozialversicherungszweigen tragen Arbeitgeber und Arbeitnehmer grundsätzlich gemeinsam Beiträge"
+            ],
+
+            hinweis:
+                "🎯 Prüfungsfokus: Welcher Versicherungszweig ist für welchen Fall zuständig? Aktuelle Beitragssätze lieber getrennt von dauerhaftem Lernstoff behandeln.",
+
+            merksatz:
+                "Krankheit – Pflege – Alter – Arbeitslosigkeit – Arbeitsunfall: die fünf klassischen Zweige unterscheiden können."
+        },
+
+
+        {
+            id: "wiso-entgelt",
+
+            titel:
+                "8. Entgeltabrechnung – Brutto und Netto",
+
+            texte: [
+                "Das Bruttoentgelt ist das Arbeitsentgelt vor Abzügen.",
+                "Vom Brutto können unter anderem Steuern und Arbeitnehmeranteile zur Sozialversicherung abgezogen werden.",
+                "Der anschließend ausgezahlte Betrag ist das Nettoentgelt. Brutto und Netto sind deshalb nicht identisch."
+            ],
+
+            liste: [
+                "Bruttoentgelt",
+                "Lohnsteuer",
+                "gegebenenfalls Kirchensteuer",
+                "gegebenenfalls Solidaritätszuschlag nach den jeweils geltenden Regeln",
+                "Arbeitnehmeranteile zur Sozialversicherung",
+                "Nettoentgelt",
+                "Arbeitgeber hat zusätzlich eigene Kosten und Arbeitgeberanteile"
+            ],
+
+            beispiel: {
+                titel:
+                    "Wichtig",
+
+                text:
+                    "Die gesamten Personalkosten eines Unternehmens sind höher als das Bruttogehalt, das auf der Entgeltabrechnung des Arbeitnehmers steht."
+            },
+
+            hinweis:
+                "🎯 Prüfungsrelevant: Positionen einer Entgeltabrechnung erkennen. Konkrete Beitragssätze können sich ändern und sollten bei Bedarf aktuell geprüft werden.",
+
+            merksatz:
+                "Brutto − persönliche Abzüge = Netto. Arbeitgeberkosten sind wiederum mehr als nur das Brutto."
+        },
+
+
+        {
+            id: "wiso-vertraege",
+
+            titel:
+                "9. Rechtsgeschäfte, Verträge und Verbraucherschutz",
+
+            texte: [
+                "Auch private Marktteilnehmer schließen regelmäßig Rechtsgeschäfte ab.",
+                "Ein Vertrag kommt grundsätzlich durch übereinstimmende Willenserklärungen zustande, typischerweise durch Angebot und Annahme.",
+                "In Prüfungsaufgaben spielen häufig Kauf-, Miet- und Kreditverträge sowie Fragen des Verbraucherschutzes eine Rolle."
+            ],
+
+            liste: [
+                "Willenserklärung",
+                "Angebot",
+                "Annahme",
+                "Kaufvertrag",
+                "Mietvertrag",
+                "Kreditvertrag",
+                "Geschäftsfähigkeit",
+                "Mängelrechte",
+                "Gewährleistung",
+                "Garantie",
+                "Verbraucherschutz"
+            ],
+
+            beispiel: {
+                titel:
+                    "Gewährleistung oder Garantie?",
+
+                text:
+                    "Die gesetzliche Mängelhaftung des Verkäufers ist nicht dasselbe wie eine freiwillige Garantie eines Herstellers oder Verkäufers."
+            },
+
+            hinweis:
+                "🎯 Prüfungsrelevant: Vertragssituationen erkennen und Begriffe wie Gewährleistung und Garantie nicht verwechseln.",
+
+            merksatz:
+                "Angebot + passende Annahme → Vertrag."
+        },
+
+
+        {
+            id: "wiso-unternehmen",
+
+            titel:
+                "10. Unternehmen und Wirtschaft",
+
+            texte: [
+                "Unternehmen verfolgen unterschiedliche wirtschaftliche, soziale und ökologische Ziele.",
+                "Sie sind Teil von Wertschöpfungsketten und stehen über Geld-, Güter- und Leistungsströme mit anderen Wirtschaftsteilnehmern in Verbindung.",
+                "Für wirtschaftliche Entscheidungen spielen Bedürfnisse, Bedarf, Kaufkraft, Kosten und Nutzen eine Rolle."
+            ],
+
+            liste: [
+                "Ökonomische Ziele",
+                "Soziale Ziele",
+                "Ökologische Ziele",
+                "Wertschöpfung",
+                "Wertschöpfungskette",
+                "Wirtschaftskreislauf",
+                "Bedürfnis",
+                "Bedarf",
+                "Kaufkraft",
+                "Wirtschaftlichkeitsprinzip"
+            ],
+
+            beispiel: {
+                titel:
+                    "Beispiel IT-Unternehmen",
+
+                text:
+                    "Ein Systemhaus kauft Hardware und Dienstleistungen ein, beschäftigt Mitarbeiter und verkauft wiederum Lösungen und Services an seine Kunden. Damit ist es in zahlreiche Wirtschaftsbeziehungen eingebunden."
+            },
+
+            hinweis:
+                "🎯 Prüfungsrelevant: Begriffe nicht nur definieren, sondern auf konkrete Unternehmenssituationen anwenden.",
+
+            merksatz:
+                "Unternehmen stehen nicht allein – sie sind Teil von Märkten, Wertschöpfungsketten und Wirtschaftskreisläufen."
+        },
+
+
+        {
+            id: "wiso-marktwirtschaft",
+
+            titel:
+                "11. Soziale Marktwirtschaft, Europa und globalisierte Wirtschaft",
+
+            texte: [
+                "Die Bundesrepublik Deutschland ist durch die soziale Marktwirtschaft geprägt.",
+                "Marktwirtschaftliche Elemente wie Wettbewerb und freie wirtschaftliche Entscheidungen werden dabei mit sozialer Absicherung und staatlichen Rahmenbedingungen verbunden.",
+                "Unternehmen und Beschäftigte agieren außerdem zunehmend in einem europäischen und global vernetzten Umfeld."
+            ],
+
+            liste: [
+                "Wettbewerb",
+                "Angebot und Nachfrage",
+                "Private wirtschaftliche Entscheidungen",
+                "Soziale Absicherung",
+                "Staatliche Rahmenbedingungen",
+                "Europäischer Binnenmarkt",
+                "Berufliche Mobilität innerhalb Europas",
+                "Internationale Arbeitsteilung",
+                "Standortwettbewerb",
+                "Chancen und Risiken global vernetzter Märkte"
+            ],
+
+            hinweis:
+                "🎯 Prüfungsrelevant: Chancen und Risiken abwägen können – nicht nur einzelne Begriffe auswendig lernen.",
+
+            merksatz:
+                "Soziale Marktwirtschaft verbindet marktwirtschaftlichen Wettbewerb mit sozialem Ausgleich und staatlichen Rahmenbedingungen."
+        },
+
+
+        {
+            id: "wiso-zukunft",
+
+            titel:
+                "12. Digitalisierung, Nachhaltigkeit und lebenslanges Lernen",
+
+            texte: [
+                "Digitalisierung und ökologischer Strukturwandel verändern Unternehmen, Tätigkeiten und Qualifikationsanforderungen.",
+                "Beschäftigte müssen deshalb bereit sein, ihre Kenntnisse während des Berufslebens regelmäßig weiterzuentwickeln.",
+                "Auch nachhaltige wirtschaftliche Entscheidungen und der verantwortungsvolle Umgang mit digitalen Technologien gehören zur modernen Berufs- und Arbeitswelt."
+            ],
+
+            liste: [
+                "Digitaler Wandel",
+                "Automatisierung",
+                "Veränderung von Berufsbildern",
+                "Chancen und Risiken digitaler Medien",
+                "Datenschutz und betriebliche Regeln",
+                "Ökologischer Strukturwandel",
+                "Nachhaltige Entwicklung",
+                "Fortbildung",
+                "Weiterbildung",
+                "Umschulung",
+                "Lebenslanges Lernen"
+            ],
+
+            beispiel: {
+                titel:
+                    "Praxisbezug IT",
+
+                text:
+                    "Technologien verändern sich schnell. Kenntnisse über Netzwerke, Cloud, Automatisierung oder IT-Sicherheit müssen deshalb auch nach einer Ausbildung regelmäßig aktualisiert werden."
+            },
+
+            hinweis:
+                "🛠️ Praxiswissen und 🎯 Prüfungsstoff treffen hier besonders stark aufeinander.",
+
+            merksatz:
+                "Eine abgeschlossene Ausbildung beendet das Lernen nicht."
+        },
+
+
+        {
+            id: "wiso-existenzgruendung",
+
+            titel:
+                "13. Existenzgründung und unternehmerisches Handeln",
+
+            texte: [
+                "Eine mögliche berufliche Perspektive ist die Selbstständigkeit.",
+                "Vor einer Existenzgründung müssen unter anderem Geschäftsidee, Markt, Finanzierung, Kosten, Risiken und persönliche Voraussetzungen geprüft werden.",
+                "Die Wahl einer geeigneten Rechtsform beeinflusst beispielsweise Haftung, Kapitalbedarf und organisatorische Anforderungen."
+            ],
+
+            liste: [
+                "Geschäftsidee",
+                "Zielgruppe und Markt",
+                "Kapitalbedarf",
+                "Finanzierung",
+                "Kosten und Erlöse",
+                "Chancen und Risiken",
+                "Businessplan",
+                "Persönliche Voraussetzungen",
+                "Rechtsform",
+                "Haftung"
+            ],
+
+            hinweis:
+                "🎯 Prüfungsrelevant ist vor allem, Möglichkeiten und Grenzen einer Existenzgründung beurteilen zu können. Details einzelner Rechtsformen sind sinnvolles Zusatzwissen.",
+
+            merksatz:
+                "Eine gute Idee allein reicht nicht – eine Gründung muss auch wirtschaftlich und persönlich tragfähig sein."
+        },
+
+
+        {
+            id: "wiso-pruefungstraining",
+
+            titel:
+                "14. Interaktives WiSo-Prüfungstraining",
+
+            einklappbareUebungen: true,
+
+            texte: [
+                "Jetzt kannst du zentrale WiSo-Themen anhand kurzer Zuordnungen und typischer Prüfungssituationen trainieren.",
+                "Trage jeweils den gesuchten Begriff ein."
+            ],
+
+            hinweis:
+                "Versuche die Aufgaben zuerst ohne die vorherigen Kapitel nachzuschlagen.",
+
+            uebungen: [
+
+                {
+                    titel:
+                        "Stufe 1 – Grundbegriffe",
+
+                    aufgabe:
+                        "Welcher Begriff passt zur Beschreibung?",
+
+                    felder: [
+
+                        {
+                            label:
+                                "Gesetzliche Absicherung bei Arbeitsunfällen und Berufskrankheiten",
+                            antwort:
+                                "Unfallversicherung"
+                        },
+
+                        {
+                            label:
+                                "Interessenvertretung der Beschäftigten innerhalb eines Betriebs",
+                            antwort:
+                                "Betriebsrat"
+                        },
+
+                        {
+                            label:
+                                "Arbeitsentgelt vor Steuern und persönlichen Sozialabgaben",
+                            antwort:
+                                "Brutto"
+                        },
+
+                        {
+                            label:
+                                "Freiwillige zusätzliche Zusage eines Herstellers oder Verkäufers für ein Produkt",
+                            antwort:
+                                "Garantie"
+                        },
+
+                        {
+                            label:
+                                "Vertretung von Arbeitnehmerinteressen auf tariflicher Ebene",
+                            antwort:
+                                "Gewerkschaft"
+                        },
+
+                        {
+                            label:
+                                "Regelmäßige Anpassung der eigenen Kenntnisse an Veränderungen in Beruf und Technik",
+                            antwort:
+                                "Lebenslanges Lernen"
+                        }
+
+                    ]
+                },
+
+
+                {
+                    titel:
+                        "Stufe 2 – Situationen erkennen",
+
+                    aufgabe:
+                        "Lies die Situation und nenne den passenden Begriff.",
+
+                    felder: [
+
+                        {
+                            label:
+                                "Arbeitgeber und Arbeitnehmervertretung im Betrieb vereinbaren Regeln für den Betrieb.",
+                            antwort:
+                                "Betriebsvereinbarung"
+                        },
+
+                        {
+                            label:
+                                "Eine Person verliert ihren Arbeitsplatz und benötigt Leistungen der gesetzlichen sozialen Sicherung.",
+                            antwort:
+                                "Arbeitslosenversicherung"
+                        },
+
+                        {
+                            label:
+                                "Ein Arbeitnehmer wird durch eine von Beschäftigten gewählte Interessenvertretung im Betrieb vertreten.",
+                            antwort:
+                                "Betriebsrat"
+},
+
+                        {
+                            label:
+                                "Ein Käufer macht gesetzliche Rechte geltend, weil die gekaufte Ware mangelhaft war.",
+                            antwort:
+                                "Gewährleistung"
+                        },
+
+                        {
+                            label:
+                                "Ein Unternehmen prüft, ob eine geplante Investition mit möglichst günstigem Mitteleinsatz den gewünschten Nutzen erreicht.",
+                            antwort:
+                                "Wirtschaftlichkeit"
+                        }
+
+                    ]
+                },
+
+
+                {
+                    titel:
+                        "Stufe 3 – Typische Prüfungsfallen",
+
+                    aufgabe:
+                        "Welcher Begriff ist in der Situation entscheidend?",
+
+                    felder: [
+
+                        {
+                            label:
+                                "Ein Betrieb möchte wissen, welche Stelle die Interessen der Beschäftigten direkt innerhalb des Unternehmens vertritt.",
+                            antwort:
+                                "Betriebsrat"
+                        },
+
+                        {
+                            label:
+                                "Ein Arbeitnehmer möchte wissen, welcher Betrag vor persönlichen gesetzlichen Abzügen auf seiner Entgeltabrechnung steht.",
+                            antwort:
+                                "Brutto"
+                        },
+
+                        {
+                            label:
+                                "Zwei Parteien geben inhaltlich übereinstimmende Willenserklärungen ab und schließen dadurch einen Vertrag.",
+                            antwort:
+                                "Angebot und Annahme"
+                        },
+
+                        {
+                            label:
+                                "Ein Beschäftigter entwickelt seine beruflichen Kenntnisse nach der Ausbildung regelmäßig weiter.",
+                            antwort:
+                                "Weiterbildung"
+                        },
+
+                        {
+                            label:
+                                "Ein Unternehmer möchte vor einer Gründung seine Geschäftsidee, Finanzierung, Zielgruppe und Kosten systematisch planen.",
+                            antwort:
+                                "Businessplan"
+                        }
+
+                    ]
+                }
+
+            ]
+        }
+
+    ]
+}
 
 };
